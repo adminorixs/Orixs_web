@@ -1,0 +1,79 @@
+[
+  {
+    "route": "/",
+    "pageType": "homepage",
+    "title": "Homepage",
+    "sections": ["hero", "dashboard", "features", "workflow-modules", "resources", "footer"],
+    "description": "Introduces Orixs with a hero image, dashboard screenshot, AI feature cards, workflow carousel, resource previews, and footer links."
+  },
+  {
+    "route": "/use-cases",
+    "pageType": "use-cases",
+    "title": "Use Cases",
+    "sections": ["use-cases", "footer"],
+    "description": "Shows Business Operations, Insurance, and Construction tabs with features, benefits, FAQ, and signup CTAs."
+  },
+  {
+    "route": "/pricing",
+    "pageType": "pricing",
+    "title": "Pricing",
+    "sections": ["pricing-plans", "footer"],
+    "description": "Shows pricing tabs for Orixs/RINI, Insurance, Intern Africa, Construction, and Scene One. Includes currency and billing filters and plan cards from the live Master API."
+  },
+  {
+    "route": "/get-started/business",
+    "pageType": "get-started",
+    "title": "Get Started: Business Operations",
+    "sections": ["get-started", "footer"],
+    "description": "Signup and login flow for the Business Operations workspace."
+  },
+  {
+    "route": "/get-started/insurance",
+    "pageType": "get-started",
+    "title": "Get Started: Insurance",
+    "sections": ["get-started", "footer"],
+    "description": "Signup and login flow for the Insurance workspace."
+  },
+  {
+    "route": "/get-started/construction",
+    "pageType": "get-started",
+    "title": "Get Started: Construction",
+    "sections": ["get-started", "footer"],
+    "description": "Signup and login flow for the Construction workspace."
+  },
+  {
+    "route": "/blogs",
+    "pageType": "blog",
+    "title": "Blogs",
+    "sections": ["resources", "footer"],
+    "description": "Lists static Orixs articles about AI, SaaS, operations, analytics, and business clarity."
+  },
+  {
+    "route": "/case-studies",
+    "pageType": "case-study",
+    "title": "Case Studies",
+    "sections": ["resources", "footer"],
+    "description": "Lists static case studies for finance automation, SaaS operations, and construction visibility."
+  },
+  {
+    "route": "/about",
+    "pageType": "about",
+    "title": "About Orixs",
+    "sections": ["about-hero", "about-locations", "about-leadership", "footer"],
+    "description": "Explains why Orixs was built, lists locations, and shows leadership."
+  },
+  {
+    "route": "/privacy",
+    "pageType": "legal",
+    "title": "Privacy Policy",
+    "sections": ["legal", "footer"],
+    "description": "Public privacy policy."
+  },
+  {
+    "route": "/terms-and-conditions",
+    "pageType": "legal",
+    "title": "Terms and Conditions",
+    "sections": ["legal", "footer"],
+    "description": "Public terms of service."
+  }
+]

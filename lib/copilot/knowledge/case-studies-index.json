@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "abuja-sme-finance",
+    "title": "From Missed Invoices to 100% On-Time Payouts: How an SME in Abuja Fixed Finance in 12 Days",
+    "tag": "Finance Automation",
+    "location": "Abuja, Nigeria",
+    "summary": "A mid-sized logistics company used Orixs to connect operations and finance, automate invoice generation, sync vendors and tax rules, and reduce finance handoffs.",
+    "metrics": ["78% to 0% invoice errors in 10 days", "48% to 100% on-time payouts", "6 to 2 finance approval steps"],
+    "benefits": ["Automated invoice generation", "Real-time payment triggers", "Vendor and tax sync", "Error flagging", "Founder peace of mind"]
+  },
+  {
+    "slug": "saas-founder-bottleneck",
+    "title": "Iam Done Being the Bottleneck. How One SaaS Founder Used Orixs to Stop Being the COO of Everything.",
+    "tag": "Business Automation",
+    "location": "Cape Town, South Africa",
+    "summary": "A SaaS founder used Orixs to remove manual bottlenecks, automate operations, improve project visibility, and reduce founder involvement in routine operations.",
+    "metrics": ["50+ manual touchpoints eliminated", "0 payroll errors since launch", "100% project progress visibility", "0 ops tasks for founder"],
+    "benefits": ["Unified operations", "Automated workflows", "Real-time visibility", "Error reduction", "Founder peace of mind"]
+  },
+  {
+    "slug": "construction-firm-blindspots",
+    "title": "I Had to Call the Site to Find Out What Was Happening. How One Construction Firm Fixed Their Blind Spots with Orixs.",
+    "tag": "Construction Automation",
+    "location": "Nairobi, Kenya",
+    "summary": "A construction firm used Orixs to unify site operations, replace fragmented WhatsApp updates, route approvals, and improve project visibility.",
+    "metrics": ["80% drop in phone-based update requests", "3 hours to 15 minutes gathering project status", "90+ team size including contractors", "100% procurement and payment auditability"],
+    "benefits": ["Unified site operations", "Real-time project tracking", "Automated approvals", "Auditability", "Founder peace of mind"]
+  }
+]

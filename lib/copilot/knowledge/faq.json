@@ -1,0 +1,47 @@
+[
+  {
+    "source": "UseCasesFAQSection",
+    "question": "How quickly can my team get started?",
+    "answer": "Most teams are fully onboarded within a week. Orixs includes guided setup, data migration tools, and dedicated support to ensure a smooth transition with zero downtime."
+  },
+  {
+    "source": "UseCasesFAQSection",
+    "question": "Does Orixs integrate with existing tools?",
+    "answer": "Yes. Orixs connects with popular CRMs, ERPs, accounting software, and communication platforms through native integrations and a full REST API."
+  },
+  {
+    "source": "UseCasesFAQSection",
+    "question": "How is data security handled?",
+    "answer": "Orixs uses enterprise-grade encryption, role-based access controls, and automated compliance monitoring. Your data stays protected and audit-ready at all times."
+  },
+  {
+    "source": "UseCasesFAQSection",
+    "question": "Can Orixs scale as we grow?",
+    "answer": "Orixs is built to grow with you, from small teams to enterprise operations. Add users, workflows, and modules as your needs evolve, with no disruption."
+  },
+  {
+    "source": "UseCasesFAQSection",
+    "question": "Is there a free trial?",
+    "answer": "Orixs offers a guided demo and a personalized pilot program so you can see it working with your real data before committing. No credit card required. The live plan API may also include free-trial plan data when available."
+  },
+  {
+    "source": "IndustriesFAQSection",
+    "question": "Can Orixs align with my long-term business strategy?",
+    "answer": "Yes, Orixs is designed to adapt and scale with your business needs, supporting long-term strategies and growth."
+  },
+  {
+    "source": "IndustriesFAQSection",
+    "question": "How does Orixs ensure seamless adoption across different teams?",
+    "answer": "Orixs offers intuitive interfaces and integrations, making it easy for teams to adopt and collaborate efficiently."
+  },
+  {
+    "source": "IndustriesFAQSection",
+    "question": "How does Orixs drive business efficiency and scalability?",
+    "answer": "By automating workflows and providing actionable insights, Orixs boosts efficiency and supports scalable operations."
+  },
+  {
+    "source": "IndustriesFAQSection",
+    "question": "What ROI can I expect from integrating Orixs into my organization?",
+    "answer": "Organizations typically see significant cost savings, improved productivity, and faster decision-making with Orixs."
+  }
+]

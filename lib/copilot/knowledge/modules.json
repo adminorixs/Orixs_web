@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Chat with Orixs",
+    "category": "AI Assistance",
+    "description": "Lets users ask operational questions such as who is on leave or what the latest sales number is, with real-time company intelligence inside the workspace."
+  },
+  {
+    "name": "Smarter Mail with AI",
+    "category": "Communication",
+    "description": "Supports AI-assisted email drafts, thread summaries, and important-update detection."
+  },
+  {
+    "name": "Strategic Decisions, Backed by Data",
+    "category": "Analytics",
+    "description": "Provides live dashboards, predictive analytics, performance review context, P&L forecasting, policy compliance support, and budget control."
+  },
+  {
+    "name": "Seamless Migrations",
+    "category": "Onboarding",
+    "description": "Supports migration of teams, data, and workflows during onboarding with an emphasis on reduced disruption."
+  },
+  {
+    "name": "Human Resources",
+    "category": "People Operations",
+    "description": "Covers HR workflows, employee management, shift schedules, payroll-adjacent workflows, and recruitment in supported platforms."
+  },
+  {
+    "name": "Work",
+    "category": "Project Operations",
+    "description": "Covers project management, tasks, tickets, WorkCenter workflows, site updates, and team coordination."
+  },
+  {
+    "name": "Finance",
+    "category": "Finance",
+    "description": "Covers finance workflows, invoice and payment visibility, approval paths, forecasts, budget control, and reporting."
+  },
+  {
+    "name": "Travel",
+    "category": "Operations",
+    "description": "Includes travel planning workflows in the Business platform."
+  },
+  {
+    "name": "Social",
+    "category": "Communication",
+    "description": "Represents social and communication-related workflows shown in the homepage workflow carousel."
+  },
+  {
+    "name": "Commerce",
+    "category": "Business Operations",
+    "description": "Supports commerce workflows in the Business platform."
+  },
+  {
+    "name": "Support",
+    "category": "Customer Operations",
+    "description": "Covers tickets, support workflows, customer service, and support-related coordination."
+  },
+  {
+    "name": "Settings",
+    "category": "Administration",
+    "description": "Covers configuration, admin controls, and platform settings."
+  },
+  {
+    "name": "CRM",
+    "category": "Sales",
+    "description": "Supports sales pipelines, smart lead scoring, deal tracking, automated follow-ups, client management, and customer visibility."
+  },
+  {
+    "name": "Insurance Operations",
+    "category": "Industry Module",
+    "description": "Includes AI risk profiling, underwriting, claims processing, policy management, proposals, quotes, compliance, and reporting."
+  },
+  {
+    "name": "Construction Operations",
+    "category": "Industry Module",
+    "description": "Includes BIM-related planning, crew tracking, project analytics, budget control, safety compliance, subcontractor management, vendors, BOQ, tenders, and files."
+  }
+]

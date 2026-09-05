@@ -1,0 +1,56 @@
+[
+  {
+    "id": "business",
+    "displayName": "Business Operations",
+    "pricingTab": "RINI",
+    "platformKey": "rini-dev",
+    "domain": "dev.orixs.io",
+    "description": "A general business operations workspace that centralizes projects, sales pipelines, HR, payroll, finance, documents, commerce, communications, dashboards, reporting, and AI-assisted workflows.",
+    "targetIndustries": ["Startups", "SMEs", "Operations teams", "Founders", "General business teams"],
+    "modules": ["Dashboard", "CRM", "HR", "Payroll", "Recruitment", "Project Management", "Finance", "Document Centre", "Campaigns", "Forms", "Commerce", "Travel Planner", "Communication Suite", "Reports", "Video Conferencing"],
+    "signupRoute": "/get-started/business"
+  },
+  {
+    "id": "insurance",
+    "displayName": "Insurance",
+    "pricingTab": "Insurance",
+    "platformKey": "rini-insurance",
+    "domain": "insurance.orixs.io",
+    "description": "An insurance operations workspace for claims, underwriting, policy management, proposals, quotes, clients, compliance, and reporting.",
+    "targetIndustries": ["Insurance agencies", "Brokers", "Claims teams", "Underwriting teams"],
+    "modules": ["Dashboard", "Profile Management", "Shift Schedule", "Calendar", "Leads", "Insurance Plans", "Proposals", "Quotes", "Clients", "Finance", "Document Centre", "Notice Board", "Tickets", "Tasks", "HR Tools", "Reports", "Admin", "Settings"],
+    "signupRoute": "/get-started/insurance"
+  },
+  {
+    "id": "construction",
+    "displayName": "Construction",
+    "pricingTab": "Construction",
+    "platformKey": "rini-construction",
+    "domain": "construction.orixs.io",
+    "description": "A construction operations workspace for project visibility, crew tracking, budgets, BOQ, tenders, documents, safety compliance, vendors, and site execution.",
+    "targetIndustries": ["Construction firms", "Project managers", "Contractors", "Site operations teams"],
+    "modules": ["Dashboard", "Profile", "Projects", "Tasks", "Tickets", "Human Resources", "Vendors", "BOQ", "Technical Details", "Files", "Projections", "Finance", "Tenders", "Document Centre", "Reports", "Settings"],
+    "signupRoute": "/get-started/construction"
+  },
+  {
+    "id": "scene-one",
+    "displayName": "Scene One",
+    "pricingTab": "Scene One",
+    "platformKey": "scene-one",
+    "description": "A studio and production-oriented workspace for casting, bookings, box office, contracts, documents, settings, and support tickets.",
+    "targetIndustries": ["Studios", "Casting teams", "Production teams", "Media businesses"],
+    "modules": ["Studio Dashboard", "Casting Lounge", "Casting Desk", "Casting Crew", "Bookings", "Box Office", "Contracts", "Documents", "Scene Settings", "Support Tickets"],
+    "signupRoute": null
+  },
+  {
+    "id": "intern-africa",
+    "displayName": "Intern Africa",
+    "pricingTab": "Intern Africa",
+    "platformKey": "intern-africa",
+    "domain": "africa.orixs.io",
+    "description": "A talent and internship operations workspace focused on role-based dashboards, structured profiles, permissions, plan tracking, and signup flows.",
+    "targetIndustries": ["Internship programs", "Talent pipelines", "Training organizations"],
+    "modules": ["Role-Based Dashboards", "Structured Profile Format", "Granular Permissions", "Plan Tracking", "Seamless Signup Flows", "Bookings", "Contracts", "Documents", "Settings", "Support Tickets"],
+    "signupRoute": null
+  }
+]
