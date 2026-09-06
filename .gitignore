@@ -12,6 +12,8 @@
 
 # production
 /build
+/_deploy_*/
+/_deploy_*.tgz
 
 # misc
 .DS_Store

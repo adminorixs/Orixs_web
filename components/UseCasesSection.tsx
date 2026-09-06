@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { copilotEventBus } from '@/lib/copilot/eventBus';
 import { FaBriefcase, FaShieldAlt, FaHardHat } from 'react-icons/fa';
@@ -78,7 +78,6 @@ const useCases = [
 
 export function UseCasesSection() {
   const [active, setActive] = useState(0);
-  const router = useRouter();
   const current = useCases[active];
 
   useEffect(() => {
@@ -126,21 +125,11 @@ export function UseCasesSection() {
                 }`}>
                   {uc.icon}
                 </div>
-                {/* Sign Up icon button */}
-                <span
-                  role="link"
-                  tabIndex={0}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    router.push(`/get-started/${uc.id}`);
-                  }}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      e.stopPropagation();
-                      router.push(`/get-started/${uc.id}`);
-                    }
-                  }}
-                  className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold transition-all cursor-pointer ${
+                {/* Sign Up link */}
+                <Link
+                  href={`/get-started/${uc.id}`}
+                  onClick={(e) => e.stopPropagation()}
+                  className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold transition-all ${
                     active === idx
                       ? 'bg-purple-600 text-white hover:bg-purple-700 shadow-sm'
                       : 'bg-purple-50 text-purple-600 hover:bg-purple-100'
@@ -151,7 +140,7 @@ export function UseCasesSection() {
                   <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </span>
+                </Link>
               </div>
               <h3 className={`text-base sm:text-lg font-semibold mb-1 transition-colors ${
                 active === idx ? 'text-gray-900' : 'text-gray-700'
@@ -216,12 +205,12 @@ export function UseCasesSection() {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-2">
-              <button
-                onClick={() => router.push(`/get-started/${current.id}`)}
+              <Link
+                href={`/get-started/${current.id}`}
                 className="bg-purple-600 text-white font-semibold px-6 sm:px-7 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base hover:bg-purple-700 transition shadow-lg shadow-purple-200"
               >
                 Get started with {current.name}
-              </button>
+              </Link>
               <span className="text-xs sm:text-sm text-gray-400">
                 Free setup · No credit card · Live in under a week
               </span>
