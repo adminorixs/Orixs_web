@@ -357,7 +357,7 @@ export default function GetStartedPage() {
       const response = await axios.post(`${signupApiBaseUrl}/send`, {
         email,
         platform: config.platformKey,
-      });
+      }, { timeout: 20_000 });
       setEmailOtpSent(true);
       setOtpCooldown(response.data?.resend_after || 60);
       setSuccessMessage('');

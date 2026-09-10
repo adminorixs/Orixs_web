@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const allowedActions = new Set(['send', 'verify']);
 const masterOtpBaseUrl = 'https://master.orixs.io/api/signup/email-otp';
+const upstreamTimeoutMs = 15_000;
 
 export async function POST(
   request: NextRequest,
@@ -30,6 +31,7 @@ export async function POST(
       },
       body: JSON.stringify(body),
       cache: 'no-store',
+      signal: AbortSignal.timeout(upstreamTimeoutMs),
     });
 
     const payload = await upstream.text();
@@ -43,8 +45,18 @@ export async function POST(
     });
   } catch {
     return NextResponse.json(
-      { message: 'Email verification is temporarily unavailable. Please try again shortly.' },
-      { status: 503 }
+      {
+        success: false,
+        code: 'delivery_unavailable',
+        message: 'Email delivery is temporarily unavailable. Please try again later or contact support.',
+      },
+      {
+        status: 503,
+        headers: {
+          'Cache-Control': 'no-store',
+          'Retry-After': '60',
+        },
+      }
     );
   }
 }
