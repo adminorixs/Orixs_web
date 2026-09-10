@@ -102,6 +102,8 @@ const countryToPhoneCode: Record<string, string> = {
   IN: '+91', US: '+1', GB: '+44', ZA: '+27',
 };
 
+const signupApiBaseUrl = 'https://master.orixs.io/api';
+
 /* ─── Validators (reused from pricingForm) ─── */
 const pincodeValidators: Record<string, { regex: RegExp; message: string }> = {
   IN: { regex: /^[1-9][0-9]{5}$/, message: 'Pincode must be a 6-digit number starting from 1-9.' },
@@ -169,6 +171,12 @@ export default function GetStartedPage() {
   const [redirecting, setRedirecting] = useState(false);
   const [loginLoading, setLoginLoading] = useState(false);
   const [loginSuccess, setLoginSuccess] = useState(false);
+  const [emailOtp, setEmailOtp] = useState('');
+  const [emailOtpSent, setEmailOtpSent] = useState(false);
+  const [emailVerificationToken, setEmailVerificationToken] = useState('');
+  const [emailOtpLoading, setEmailOtpLoading] = useState(false);
+  const [emailOtpVerifying, setEmailOtpVerifying] = useState(false);
+  const [otpCooldown, setOtpCooldown] = useState(0);
 
   /* Auto-detect timezone on mount */
   useEffect(() => {
@@ -200,6 +208,16 @@ export default function GetStartedPage() {
       setFormData(prev => ({ ...prev, phoneCode: countryToPhoneCode[prev.country] }));
     }
   }, [formData.country]);
+
+  useEffect(() => {
+    if (otpCooldown <= 0) return;
+
+    const timer = window.setInterval(() => {
+      setOtpCooldown(seconds => Math.max(0, seconds - 1));
+    }, 1000);
+
+    return () => window.clearInterval(timer);
+  }, [otpCooldown]);
 
   /* Fetch plans from API */
   const { data: pricingData } = usePricing('allPlan');
@@ -259,6 +277,7 @@ export default function GetStartedPage() {
           company_email: 'adminEmail',
           business_mobile_number: 'phone',
           business_mobile_country_code: 'phoneCode',
+          email_verification_token: 'adminEmail',
         };
         Object.entries(details).forEach(([apiField, messages]) => {
           const formField = apiToForm[apiField] || apiField;
@@ -281,6 +300,7 @@ export default function GetStartedPage() {
     if (!formData.adminName.trim()) errs.adminName = 'Full name is required.';
     if (!formData.adminEmail.trim()) errs.adminEmail = 'Email is required.';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.adminEmail)) errs.adminEmail = 'Enter a valid email address.';
+    else if (!emailVerificationToken) errs.adminEmail = 'Verify your email with the code we sent before continuing.';
     if (!formData.adminPassword) errs.adminPassword = 'Password is required.';
     else if (!isStrongPassword(formData.adminPassword)) errs.adminPassword = 'Min 8 chars with uppercase, lowercase, number & special character.';
     if (!formData.companyName.trim()) errs.companyName = 'Company name is required.';
@@ -318,6 +338,70 @@ export default function GetStartedPage() {
     if (validateStep1()) setStep(2);
   }
 
+  async function handleSendEmailOtp() {
+    const email = formData.adminEmail.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setErrors(prev => ({ ...prev, adminEmail: 'Enter a valid email before requesting a code.' }));
+      return;
+    }
+
+    setEmailOtpLoading(true);
+    setErrors(prev => {
+      const next = { ...prev };
+      delete next.adminEmail;
+      delete next.emailOtp;
+      return next;
+    });
+
+    try {
+      const response = await axios.post(`${signupApiBaseUrl}/signup/email-otp/send`, {
+        email,
+        platform: config.platformKey,
+      });
+      setEmailOtpSent(true);
+      setOtpCooldown(response.data?.resend_after || 60);
+      setSuccessMessage('');
+    } catch (error: any) {
+      setErrors(prev => ({
+        ...prev,
+        adminEmail: error?.response?.data?.message || 'We could not send a verification code. Please try again.',
+      }));
+    } finally {
+      setEmailOtpLoading(false);
+    }
+  }
+
+  async function handleVerifyEmailOtp() {
+    if (!/^\d{6}$/.test(emailOtp)) {
+      setErrors(prev => ({ ...prev, emailOtp: 'Enter the 6-digit code from your email.' }));
+      return;
+    }
+
+    setEmailOtpVerifying(true);
+    setErrors(prev => {
+      const next = { ...prev };
+      delete next.emailOtp;
+      return next;
+    });
+
+    try {
+      const response = await axios.post(`${signupApiBaseUrl}/signup/email-otp/verify`, {
+        email: formData.adminEmail.trim(),
+        otp: emailOtp,
+        platform: config.platformKey,
+      });
+      setEmailVerificationToken(response.data.verification_token);
+      setEmailOtpSent(true);
+    } catch (error: any) {
+      setErrors(prev => ({
+        ...prev,
+        emailOtp: error?.response?.data?.message || 'We could not verify that code. Try again or request a new code.',
+      }));
+    } finally {
+      setEmailOtpVerifying(false);
+    }
+  }
+
   function handleSignupSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!validateAndSubmit()) return;
@@ -337,6 +421,8 @@ export default function GetStartedPage() {
       admin_name: formData.adminName,
       admin_email: formData.adminEmail,
       admin_password: formData.adminPassword,
+      email_verification_token: emailVerificationToken,
+      email_verification_platform: config.platformKey,
       business_mobile_country_code: formData.phoneCode,
       business_mobile_number: formData.phone,
       admin_mobile_country_code: formData.phoneCode,
@@ -414,6 +500,12 @@ export default function GetStartedPage() {
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    if (name === 'adminEmail') {
+      setEmailOtp('');
+      setEmailOtpSent(false);
+      setEmailVerificationToken('');
+      setOtpCooldown(0);
+    }
     // Clear field-level error on change
     if (errors[name]) {
       setErrors(prev => { const n = { ...prev }; delete n[name]; return n; });
@@ -605,16 +697,64 @@ export default function GetStartedPage() {
                           {/* Work Email */}
                           <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1.5">Work Email</label>
-                            <input
-                              type="email"
-                              name="adminEmail"
-                              value={formData.adminEmail}
-                              onChange={handleInputChange}
-                              placeholder="jane@company.com"
-                              className="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
-                              required
-                            />
+                            <div className="flex gap-2">
+                              <input
+                                type="email"
+                                name="adminEmail"
+                                value={formData.adminEmail}
+                                onChange={handleInputChange}
+                                placeholder="jane@company.com"
+                                className="min-w-0 flex-1 px-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+                                required
+                                disabled={Boolean(emailVerificationToken)}
+                              />
+                              <button
+                                type="button"
+                                onClick={handleSendEmailOtp}
+                                disabled={emailOtpLoading || Boolean(emailVerificationToken) || otpCooldown > 0}
+                                className="shrink-0 rounded-xl border border-purple-200 px-3 text-sm font-semibold text-purple-700 transition hover:bg-purple-50 disabled:cursor-not-allowed disabled:opacity-60"
+                              >
+                                {emailVerificationToken
+                                  ? 'Verified'
+                                  : emailOtpLoading
+                                    ? 'Sending...'
+                                    : otpCooldown > 0
+                                      ? `Resend ${otpCooldown}s`
+                                      : emailOtpSent
+                                        ? 'Resend code'
+                                        : 'Send code'}
+                              </button>
+                            </div>
                             {errors.adminEmail && <p className="text-red-500 text-xs mt-1">{errors.adminEmail}</p>}
+                            {emailOtpSent && !emailVerificationToken && (
+                              <div className="mt-3 rounded-lg border border-purple-100 bg-purple-50 p-3">
+                                <label className="block text-xs font-semibold text-gray-700 mb-2">Enter the 6-digit code we sent</label>
+                                <div className="flex gap-2">
+                                  <input
+                                    type="text"
+                                    inputMode="numeric"
+                                    autoComplete="one-time-code"
+                                    maxLength={6}
+                                    value={emailOtp}
+                                    onChange={event => setEmailOtp(event.target.value.replace(/\D/g, '').slice(0, 6))}
+                                    placeholder="123456"
+                                    className="min-w-0 flex-1 rounded-lg border border-gray-300 bg-white px-3 py-2 text-center text-sm tracking-[0.25em] focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                  />
+                                  <button
+                                    type="button"
+                                    onClick={handleVerifyEmailOtp}
+                                    disabled={emailOtpVerifying || emailOtp.length !== 6}
+                                    className="shrink-0 rounded-lg bg-purple-600 px-3 text-sm font-semibold text-white transition hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-60"
+                                  >
+                                    {emailOtpVerifying ? 'Verifying...' : 'Verify'}
+                                  </button>
+                                </div>
+                                {errors.emailOtp && <p className="text-red-500 text-xs mt-2">{errors.emailOtp}</p>}
+                              </div>
+                            )}
+                            {emailVerificationToken && (
+                              <p className="mt-2 text-xs font-medium text-green-700">Email verified. Continue with your account details.</p>
+                            )}
                           </div>
 
                           {/* Password */}
@@ -661,6 +801,7 @@ export default function GetStartedPage() {
                         {/* Continue CTA */}
                         <button
                           type="submit"
+                          disabled={!emailVerificationToken}
                           className="w-full mt-6 bg-purple-600 text-white font-semibold py-3 rounded-xl text-sm hover:bg-purple-700 transition shadow-lg shadow-purple-200"
                         >
                           Continue for Free
