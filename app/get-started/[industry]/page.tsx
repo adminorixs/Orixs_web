@@ -102,7 +102,7 @@ const countryToPhoneCode: Record<string, string> = {
   IN: '+91', US: '+1', GB: '+44', ZA: '+27',
 };
 
-const signupApiBaseUrl = 'https://master.orixs.io/api';
+const signupApiBaseUrl = '/api/signup/email-otp';
 
 /* ─── Validators (reused from pricingForm) ─── */
 const pincodeValidators: Record<string, { regex: RegExp; message: string }> = {
@@ -354,7 +354,7 @@ export default function GetStartedPage() {
     });
 
     try {
-      const response = await axios.post(`${signupApiBaseUrl}/signup/email-otp/send`, {
+      const response = await axios.post(`${signupApiBaseUrl}/send`, {
         email,
         platform: config.platformKey,
       });
@@ -385,7 +385,7 @@ export default function GetStartedPage() {
     });
 
     try {
-      const response = await axios.post(`${signupApiBaseUrl}/signup/email-otp/verify`, {
+      const response = await axios.post(`${signupApiBaseUrl}/verify`, {
         email: formData.adminEmail.trim(),
         otp: emailOtp,
         platform: config.platformKey,
