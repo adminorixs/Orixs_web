@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBriefcase, FaShieldAlt, FaHardHat, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 import {
   HiOutlineCheckCircle,
   HiOutlineLightningBolt,
@@ -404,6 +405,10 @@ export default function GetStartedPage() {
     } finally {
       setLoginLoading(false);
     }
+  }
+
+  function handleGoogleLogin() {
+    window.location.href = `${config.appBaseUrl}/auth/google/redirect`;
   }
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
@@ -911,6 +916,25 @@ export default function GetStartedPage() {
                       ) : (
                         'Log In'
                       )}
+                    </button>
+
+                    <div className="my-5 flex items-center gap-3 text-xs text-gray-400">
+                      <div className="h-px flex-1 bg-gray-200" />
+                      <span>or</span>
+                      <div className="h-px flex-1 bg-gray-200" />
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={handleGoogleLogin}
+                      disabled={loginLoading}
+                      className="w-full min-h-[54px] rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-700 shadow-sm transition hover:border-purple-300 hover:bg-purple-50 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+                      aria-label="Continue with Google"
+                    >
+                      <span className="flex min-w-0 items-center justify-center gap-3 whitespace-normal text-center">
+                        <FcGoogle className="h-5 w-5 flex-none" />
+                        <span className="min-w-0 break-words leading-5">Continue with Google</span>
+                      </span>
                     </button>
 
                     <p className="text-center text-sm text-gray-400 mt-4">
