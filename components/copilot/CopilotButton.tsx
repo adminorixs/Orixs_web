@@ -1,6 +1,5 @@
 'use client';
 
-import { Bot, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useCopilot } from './CopilotProvider';
 import { ProactivePrompt } from './ProactivePrompt';
@@ -24,7 +23,13 @@ export default function CopilotButton() {
         aria-label={isOpen ? 'Close Orixs AI' : 'Ask Orixs AI'}
         aria-expanded={isOpen}
       >
-        {collapsed ? <Bot className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
+        <img
+          src="/img/chatbot-icon.png"
+          srcSet="/img/chatbot-icon@2x.png 2x"
+          alt=""
+          aria-hidden="true"
+          className={cn('rounded-full object-cover', collapsed ? 'h-8 w-8' : 'h-7 w-7')}
+        />
         {!collapsed && <span className="text-sm font-semibold">Ask Orixs</span>}
       </button>
     </>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Bot, PanelRightClose, X } from 'lucide-react';
+import { PanelRightClose, X } from 'lucide-react';
 import { Drawer as DrawerPrimitive } from 'vaul';
 import { Switch } from '@/components/ui/switch';
 import { cn } from '@/lib/utils';
@@ -59,7 +59,13 @@ function PanelHeader({ onClose }: { onClose: () => void }) {
     <div className="flex h-16 items-center justify-between border-b border-gray-100 px-4">
       <div className="flex items-center gap-2">
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-100 text-purple-600">
-          <Bot className="h-5 w-5" />
+          <img
+            src="/img/chatbot-icon.png"
+            srcSet="/img/chatbot-icon@2x.png 2x"
+            alt=""
+            aria-hidden="true"
+            className="h-8 w-8 rounded-full object-cover"
+          />
         </div>
         <div>
           <h2 className="text-base font-semibold text-gray-900">Orixs AI</h2>
