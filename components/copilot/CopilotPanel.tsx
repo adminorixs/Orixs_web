@@ -60,8 +60,8 @@ function PanelHeader({ onClose }: { onClose: () => void }) {
       <div className="flex items-center gap-2">
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-100 text-purple-600">
           <img
-            src="/img/chatbot-icon.png"
-            srcSet="/img/chatbot-icon@2x.png 2x"
+            src="/img/chatbot-icon.png?v=20260917"
+            srcSet="/img/chatbot-icon@2x.png?v=20260917 2x"
             alt=""
             aria-hidden="true"
             className="h-8 w-8 rounded-full object-cover"

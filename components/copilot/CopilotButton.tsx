@@ -24,8 +24,8 @@ export default function CopilotButton() {
         aria-expanded={isOpen}
       >
         <img
-          src="/img/chatbot-icon.png"
-          srcSet="/img/chatbot-icon@2x.png 2x"
+          src="/img/chatbot-icon.png?v=20260917"
+          srcSet="/img/chatbot-icon@2x.png?v=20260917 2x"
           alt=""
           aria-hidden="true"
           className={cn('rounded-full object-cover', collapsed ? 'h-8 w-8' : 'h-7 w-7')}
