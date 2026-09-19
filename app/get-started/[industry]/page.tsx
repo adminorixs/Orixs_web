@@ -123,7 +123,8 @@ function isStrongPassword(password: string): boolean {
 
 function detectTimezone(): string {
   try {
-    return Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const detectedTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    return detectedTimezone === 'Asia/Calcutta' ? 'Asia/Kolkata' : detectedTimezone;
   } catch {
     return 'Asia/Kolkata';
   }
