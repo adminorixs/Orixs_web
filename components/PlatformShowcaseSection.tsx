@@ -6,8 +6,6 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
 
-const modules = ['CRM', 'HR', 'Finance', 'Projects', 'Chat', 'Calendar', 'Commerce', 'Travel'];
-
 export function PlatformShowcaseSection() {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -70,11 +68,14 @@ Email: ${formData.email}${formData.date ? `\nPreferred Date: ${formData.date}` :
               AI Copilot for business
             </p>
             <h1 className="mt-3 sm:mt-4 text-3xl sm:text-4xl xl:text-[3.4rem] xl:leading-[1.08] font-bold leading-tight tracking-tight text-[#1F2340]">
-              One intelligent platform to run your entire business.
+              Run your business with clarity, not complexity.
             </h1>
             <p className="mt-4 sm:mt-5 text-base sm:text-lg leading-relaxed text-gray-600 max-w-xl mx-auto lg:mx-0">
-              Orixs brings CRM, HR, finance, projects, chat and commerce into a single workspace,
-              with an AI Copilot that answers questions, automates routine work and keeps every team aligned.
+              Orixs brings your people, customers and finances together in one intelligent workspace,
+              so every decision starts from a single, up-to-date view. Its built-in AI Copilot answers
+              questions in plain language, drafts the routine work and flags what needs your attention.
+              Your teams stop switching between tools and spend their time on the work that moves the
+              business forward. Experience what a truly connected business feels like.
             </p>
 
             {/* CTA Buttons */}
@@ -94,23 +95,6 @@ Email: ${formData.email}${formData.date ? `\nPreferred Date: ${formData.date}` :
               >
                 Request a Demo
               </button>
-            </div>
-
-            {/* What is inside the platform */}
-            <div className="mt-7 sm:mt-9 max-w-xl mx-auto lg:mx-0">
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.14em] text-gray-500">
-                Everything in one workspace
-              </p>
-              <ul className="mt-3 flex flex-wrap justify-center lg:justify-start gap-2">
-                {modules.map((name) => (
-                  <li
-                    key={name}
-                    className="rounded-full border border-purple-200 bg-purple-50 px-3.5 py-1.5 text-sm font-medium text-purple-700"
-                  >
-                    {name}
-                  </li>
-                ))}
-              </ul>
             </div>
           </motion.div>
 
