@@ -1,6 +1,5 @@
 import { Navbar } from '@/components/Navbar';
 import { HeroSection } from '@/components/HeroSection';
-import { DashboardSection } from '@/components/DashboardSection';
 import { StackedCardsSection } from '@/components/StackedCardsSection';
 import { WorkflowCarouselSection } from '@/components/WorkflowCarouselSection';
 import { HomePageResourceSection } from '@/components/HomePageResourceSection';
@@ -11,7 +10,6 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
-      <DashboardSection />
       <StackedCardsSection />
       <WorkflowCarouselSection />
       <HomePageResourceSection />

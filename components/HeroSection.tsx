@@ -3,8 +3,18 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { Rocket, TrendingUp, ShieldCheck, Layers, ArrowRight } from 'lucide-react';
+
+const highlights = [
+  { icon: Rocket, label: 'Boost Productivity' },
+  { icon: TrendingUp, label: 'Drive Growth' },
+  { icon: ShieldCheck, label: 'Enterprise Secure' },
+  { icon: Layers, label: 'Scale Effortlessly' },
+];
 
 export function HeroSection() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -50,22 +60,79 @@ Email: ${formData.email}${formData.date ? `\nPreferred Date: ${formData.date}` :
   };
   
   return (
-    <section data-copilot-section="hero" className="relative flex items-center justify-center overflow-hidden bg-white">
+    <section data-copilot-section="hero" className="relative overflow-hidden bg-white bg-[radial-gradient(ellipse_at_78%_35%,rgba(237,233,254,0.75),rgba(255,255,255,0)_62%)]">
       {/* Hero Content */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-14 sm:pt-16 md:pt-18 pb-2 relative z-10">
-        <div className="flex justify-center">
-          <Image
-            src="/All_in_One_Platform_img.png"
-            alt="All in One Platform - Everything your business needs"
-            width={1800}
-            height={900}
-            className="w-full max-w-[380px] sm:max-w-[560px] md:max-w-[800px] lg:max-w-[1050px] xl:max-w-[1250px] h-auto object-contain"
-            priority
-          />
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-20 sm:pt-24 lg:pt-28 pb-6 lg:pb-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-10 xl:gap-16">
+          {/* Left: message */}
+          <motion.div
+            className="text-center lg:text-left"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+          >
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-purple-600">
+              All-in-one business platform
+            </p>
+            <h1 className="mt-3 sm:mt-4 text-3xl sm:text-4xl xl:text-[3.4rem] xl:leading-[1.08] font-bold leading-tight tracking-tight text-[#1F2340]">
+              One intelligent platform to run your entire business.
+            </h1>
+            <p className="mt-4 sm:mt-5 text-base sm:text-lg leading-relaxed text-gray-600 max-w-xl mx-auto lg:mx-0">
+              Orixs brings CRM, HR, finance, projects, chat and commerce into a single workspace,
+              with an AI Copilot that answers questions, automates routine work and keeps every team aligned.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+              <button
+                type="button"
+                onClick={() => router.push('/get-started/business')}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-purple-600 px-7 py-3 text-base font-semibold text-white shadow-[0_8px_20px_-6px_rgba(124,58,237,0.6)] transition hover:bg-purple-700 w-full sm:w-auto"
+              >
+                Explore Now
+                <ArrowRight className="h-4 w-4" />
+              </button>
+              <button
+                type="button"
+                onClick={handleRequestDemo}
+                className="inline-flex items-center justify-center rounded-full border border-purple-600 bg-white px-7 py-3 text-base font-semibold text-purple-700 transition hover:bg-purple-50 w-full sm:w-auto"
+              >
+                Request a Demo
+              </button>
+            </div>
+
+            {/* Value points */}
+            <ul className="mt-7 sm:mt-9 grid grid-cols-2 gap-x-6 gap-y-3 max-w-md mx-auto lg:mx-0 text-left">
+              {highlights.map(({ icon: Icon, label }) => (
+                <li key={label} className="flex items-center gap-2.5 text-sm sm:text-base font-medium text-[#1F2340]">
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-purple-100 text-purple-600">
+                    <Icon className="h-4 w-4" />
+                  </span>
+                  {label}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Right: product visual (square) */}
+          <motion.div
+            data-copilot-section="dashboard"
+            className="flex justify-center lg:justify-end"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
+          >
+            <Image
+              src="/orixs-hero-square.webp"
+              alt="Orixs dashboard with tasks, KPIs, finance and the Orixs AI Copilot"
+              width={1280}
+              height={1280}
+              priority
+              className="w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[540px] xl:max-w-[620px] h-auto"
+            />
+          </motion.div>
         </div>
-        
-        {/* CTA Buttons */}
-       
+
 
         {/* Demo Request Form Modal */}
         {showForm && (
