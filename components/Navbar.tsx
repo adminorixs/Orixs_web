@@ -4,60 +4,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { usePathname, useRouter } from 'next/navigation';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import PartnerModal from './modal/PartnerModal';
 
 export function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
   const [showPartnerModal, setShowPartnerModal] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
-  const resourcesRef = useRef<HTMLDivElement>(null);
 
-  // Check if active page is blogs or case-studies
   const isActive = (path: string) => pathname === path;
-  const isResourcesActive = pathname?.startsWith('/blogs') || pathname?.startsWith('/case-studies');
-
-  // Handle clicks outside the resources menu
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (resourcesRef.current && !resourcesRef.current.contains(event.target as Node)) {
-        setIsResourcesOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [resourcesRef]);
-
-  const handleMouseEnter = () => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
-    setIsResourcesOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    const id = setTimeout(() => {
-      setIsResourcesOpen(false);
-    }, 200); // 200ms delay before closing
-    setTimeoutId(id);
-  };
-
-  const toggleResourcesMenu = () => {
-    setIsResourcesOpen(!isResourcesOpen);
-  };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const toggleMobileResources = () => {
-    setMobileResourcesOpen(!mobileResourcesOpen);
   };
 
   return (
@@ -116,63 +75,6 @@ export function Navbar() {
             >
               Use Cases
             </Link>
-            <div 
-              ref={resourcesRef}
-              className="relative"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              {/* Resources text with click handler for tablet */}
-              <span 
-                onClick={toggleResourcesMenu}
-                className={`px-2 sm:px-2.5 md:px-3 lg:px-4 transition-colors font-medium text-xs sm:text-sm md:text-base relative cursor-pointer flex items-center gap-1 ${
-                  isResourcesActive 
-                    ? 'text-purple-600 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[1px] after:w-3/5 after:bg-purple-600 after:scale-x-100' 
-                    : 'text-gray-600 hover:text-purple-600'
-                }`}
-              >
-                Resources
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className={`h-2 w-2 sm:h-2.5 sm:w-2.5 md:h-3 md:w-3 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-              
-              {/* Dropdown with higher z-index and better positioning */}
-              <div 
-                className={`absolute left-0 mt-2 w-28 sm:w-32 md:w-36 lg:w-40 bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-200 z-50 ${
-                  isResourcesOpen 
-                    ? 'opacity-100 visible' 
-                    : 'opacity-0 invisible'
-                }`}
-              >
-                <Link 
-                  href="/blogs" 
-                  className={`block px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 text-xs sm:text-sm md:text-base ${
-                    pathname?.startsWith('/blogs') 
-                      ? 'text-purple-600 bg-purple-50' 
-                      : 'text-gray-700 hover:bg-purple-50 hover:text-purple-700'
-                  }`}
-                >
-                  Blogs
-                </Link>
-                <Link 
-                  href="/case-studies" 
-                  className={`block px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 text-xs sm:text-sm md:text-base ${
-                    pathname?.startsWith('/case-studies') 
-                      ? 'text-purple-600 bg-purple-50' 
-                      : 'text-gray-700 hover:bg-purple-50 hover:text-purple-700'
-                  }`}
-                >
-                  Case Studies
-                </Link>
-              </div>
-            </div>
             {/* Pricing link - temporarily hidden per investor request
             <Link
               href="/pricing"
@@ -248,48 +150,6 @@ export function Navbar() {
           >
             Use Cases
           </Link>
-
-          {/* Resources dropdown in mobile menu */}
-          <div>
-            <button
-              className={`flex items-center justify-between w-full py-2 px-4 text-sm sm:text-base rounded-lg ${
-                isResourcesActive ? 'text-purple-600 bg-purple-50 font-medium' : 'text-gray-700 hover:bg-gray-50'
-              }`}
-              onClick={toggleMobileResources}
-            >
-              <span>Resources</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-4 w-4 transition-transform ${mobileResourcesOpen ? 'rotate-180' : ''}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div className={`pl-4 space-y-1 mt-1 ${mobileResourcesOpen ? 'block' : 'hidden'}`}>
-              <Link
-                href="/blogs"
-                className={`block py-2 px-4 text-sm sm:text-base rounded-lg ${
-                  pathname?.startsWith('/blogs') ? 'text-purple-600 bg-purple-50 font-medium' : 'text-gray-700 hover:bg-gray-50'
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blogs
-              </Link>
-              <Link
-                href="/case-studies"
-                className={`block py-2 px-4 text-sm sm:text-base rounded-lg ${
-                  pathname?.startsWith('/case-studies') ? 'text-purple-600 bg-purple-50 font-medium' : 'text-gray-700 hover:bg-gray-50'
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Case Studies
-              </Link>
-            </div>
-          </div>
-
           {/* Pricing link - temporarily hidden per investor request
           <Link
             href="/pricing"

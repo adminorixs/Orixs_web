@@ -40,8 +40,11 @@ export function WorkflowCarouselSection() {
   return (
     <section data-copilot-section="workflow-modules" className="w-full py-4 sm:py-6 md:py-8 lg:py-10 bg-white flex flex-col items-center px-4 sm:px-6 md:px-8 overflow-hidden">
       <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-3 sm:mb-4 md:mb-6 px-2">
-        How Orixs Transform's your workflow
+        One workspace for every core business function
       </h2>
+      <p className="max-w-2xl text-center text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
+        Bring daily operations into connected modules, giving every team the tools and intelligence they need to move faster.
+      </p>
       <div className="w-full max-w-[1400px] mx-auto overflow-hidden">
         <div className="w-full overflow-hidden relative h-48 sm:h-64 md:h-80 lg:h-96">
           <div

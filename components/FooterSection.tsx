@@ -39,15 +39,6 @@ export function FooterSection() {
                 {/* <Link href="/about" className="text-gray-300 hover:text-purple-400">About Us</Link> */}
               </div>
             </div>
-            
-            {/* Resources Links */}
-            <div>
-              <div className="font-semibold mb-1.5 sm:mb-2 text-[0.7rem] sm:text-xs md:text-sm text-white">Resources</div>
-              <div className="flex flex-col gap-1 sm:gap-1.5 text-[0.7rem] sm:text-xs md:text-sm font-light">
-                <Link href="/blogs" className="text-gray-300 hover:text-purple-400">Blogs</Link>
-                <Link href="/case-studies" className="text-gray-300 hover:text-purple-400">Case Studies</Link>
-              </div>
-            </div>
           </div>
           
           {/* Right Column - Newsletter */}

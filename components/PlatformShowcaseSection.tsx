@@ -55,7 +55,7 @@ Email: ${formData.email}${formData.date ? `\nPreferred Date: ${formData.date}` :
   return (
     <section data-copilot-section="dashboard" className="relative overflow-hidden bg-white bg-[radial-gradient(ellipse_at_78%_35%,rgba(237,233,254,0.75),rgba(255,255,255,0)_62%)]">
       {/* Hero Content */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-4 sm:pt-6 lg:pt-8 pb-6 lg:pb-8 relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-24 sm:pt-28 lg:pt-32 pb-8 lg:pb-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-10 xl:gap-16">
           {/* Left: message */}
           <motion.div
@@ -65,17 +65,15 @@ Email: ${formData.email}${formData.date ? `\nPreferred Date: ${formData.date}` :
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-purple-600">
-              AI Copilot for business
+              AI Copilot for business operations
             </p>
             <h1 className="mt-3 sm:mt-4 text-3xl sm:text-4xl xl:text-[3.4rem] xl:leading-[1.08] font-bold leading-tight tracking-tight text-[#1F2340]">
               Run your business with clarity, not complexity.
             </h1>
             <p className="mt-4 sm:mt-5 text-base sm:text-lg leading-relaxed text-gray-600 max-w-xl mx-auto lg:mx-0">
-              Orixs brings your people, customers and finances together in one intelligent workspace,
-              so every decision starts from a single, up-to-date view. Its built-in AI Copilot answers
-              questions in plain language, drafts the routine work and flags what needs your attention.
-              Your teams stop switching between tools and spend their time on the work that moves the
-              business forward. Experience what a truly connected business feels like.
+              Orixs connects your teams, customers, workflows and financial data in one intelligent
+              workspace. Ask questions, automate routine work, track performance and make faster
+              decisions with a real-time view of your business.
             </p>
 
             {/* CTA Buttons */}
@@ -85,7 +83,7 @@ Email: ${formData.email}${formData.date ? `\nPreferred Date: ${formData.date}` :
                 onClick={() => router.push('/get-started/business')}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-purple-600 px-7 py-3 text-base font-semibold text-white shadow-[0_8px_20px_-6px_rgba(124,58,237,0.6)] transition hover:bg-purple-700 w-full sm:w-auto"
               >
-                Explore Now
+                Explore Platform
                 <ArrowRight className="h-4 w-4" />
               </button>
               <button
