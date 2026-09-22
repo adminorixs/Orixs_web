@@ -1,7 +1,6 @@
 import { Navbar } from '@/components/Navbar';
 import { PlatformShowcaseSection } from '@/components/PlatformShowcaseSection';
-import { StackedCardsSection } from '@/components/StackedCardsSection';
-import { WorkflowCarouselSection } from '@/components/WorkflowCarouselSection';
+import { OnePageProductSections } from '@/components/OnePageProductSections';
 import { FooterSection } from '@/components/FooterSection';
 
 export default function Home() {
@@ -9,8 +8,7 @@ export default function Home() {
     <>
       <Navbar />
       <PlatformShowcaseSection />
-      <StackedCardsSection />
-      <WorkflowCarouselSection />
+      <OnePageProductSections />
       <FooterSection />
     </>
   );
