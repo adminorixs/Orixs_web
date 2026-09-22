@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBriefcase, FaShieldAlt, FaHardHat, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
@@ -134,11 +134,14 @@ function detectTimezone(): string {
 export default function GetStartedPage() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const industry = (params.industry as string) || 'business';
   const config = industryConfig[industry] || industryConfig.business;
 
   /* Tabs */
-  const [activeTab, setActiveTab] = useState<'signup' | 'login'>('signup');
+  const [activeTab, setActiveTab] = useState<'signup' | 'login'>(() => (
+    searchParams.get('mode') === 'login' ? 'login' : 'signup'
+  ));
 
   /* Signup multi-step */
   const [step, setStep] = useState(1);

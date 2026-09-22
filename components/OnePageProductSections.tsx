@@ -1,6 +1,27 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, ChartNoAxesCombined, CircleCheck, Mail, MessagesSquare, Network, ShieldCheck, Workflow } from 'lucide-react';
+import { useState } from 'react';
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  CalendarDays,
+  ChartNoAxesCombined,
+  CircleCheck,
+  ClipboardCheck,
+  FileCheck2,
+  HardHat,
+  Mail,
+  MapPin,
+  MessagesSquare,
+  Network,
+  Settings2,
+  ShieldCheck,
+  UsersRound,
+  WalletCards,
+  Workflow,
+} from 'lucide-react';
 
 const steps = [
   {
@@ -41,30 +62,61 @@ const capabilities = [
   },
 ];
 
-const useCases = [
+const industryUseCases = [
   {
-    title: 'Business operations',
-    description: 'Give the people running the business a clear view of work, ownership and what needs attention next.',
-    accent: 'border-t-[#2f275a]',
+    id: 'business',
+    name: 'Business Operations',
+    tagline: 'Your AI command center',
+    icon: BriefcaseBusiness,
+    title: 'Intelligence that keeps the whole business moving',
+    description: 'Connect project activity, customer relationships and financial priorities in one workspace so teams can act with the same context.',
+    features: [
+      { icon: ChartNoAxesCombined, title: 'Live dashboards', description: 'Keep performance, team activity and priorities visible in one place.' },
+      { icon: UsersRound, title: 'Connected customer work', description: 'Bring follow-ups and customer context closer to the work they create.' },
+      { icon: Settings2, title: 'Resource visibility', description: 'Give owners a clearer view of people, budgets and shared work.' },
+      { icon: Workflow, title: 'Workflow automation', description: 'Move routine handoffs and approvals forward with less manual coordination.' },
+      { icon: FileCheck2, title: 'Ready-to-share reporting', description: 'Turn operational information into clear reports for the people who need them.' },
+      { icon: CircleCheck, title: 'Priority tracking', description: 'See what is on track, what is blocked and what needs attention next.' },
+    ],
   },
   {
-    title: 'Client and project delivery',
-    description: 'Keep customer commitments, conversations and internal handoffs visible from planning through delivery.',
-    accent: 'border-t-[#0f766e]',
+    id: 'insurance',
+    name: 'Insurance',
+    tagline: 'Claims, underwriting, compliance',
+    icon: ShieldCheck,
+    title: 'A clearer operating view across the insurance lifecycle',
+    description: 'Bring claims, underwriting, policy work and customer communication into a shared operational picture for faster, more consistent action.',
+    features: [
+      { icon: ShieldCheck, title: 'Risk context', description: 'Give teams the information they need to review and assess each case.' },
+      { icon: ClipboardCheck, title: 'Claims coordination', description: 'Track review steps, documents and handoffs across the claims process.' },
+      { icon: FileCheck2, title: 'Policy oversight', description: 'Keep policy updates, renewals and key records easier to follow.' },
+      { icon: UsersRound, title: 'Customer service', description: 'Connect customer requests to the people and work needed to resolve them.' },
+      { icon: Workflow, title: 'Compliance workflows', description: 'Support consistent checks, approvals and auditable operational steps.' },
+      { icon: ChartNoAxesCombined, title: 'Operational reporting', description: 'Give leaders a clearer view of workload, progress and service activity.' },
+    ],
   },
   {
-    title: 'Finance and leadership',
-    description: 'Connect performance signals to the decisions that shape priorities, budgets and business momentum.',
-    accent: 'border-t-[#b45309]',
-  },
-  {
-    title: 'People and internal teams',
-    description: 'Make everyday coordination easier across people operations, approvals, communication and shared work.',
-    accent: 'border-t-[#be123c]',
+    id: 'construction',
+    name: 'Construction',
+    tagline: 'Projects, crews, budgets',
+    icon: HardHat,
+    title: 'Full visibility across every build',
+    description: 'Connect timelines, crews, budgets and site activity so project teams can make informed decisions from pre-construction to handover.',
+    features: [
+      { icon: HardHat, title: 'Project planning', description: 'Keep the work, milestones and planning context visible to the whole team.' },
+      { icon: MapPin, title: 'Crew coordination', description: 'Support clearer task ownership, check-ins and activity across project locations.' },
+      { icon: WalletCards, title: 'Budget control', description: 'Bring cost activity and budget priorities into the project conversation.' },
+      { icon: ClipboardCheck, title: 'Safety workflows', description: 'Coordinate safety actions, checklists and issue follow-up across sites.' },
+      { icon: CalendarDays, title: 'Delivery milestones', description: 'Keep subcontractor activity, schedules and milestones aligned with the plan.' },
+      { icon: ChartNoAxesCombined, title: 'Project reporting', description: 'Give stakeholders a current view of progress, workload and delivery risk.' },
+    ],
   },
 ];
 
 export function OnePageProductSections() {
+  const [activeIndustryId, setActiveIndustryId] = useState('business');
+  const activeIndustry = industryUseCases.find((industry) => industry.id === activeIndustryId) ?? industryUseCases[0];
+
   return (
     <main>
       <section id="how-it-works" className="scroll-mt-20 border-y border-slate-200 bg-white py-20 sm:py-24" aria-labelledby="how-it-works-title">
@@ -126,23 +178,69 @@ export function OnePageProductSections() {
 
       <section id="use-cases" className="scroll-mt-20 bg-[#fbfafc] py-20 sm:py-24" aria-labelledby="use-cases-title">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7564b6]">Use cases</p>
-            <h2 id="use-cases-title" className="mt-4 text-3xl font-semibold leading-tight text-[#1e1a2e] sm:text-4xl">
-              One workspace, shaped around the work that matters.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Orixs adapts to the practical moments where teams need a shared understanding and a faster path forward.
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7564b6]">Use cases</p>
+              <h2 id="use-cases-title" className="mt-4 text-3xl font-semibold leading-tight text-[#1e1a2e] sm:text-4xl">
+                A connected workspace for your industry.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-lg leading-8 text-slate-600">
+              Choose the way your organization works today, then explore the Orixs capabilities and account experience built around it.
             </p>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {useCases.map(({ title, description, accent }) => (
-              <article key={title} className={`min-h-[236px] border border-slate-200 border-t-4 bg-white p-6 shadow-sm ${accent}`}>
-                <Workflow aria-hidden="true" size={21} className="text-slate-500" />
-                <h3 className="mt-9 text-xl font-semibold text-slate-900">{title}</h3>
-                <p className="mt-3 leading-7 text-slate-600">{description}</p>
-              </article>
-            ))}
+
+          <div className="mt-12 grid gap-4 md:grid-cols-3" role="group" aria-label="Industry use cases">
+            {industryUseCases.map(({ id, name, tagline, icon: Icon }) => {
+              const isActive = id === activeIndustry.id;
+
+              return (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setActiveIndustryId(id)}
+                  aria-pressed={isActive}
+                  className={`min-h-[176px] border p-6 text-left transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2f275a] ${
+                    isActive
+                      ? 'border-[#2f275a] bg-[#2f275a] text-white shadow-lg shadow-[#2f275a]/15'
+                      : 'border-slate-200 bg-white text-slate-900 hover:border-[#a59bd3] hover:bg-[#f7f5ff]'
+                  }`}
+                >
+                  <Icon aria-hidden="true" size={25} className={isActive ? 'text-[#ddd7ff]' : 'text-[#7564b6]'} />
+                  <span className="mt-8 block text-xl font-semibold">{name}</span>
+                  <span className={`mt-2 block text-sm ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>{tagline}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 border border-slate-200 bg-white p-6 sm:p-8 lg:p-10">
+            <div className="flex flex-col justify-between gap-6 border-b border-slate-200 pb-8 lg:flex-row lg:items-end">
+              <div className="max-w-2xl">
+                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7564b6]">{activeIndustry.name}</p>
+                <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#1e1a2e] sm:text-3xl">{activeIndustry.title}</h3>
+                <p className="mt-4 leading-7 text-slate-600">{activeIndustry.description}</p>
+              </div>
+              <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
+                <Link href={`/get-started/${activeIndustry.id}`} className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#2f275a] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#211b43]">
+                  Sign up for {activeIndustry.name}
+                  <ArrowRight aria-hidden="true" size={16} />
+                </Link>
+                <Link href={`/get-started/${activeIndustry.id}?mode=login`} className="inline-flex h-11 items-center justify-center rounded-md border border-slate-300 px-4 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:bg-slate-50">
+                  Log in to your account
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-x-5 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
+              {activeIndustry.features.map(({ icon: Icon, title, description }) => (
+                <article key={title} className="border-l-2 border-[#d9d4f1] pl-4">
+                  <Icon aria-hidden="true" size={20} className="text-[#7564b6]" />
+                  <h4 className="mt-4 font-semibold text-slate-900">{title}</h4>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{description}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
