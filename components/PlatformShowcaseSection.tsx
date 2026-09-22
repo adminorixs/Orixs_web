@@ -4,8 +4,8 @@ import { ArrowRight } from 'lucide-react';
 
 export function PlatformShowcaseSection() {
   return (
-    <section className="bg-[#fbfafc] pt-28 sm:pt-32" aria-labelledby="hero-title">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 sm:px-6 sm:pb-20 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 lg:px-8 lg:pb-24">
+    <section className="bg-[#fbfafc] pt-24 sm:pt-28" aria-labelledby="hero-title">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-12 sm:px-6 sm:pb-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12 lg:px-8 lg:pb-20">
         <div className="max-w-xl">
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7564b6]">Orixs AI workspace</p>
           <h1 id="hero-title" className="mt-5 text-4xl font-semibold leading-[1.08] text-[#1e1a2e] sm:text-5xl lg:text-6xl">
@@ -26,7 +26,7 @@ export function PlatformShowcaseSection() {
           <p className="mt-6 text-sm leading-6 text-slate-500">One connected workspace for the questions, work and decisions that keep your business moving.</p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[640px] lg:mx-0 lg:justify-self-end">
+        <div className="relative mx-auto w-full max-w-[560px] lg:mx-0 lg:justify-self-end">
           <div className="absolute -inset-x-4 top-[11%] bottom-[9%] -z-10 rounded-[2rem] bg-[#ece9fb] sm:-inset-x-8" />
           <Image
             src="/orixs-hero-square.webp"
