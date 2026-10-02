@@ -14,8 +14,7 @@ const footerGroups = [
     title: 'Get started',
     links: [
       { label: 'Request a demo', href: '/#contact' },
-      { label: 'Sign up', href: '/get-started/business' },
-      { label: 'Log in', href: '/get-started/business?mode=login' },
+      { label: 'Log in or register', href: '/get-started/business' },
     ],
   },
   {

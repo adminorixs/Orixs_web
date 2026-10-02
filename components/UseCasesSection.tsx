@@ -134,7 +134,7 @@ export function UseCasesSection() {
                       ? 'bg-purple-600 text-white hover:bg-purple-700 shadow-sm'
                       : 'bg-purple-50 text-purple-600 hover:bg-purple-100'
                   }`}
-                  aria-label={`Sign up for ${uc.name}`}
+                  aria-label={`Get started with ${uc.name}`}
                 >
                   Sign Up
                   <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

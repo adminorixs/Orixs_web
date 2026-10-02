@@ -223,11 +223,8 @@ export function OnePageProductSections() {
               </div>
               <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
                 <Link href={`/get-started/${activeIndustry.id}`} className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#2f275a] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#211b43]">
-                  Sign up for {activeIndustry.name}
+                  Get started with {activeIndustry.name}
                   <ArrowRight aria-hidden="true" size={16} />
-                </Link>
-                <Link href={`/get-started/${activeIndustry.id}?mode=login`} className="inline-flex h-11 items-center justify-center rounded-md border border-slate-300 px-4 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:bg-slate-50">
-                  Log in to your account
                 </Link>
               </div>
             </div>
