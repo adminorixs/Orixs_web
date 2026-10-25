@@ -30,7 +30,7 @@ function MarkdownLight({ content }: { content: string }) {
 
   if (bullets.length === lines.length && lines.length > 0) {
     return (
-      <ul className="list-disc space-y-1 pl-4">
+      <ul className="list-disc space-y-1 ps-4">
         {lines.map((line, index) => (
           <li key={index}>{renderInline(line.trim().slice(2))}</li>
         ))}

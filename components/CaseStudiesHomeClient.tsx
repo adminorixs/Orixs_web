@@ -79,12 +79,12 @@ Interested in: Orixs AI-Driven SaaS Management Solutions`;
             className="object-contain w-full h-auto"
             priority
           />
-          <div className="absolute top-0 left-0 flex flex-col items-center xs:items-start justify-start pt-3 xs:pt-4 sm:pt-10 md:pt-16 lg:pt-24 px-4 sm:pl-8 md:pl-12 lg:pl-16 w-full max-w-full xs:max-w-[90%]">
-            <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-light text-black text-center xs:text-left mb-1 sm:mb-3 drop-shadow-lg">
+          <div className="absolute top-0 start-0 flex flex-col items-center xs:items-start justify-start pt-3 xs:pt-4 sm:pt-10 md:pt-16 lg:pt-24 px-4 sm:ps-8 md:ps-12 lg:ps-16 w-full max-w-full xs:max-w-[90%]">
+            <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-light text-black text-center xs:text-start mb-1 sm:mb-3 drop-shadow-lg">
               Empowering Businesses with AI-Driven SaaS<br className="hidden sm:block" />
               <span className="block mt-0.5 sm:mt-2 md:mt-3 lg:mt-4">Management Solutions</span>
             </h1>
-            <p className="text-xs sm:text-sm md:text-base lg:text-xl text-black text-center xs:text-left font-normal drop-shadow-lg mb-2 sm:mb-4 md:mb-5 max-w-full sm:max-w-[90%] md:max-w-[80%]">
+            <p className="text-xs sm:text-sm md:text-base lg:text-xl text-black text-center xs:text-start font-normal drop-shadow-lg mb-2 sm:mb-4 md:mb-5 max-w-full sm:max-w-[90%] md:max-w-[80%]">
               Orixs Integrates AI To Streamline Operations, Cut Costs, And Boost Efficiency.
             </p>
             <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4 md:mt-5 justify-center xs:justify-start w-full xs:w-auto">

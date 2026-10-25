@@ -1,0 +1,88 @@
+{
+  "blogs": {
+    "badge": "Blog",
+    "heroTitleLead": "Insights for",
+    "heroTitleHighlight": "modern teams.",
+    "heroDescription": "Practical guides, founder stories, and deep dives into AI-powered operations, business automation, and scaling with clarity.",
+    "featured": "Featured",
+    "readTime": "{minutes} min read",
+    "author": "Author",
+    "allArticles": "All articles",
+    "allArticlesDescription": "Explore ideas and strategies to run your business smarter.",
+    "filterAll": "All",
+    "read": "Read",
+    "empty": "No articles found in this category.",
+    "ctaTitle": "Ready to see Orixs in action?",
+    "ctaDescription": "Get a personalized walkthrough for your industry. No commitment required.",
+    "ctaGetStarted": "Get started free",
+    "ctaTalkToSales": "Talk to sales"
+  },
+  "blogDetails": {
+    "notFoundTitle": "Blog not found",
+    "notFoundDescription": "The blog you're looking for doesn't exist.",
+    "home": "Home",
+    "blog": "Blog",
+    "author": "Author",
+    "readTime": "{minutes} min read",
+    "share": "Share",
+    "copied": "Copied!",
+    "copyLink": "Copy Link",
+    "tableOfContents": "Table of Contents",
+    "related": "{count, plural, one {Related Blog} other {Related Blogs}}",
+    "readMore": "Read More",
+    "sections": {
+      "introduction": "Introduction",
+      "challenge": "Understanding The Challenge",
+      "approach": "The Orixs Approach",
+      "strategy": "Implementation Strategy",
+      "measuring": "Measuring Success",
+      "conclusion": "Conclusion"
+    }
+  },
+  "caseStudies": {
+    "badge": "Case Studies",
+    "heroTitleLead": "Real results.",
+    "heroTitleHighlight": "Real businesses.",
+    "heroDescription": "See how companies across industries are using Orixs to eliminate bottlenecks, automate operations, and drive measurable growth.",
+    "requestDemo": "Request a demo",
+    "viewCaseStudies": "View case studies ↓",
+    "stats": {
+      "payouts": "On-time payouts achieved",
+      "errors": "Error reduction",
+      "checkins": "Fewer manual check-ins",
+      "industries": "Industries transformed"
+    },
+    "featuredTitle": "Featured stories",
+    "featuredDescription": "Every business has a unique challenge. Here is how Orixs solved theirs.",
+    "readFullStory": "Read full story",
+    "ctaTitle": "Want results like these?",
+    "ctaDescription": "See how Orixs can transform your operations with a personalized walkthrough.",
+    "ctaGetStarted": "Get started free",
+    "ctaTalkToSales": "Talk to sales"
+  },
+  "caseStudyDetails": {
+    "home": "Home",
+    "caseStudies": "Case Studies",
+    "keyBenefits": "Key Benefits",
+    "requestSimilar": "Request a Similar Solution",
+    "overview": "Overview",
+    "challenges": "Challenges",
+    "solution": "Solution",
+    "results": "Results",
+    "testimonial": "Testimonial",
+    "ctaTitle": "Ready to streamline your operations?",
+    "ctaDescription": "Discover how Orixs can replace your scattered tools with one unified platform while maintaining flexibility for your unique needs.",
+    "scheduleDemo": "Schedule a Demo",
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "contactNumber": "Contact Number",
+      "organisation": "Organisation",
+      "designation": "Designation",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "preferredDateTime": "Preferred Date and Time (optional)",
+      "topics": "Any specific topics you'd like to cover during the demo?"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "heroImageAlt": "About us",
+  "meetImageAlt": "Meet Orixs",
+  "story": {
+    "p1": "We built Orixs because we were tired of seeing smart businesses lose time, money, and momentum to clunky tools and scattered data.",
+    "p2": "Every team we worked with had the same problem: multiple systems that didn't talk to each other, manual processes eating up hours, and no single place to see the full picture. So we created Orixs, a 360° organizational OS that brings everything together.",
+    "p3": "Think of it as your CRM, ERP, project tracker, reporting engine, and AI assistant, all in one fully customizable platform. It adapts to your unique workflow, connects every department, and gives you real-time insights that actually drive decisions.",
+    "p4": "From construction to insurance, from startups in Nairobi to enterprises in Mumbai, Orixs is built to simplify work, unify operations, and scale with your growth.",
+    "p5": "We didn't build Orixs to follow trends. We built it to fix what was broken.",
+    "p6": "No chaos. No silos. Just clarity, control, and growth."
+  },
+  "locations": {
+    "titlePrefix": "Our",
+    "titleHighlight": "Locations",
+    "india": "India",
+    "indiaAddress": "5th floor, 9 star hills, Sesh Nag complex, Pipeline Road, Manikonda, Hyderabad, India",
+    "southAfrica": "South Africa",
+    "southAfricaAddress": "Monte Circle Building, C109 Monte Casino Boulevard, William Nicol Road, Fourways, Gauteng, 1685, Johannesburg, South Africa",
+    "mapAlt": "World map"
+  },
+  "leadership": {
+    "titlePrefix": "Our",
+    "titleHighlight": "Leadership",
+    "subtitle": "Meet the team driving TruSphere's vision forward",
+    "roles": {
+      "director": "Director",
+      "mentor": "Mentor & Advisor"
+    }
+  }
+}
