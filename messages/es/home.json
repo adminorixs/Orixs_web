@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "eyebrow": "Espacio de trabajo con IA de Orixs",
+    "title": "Pon en foco cada decisión de tu negocio.",
+    "description": "Orixs reúne tu trabajo, tus conversaciones, tus clientes y tus datos operativos para que cada equipo entienda lo que importa e impulse el negocio.",
+    "requestDemo": "Solicitar una demostración",
+    "seeHow": "Descubre cómo funciona",
+    "note": "Un único espacio de trabajo conectado para las preguntas, el trabajo y las decisiones que mantienen tu negocio en marcha.",
+    "imageAlt": "Espacio de trabajo de Orixs con tareas, actividad de proyectos, finanzas y el Copiloto de Orixs"
+  },
+  "howItWorks": {
+    "eyebrow": "Cómo funciona Orixs",
+    "title": "Un camino sencillo de la pregunta a la acción.",
+    "description": "Orixs está diseñado en torno a cómo se trabaja de verdad: llega una pregunta, hace falta contexto y alguien tiene que dar el siguiente paso.",
+    "steps": {
+      "ask": {
+        "title": "Pregunta en lenguaje natural",
+        "description": "Empieza por la pregunta que tienes delante, desde una actualización de proyecto o un seguimiento a un cliente hasta una prioridad operativa."
+      },
+      "see": {
+        "title": "Mira el panorama conectado",
+        "description": "Orixs reúne en una sola vista el trabajo, la información y las personas relevantes, con el contexto para entenderlos."
+      },
+      "act": {
+        "title": "Convierte la claridad en acción",
+        "description": "Pasa de la información a la siguiente tarea, traspaso, decisión o flujo de trabajo sin perder el hilo."
+      }
+    }
+  },
+  "platform": {
+    "eyebrow": "La plataforma Orixs",
+    "title": "La capa operativa del negocio de cada día.",
+    "description": "Reúne personas, trabajo, información de clientes y actividad financiera en un espacio conectado que da a cada equipo el contexto para actuar con confianza.",
+    "imageAlt": "Plataforma todo en uno de Orixs para operaciones empresariales conectadas",
+    "capabilities": {
+      "copilot": {
+        "title": "Un copiloto dentro del flujo de trabajo",
+        "description": "Da a tus equipos una forma directa de preguntar, resumir y encontrar la mejor siguiente acción sin perseguir información entre herramientas."
+      },
+      "communication": {
+        "title": "Comunicación que lleva a algo",
+        "description": "Mantén las conversaciones importantes conectadas con las personas, tareas y seguimientos que generan."
+      },
+      "view": {
+        "title": "Una vista en vivo para decidir mejor",
+        "description": "Reúne las señales operativas para que los líderes vean prioridades, avances y áreas que requieren atención."
+      }
+    }
+  },
+  "useCases": {
+    "eyebrow": "Casos de uso",
+    "title": "Un espacio de trabajo conectado para tu sector.",
+    "description": "Elige cómo trabaja hoy tu organización y descubre las capacidades de Orixs y la experiencia de cuenta creadas en torno a ello.",
+    "groupLabel": "Casos de uso por sector",
+    "getStarted": "Empezar con {name}",
+    "industries": {
+      "business": {
+        "name": "Operaciones empresariales",
+        "tagline": "Tu centro de mando con IA",
+        "title": "Inteligencia que mantiene en marcha todo el negocio",
+        "description": "Conecta la actividad de los proyectos, las relaciones con clientes y las prioridades financieras en un único espacio para que los equipos actúen con el mismo contexto.",
+        "features": {
+          "dashboards": { "title": "Paneles en vivo", "description": "Mantén el rendimiento, la actividad del equipo y las prioridades visibles en un solo lugar." },
+          "customers": { "title": "Trabajo con clientes conectado", "description": "Acerca los seguimientos y el contexto del cliente al trabajo que generan." },
+          "resources": { "title": "Visibilidad de recursos", "description": "Ofrece a los responsables una visión más clara de personas, presupuestos y trabajo compartido." },
+          "automation": { "title": "Automatización de flujos de trabajo", "description": "Avanza traspasos y aprobaciones rutinarias con menos coordinación manual." },
+          "reporting": { "title": "Informes listos para compartir", "description": "Convierte la información operativa en informes claros para quienes los necesitan." },
+          "priorities": { "title": "Seguimiento de prioridades", "description": "Ve qué va según lo previsto, qué está bloqueado y qué requiere atención a continuación." }
+        }
+      },
+      "insurance": {
+        "name": "Seguros",
+        "tagline": "Siniestros, suscripción, cumplimiento",
+        "title": "Una visión operativa más clara en todo el ciclo del seguro",
+        "description": "Reúne siniestros, suscripción, trabajo sobre pólizas y comunicación con el cliente en una imagen operativa compartida para actuar con más rapidez y coherencia.",
+        "features": {
+          "risk": { "title": "Contexto del riesgo", "description": "Da a los equipos la información que necesitan para revisar y evaluar cada caso." },
+          "claims": { "title": "Coordinación de siniestros", "description": "Sigue los pasos de revisión, los documentos y los traspasos a lo largo del proceso de siniestros." },
+          "policy": { "title": "Supervisión de pólizas", "description": "Facilita el seguimiento de actualizaciones de pólizas, renovaciones y registros clave." },
+          "service": { "title": "Atención al cliente", "description": "Conecta las solicitudes de los clientes con las personas y el trabajo necesarios para resolverlas." },
+          "compliance": { "title": "Flujos de cumplimiento", "description": "Respalda controles, aprobaciones y pasos operativos coherentes y auditables." },
+          "reporting": { "title": "Informes operativos", "description": "Ofrece a los líderes una visión más clara de la carga de trabajo, el avance y la actividad de servicio." }
+        }
+      },
+      "construction": {
+        "name": "Construcción",
+        "tagline": "Proyectos, cuadrillas, presupuestos",
+        "title": "Visibilidad total en cada obra",
+        "description": "Conecta plazos, cuadrillas, presupuestos y actividad en obra para que los equipos tomen decisiones informadas desde la preconstrucción hasta la entrega.",
+        "features": {
+          "planning": { "title": "Planificación de proyectos", "description": "Mantén el trabajo, los hitos y el contexto de planificación visibles para todo el equipo." },
+          "crews": { "title": "Coordinación de cuadrillas", "description": "Facilita una asignación de tareas, controles de presencia y actividad más claros en todas las ubicaciones del proyecto." },
+          "budget": { "title": "Control del presupuesto", "description": "Lleva la actividad de costes y las prioridades presupuestarias a la conversación del proyecto." },
+          "safety": { "title": "Flujos de seguridad", "description": "Coordina acciones de seguridad, listas de verificación y seguimiento de incidencias entre obras." },
+          "delivery": { "title": "Hitos de entrega", "description": "Mantén la actividad de los subcontratistas, los calendarios y los hitos alineados con el plan." },
+          "reporting": { "title": "Informes de proyecto", "description": "Ofrece a las partes interesadas una visión actualizada del avance, la carga de trabajo y el riesgo de entrega." }
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Descubre lo que puede desbloquear un espacio de trabajo empresarial conectado.",
+    "description": "Explora cómo Orixs puede llevar a tus equipos, tu trabajo y tus decisiones a un ritmo operativo más claro.",
+    "requestDemo": "Solicitar una demostración"
+  }
+}

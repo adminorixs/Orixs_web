@@ -1,0 +1,88 @@
+{
+  "blogs": {
+    "badge": "المدونة",
+    "heroTitleLead": "رؤى لـ",
+    "heroTitleHighlight": "الفرق العصرية.",
+    "heroDescription": "أدلة عملية وقصص مؤسسين وتحليلات معمّقة حول العمليات المدعومة بالذكاء الاصطناعي وأتمتة الأعمال والنمو بوضوح.",
+    "featured": "مميز",
+    "readTime": "{minutes} دقائق للقراءة",
+    "author": "الكاتب",
+    "allArticles": "جميع المقالات",
+    "allArticlesDescription": "استكشف الأفكار والاستراتيجيات لإدارة عملك بذكاء أكبر.",
+    "filterAll": "الكل",
+    "read": "اقرأ",
+    "empty": "لا توجد مقالات في هذه الفئة.",
+    "ctaTitle": "هل أنت مستعد لرؤية Orixs في العمل؟",
+    "ctaDescription": "احصل على جولة مخصصة لقطاعك. دون أي التزام.",
+    "ctaGetStarted": "ابدأ مجانًا",
+    "ctaTalkToSales": "تحدث إلى المبيعات"
+  },
+  "blogDetails": {
+    "notFoundTitle": "لم يتم العثور على المقال",
+    "notFoundDescription": "المقال الذي تبحث عنه غير موجود.",
+    "home": "الرئيسية",
+    "blog": "المدونة",
+    "author": "الكاتب",
+    "readTime": "{minutes} دقائق للقراءة",
+    "share": "مشاركة",
+    "copied": "تم النسخ!",
+    "copyLink": "نسخ الرابط",
+    "tableOfContents": "جدول المحتويات",
+    "related": "{count, plural, one {مقال ذو صلة} two {مقالان ذوا صلة} few {مقالات ذات صلة} many {مقالات ذات صلة} other {مقالات ذات صلة}}",
+    "readMore": "اقرأ المزيد",
+    "sections": {
+      "introduction": "مقدمة",
+      "challenge": "فهم التحدي",
+      "approach": "نهج Orixs",
+      "strategy": "استراتيجية التنفيذ",
+      "measuring": "قياس النجاح",
+      "conclusion": "خاتمة"
+    }
+  },
+  "caseStudies": {
+    "badge": "دراسات الحالة",
+    "heroTitleLead": "نتائج حقيقية.",
+    "heroTitleHighlight": "أعمال حقيقية.",
+    "heroDescription": "اكتشف كيف تستخدم الشركات في مختلف القطاعات Orixs للقضاء على العقبات وأتمتة العمليات وتحقيق نمو قابل للقياس.",
+    "requestDemo": "اطلب عرضًا تجريبيًا",
+    "viewCaseStudies": "عرض دراسات الحالة ↓",
+    "stats": {
+      "payouts": "مدفوعات تمت في موعدها",
+      "errors": "انخفاض الأخطاء",
+      "checkins": "تقليل عمليات التسجيل اليدوية",
+      "industries": "قطاعات جرى تحويلها"
+    },
+    "featuredTitle": "قصص مميزة",
+    "featuredDescription": "لكل عمل تحدٍّ فريد. إليك كيف حلّ Orixs تحدياتهم.",
+    "readFullStory": "اقرأ القصة كاملة",
+    "ctaTitle": "هل تريد نتائج مماثلة؟",
+    "ctaDescription": "اكتشف كيف يمكن لـ Orixs تحويل عملياتك من خلال جولة مخصصة.",
+    "ctaGetStarted": "ابدأ مجانًا",
+    "ctaTalkToSales": "تحدث إلى المبيعات"
+  },
+  "caseStudyDetails": {
+    "home": "الرئيسية",
+    "caseStudies": "دراسات الحالة",
+    "keyBenefits": "أبرز الفوائد",
+    "requestSimilar": "اطلب حلًا مشابهًا",
+    "overview": "نظرة عامة",
+    "challenges": "التحديات",
+    "solution": "الحل",
+    "results": "النتائج",
+    "testimonial": "شهادة",
+    "ctaTitle": "هل أنت مستعد لتبسيط عملياتك؟",
+    "ctaDescription": "اكتشف كيف يمكن لـ Orixs أن يحل محل أدواتك المتفرقة بمنصة موحدة مع الحفاظ على المرونة التي تحتاجها.",
+    "scheduleDemo": "حدد موعدًا لعرض تجريبي",
+    "form": {
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "contactNumber": "رقم التواصل",
+      "organisation": "المؤسسة",
+      "designation": "المسمى الوظيفي",
+      "submit": "إرسال",
+      "cancel": "إلغاء",
+      "preferredDateTime": "التاريخ والوقت المفضلان (اختياري)",
+      "topics": "هل هناك مواضيع محددة تود مناقشتها خلال العرض التجريبي؟"
+    }
+  }
+}

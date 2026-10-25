@@ -235,7 +235,7 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
         <button
           type="button"
           onClick={handleClose}
-          className="absolute right-4 top-4 rounded-md p-1 text-gray-400 transition hover:bg-gray-100 hover:text-purple-700 focus:outline-none"
+          className="absolute end-4 top-4 rounded-md p-1 text-gray-400 transition hover:bg-gray-100 hover:text-purple-700 focus:outline-none"
           aria-label="Close"
         >
           <X className="h-5 w-5" />
@@ -275,7 +275,7 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className={`${inputClass} pl-9`}
+                    className={`${inputClass} ps-9`}
                     placeholder="e.g. John Doe"
                     maxLength={50}
                   />
@@ -295,7 +295,7 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
                     value={form.email}
                     onChange={handleChange}
                     type="email"
-                    className={`${inputClass} pl-9`}
+                    className={`${inputClass} ps-9`}
                     placeholder="e.g. john@example.com"
                     maxLength={100}
                   />
@@ -314,7 +314,7 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
                     name="type"
                     value={form.type}
                     onChange={handleChange}
-                    className={`${inputClass} pl-9`}
+                    className={`${inputClass} ps-9`}
                   >
                     {partnerTypes.map((type) => (
                       <option key={type.value} value={type.value}>
@@ -336,7 +336,7 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
                     name="companyPhoneCode"
                     value={form.companyPhoneCode}
                     onChange={handleChange}
-                    className="w-[118px] rounded-l-md border border-r-0 border-gray-200 bg-gray-50 px-2 py-2.5 text-sm text-gray-900 outline-none transition focus:border-purple-500 focus:ring-2 focus:ring-purple-100"
+                    className="w-[118px] rounded-s-md border border-e-0 border-gray-200 bg-gray-50 px-2 py-2.5 text-sm text-gray-900 outline-none transition focus:border-purple-500 focus:ring-2 focus:ring-purple-100"
                   >
                     {phoneOptions.map((option) => (
                       <option key={option.value} value={option.value}>
@@ -351,7 +351,7 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
                       name="companyPhone"
                       value={form.companyPhone}
                       onChange={handleChange}
-                      className={`${inputClass} rounded-l-none pl-9`}
+                      className={`${inputClass} rounded-s-none ps-9`}
                       placeholder="Mobile Number"
                       type="tel"
                       inputMode="numeric"
@@ -379,7 +379,7 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
                     name="companyName"
                     value={form.companyName}
                     onChange={handleChange}
-                    className={`${inputClass} pl-9`}
+                    className={`${inputClass} ps-9`}
                     placeholder="Company Name"
                   />
                 </div>
@@ -397,7 +397,7 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
                     value={form.companyEmail}
                     onChange={handleChange}
                     type="email"
-                    className={`${inputClass} pl-9`}
+                    className={`${inputClass} ps-9`}
                     placeholder="Company Email"
                   />
                 </div>
@@ -411,13 +411,13 @@ const PartnerModal: React.FC<PartnerModalProps> = ({ open, onClose }) => {
                   Company Address
                 </label>
                 <div className="relative">
-                  <MapPin className="pointer-events-none absolute left-3 top-3.5 h-4 w-4 text-gray-400" />
+                  <MapPin className="pointer-events-none absolute start-3 top-3.5 h-4 w-4 text-gray-400" />
                   <textarea
                     id="partner-company-address"
                     name="companyAddress"
                     value={form.companyAddress}
                     onChange={handleChange}
-                    className={`${inputClass} min-h-[86px] resize-none pl-9`}
+                    className={`${inputClass} min-h-[86px] resize-none ps-9`}
                     placeholder="Company Address"
                   />
                 </div>

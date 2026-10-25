@@ -8,7 +8,8 @@ import { useMutation } from "@tanstack/react-query";
 import { handlePricing } from "@/lib/api/tanstack/pricingApi";
 import Modal from "../modal/modal";
 import Response from "../response/Response";
-import { set } from "mongoose";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 type PricingPlan = {
   maxUserLimit: string;
@@ -34,6 +35,7 @@ type PricingFormProps = {
 };
 
 const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, onClose, currency: initialCurrency, billingPeriod: initialBillingPeriod, initialLicenseCount }) => {
+    const t = useTranslations('Pricing.form');
      const currencyData = {
         USD: { symbol: '$', rate: 1 },
         EUR: { symbol: '€', rate: 0.93 },
@@ -132,7 +134,7 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
 
         // Password validation
         if (value !== '' && name === 'adminPassword' && !isStrongPassword(value)) {
-            setPasswordError("Password must be at least 8 characters long, contain uppercase, lowercase, numbers, and special characters.");
+            setPasswordError(t('errors.password'));
         } else {
             setPasswordError(null);
         }
@@ -148,7 +150,7 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
         // Country must be selected before entering pincode
         if (name === 'pincode') {
             if (!pricingFormData.country) {
-                setServerErrors((prev: any) => ({ ...prev, pincode: "Please, Select a country first" }));
+                setServerErrors((prev: any) => ({ ...prev, pincode: t('errors.selectCountryFirst') }));
                 return;
             }
 
@@ -273,7 +275,7 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
               maximumFractionDigits: 2
             })}
             {discountLabel && (
-              <span className={`ml-2 text-sm ${originalPriceColor} line-through`}>
+              <span className={`ms-2 text-sm ${originalPriceColor} line-through`}>
                 {symbol}
                 {originalTotal.toLocaleString(undefined, {
                   minimumFractionDigits: 2,
@@ -281,7 +283,7 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                 })}
               </span>
             )}
-            <span className={`ml-1 text-lg font-medium ${secondaryColor}`}>
+            <span className={`ms-1 text-lg font-medium ${secondaryColor}`}>
               {suffix}
             </span>
           </span>
@@ -370,33 +372,33 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
 
         // Mobile number validation by country code
         function validateMobileNumber(code: string, phone: string) {
-            if (!phone) return { valid: false, message: 'Mobile number is required.' };
+            if (!phone) return { valid: false, message: t('errors.mobileRequired') };
 
             const rules: Record<string, { regex: RegExp; message: string }> = {
                     '+91': {
                     regex: /^[6-9]\d{9}$/,
-                    message: 'Enter a valid 10-digit Indian mobile number (starts with 6-9).',
+                    message: t('errors.mobileIN'),
                     },
                     '+1': {
                     regex: /^\d{10}$/,
-                    message: 'Enter a valid 10-digit US mobile number.',
+                    message: t('errors.mobileUS'),
                     },
                     '+44': {
                     // UK mobile numbers start with 7 and have 10 digits (without country code)
                     regex: /^7\d{9}$/,
-                    message: 'Enter a valid 10-digit UK mobile number (starting with 7).',
+                    message: t('errors.mobileGB'),
                     },
                     '+27': {
                     // South African mobile numbers start with 6, 7 or 8, and are 9 digits
                     regex: /^[6-8]\d{8}$/,
-                    message: 'Enter a valid 9-digit South African mobile number (starting with 6-8).',
+                    message: t('errors.mobileZA'),
                     },
                 };
 
                 const rule = rules[code];
 
                 if (!rule) {
-                    return { valid: false, message: 'Please select a valid supported country code.' };
+                    return { valid: false, message: t('errors.mobileCode') };
                 }
 
                 if (!rule.regex.test(phone)) {
@@ -419,7 +421,7 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                 
         // Inline State Validation (no numbers or special characters allowed)
         if (!/^[A-Za-z\s\-]{2,}$/.test(pricingFormData.state.trim())) {
-            setStateError("Please enter a valid state name (no numbers or special characters).");
+            setStateError(t('errors.state'));
             valid = false;
             setIsSubmitting(false)
         } else {
@@ -431,7 +433,7 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
             new URL(pricingFormData.website);
             setUrlError(null);
         } catch {
-            setUrlError("Please enter a valid website URL");
+            setUrlError(t('errors.website'));
             setIsSubmitting(false)
             valid = false;
         }
@@ -496,37 +498,37 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
     },[billingPeriod,selectedPlan,licenseCounts]);
     
     const timezoneMappings = {
-        'Asia/Kolkata': 'India Standard Time',
-        'America/New_York': 'Eastern Standard Time',
-        'Europe/London': 'GMT Standard Time',
-        'Africa/Johannesburg': 'South Africa Standard Time',
+        'Asia/Kolkata': t('timezones.Asia/Kolkata'),
+        'America/New_York': t('timezones.America/New_York'),
+        'Europe/London': t('timezones.Europe/London'),
+        'Africa/Johannesburg': t('timezones.Africa/Johannesburg'),
     };
     const pincodeValidators:Record<CountryCode,PincodeValidator> = {
         IN: {
             regex: /^[1-9][0-9]{5}$/, // 6 digits, first digit not 0
-            message: "Pincode must be a 6-digit number starting from 1-9 in India.",
+            message: t('errors.pincodeIN'),
         },
         US: {
             regex: /^\d{5}(-\d{4})?$/, // 5 digits or ZIP+4 (12345 or 12345-6789)
-            message: "ZIP code must be 5 digits or in ZIP+4 format (e.g., 12345 or 12345-6789).",
+            message: t('errors.pincodeUS'),
         },
         GB: {
             regex: /^([A-Z]{1,2}\d[A-Z\d]? ?\d[ABD-HJLNP-UW-Z]{2})$/i, // UK postcode format
-            message: "Please enter a valid UK postcode (e.g., SW1A 1AA).",
+            message: t('errors.pincodeGB'),
         },
         ZA: {
             regex: /^\d{4}$/, // 4-digit code
-            message: "Postal code must be a 4-digit number in South Africa.",
+            message: t('errors.pincodeZA'),
         },
     };
     function validatePincode(countryCode:string, pincode:string) {
         const validator = pincodeValidators[countryCode];
-        if (!validator) return { valid: false, message: "Unsupported country." };
+        if (!validator) return { valid: false, message: t('errors.unsupportedCountry') };
 
         const isValid = validator.regex.test(pincode.trim());
         return {
             valid: isValid,
-            message: isValid ? "Valid pincode." : validator.message,
+            message: isValid ? t('errors.pincodeValid') : validator.message,
         };
     }
 
@@ -538,7 +540,7 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                     ref={formRef}
                     className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-6xl mx-auto relative md:block md:overflow-visible md:max-h-none overflow-y-auto max-h-[90vh] md:!overflow-visible md:!max-h-none"
                 >
-                    <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">Pricing Plan</h2>
+                    <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">{t('title')}</h2>
                     
                     {/* Selected Plan Summary */}
                     <div className="bg-purple-50 rounded-lg p-3 sm:p-4 mb-4">
@@ -559,9 +561,9 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                                 onChange={(e) => handleInputChange(e)}
                                 onBlur={handleLicenseCountBlur}
                                 onWheel={preventScroll}
-                                className="w-20 px-2 py-1 border-2 border-purple-300 rounded-lg text-sm font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-purple-400 transition text-center pr-8"
+                                className="w-20 px-2 py-1 border-2 border-purple-300 rounded-lg text-sm font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-purple-400 transition text-center pe-8"
                                 />
-                                <div className="absolute right-1.5 inset-y-1.5 flex flex-col justify-between">
+                                <div className="absolute end-1.5 inset-y-1.5 flex flex-col justify-between">
                                 <button
                                     type="button"
                                     onClick={incrementLicenses}
@@ -596,14 +598,14 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                                 </button>
                                 </div>
                             </div>
-                            <span className="text-sm text-gray-600">license{getLicenseCount() > 1 ? 's' : ''}</span>
+                            <span className="text-sm text-gray-600">{getLicenseCount() > 1 ? t('licenseMany') : t('licenseOne')}</span>
                             </div>
                         </div>
                             <div className="text-sm text-gray-600 mt-2">
-                                Max License :{selectedPlan?.maxUserLimit}
+                                {t('maxLicense')} {selectedPlan?.maxUserLimit}
                             </div>
                         </div>
-                        <div className="text-right">
+                        <div className="text-end">
                         <div className="text-xl sm:text-2xl font-bold text-purple-700">
                             {formatPrice(selectedPlan, currencyData[currency].symbol, billingPeriod, licenseCounts)}
                         </div>
@@ -617,26 +619,26 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
 
                             {/* Billing dropdown with heading below pricing summary */}
                             <div className="">
-                            <label className="block text-sm font-medium mb-1">Billing</label>
+                            <label className="block text-sm font-medium mb-1">{t('billing')}</label>
                             <select
                                 value={billingPeriod}
                                 onChange={e => setBillingPeriod(e.target.value as 'monthly' | 'yearly')}
                                 className="border border-purple-300 rounded px-3 py-2 text-sm font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-purple-400 transition shadow-sm cursor-pointer hover:border-purple-500 h-10 w-full max-w-xs"
                             >
-                                <option value="monthly">Monthly</option>
-                                <option value="yearly">Yearly</option>
+                                <option value="monthly">{t('monthly')}</option>
+                                <option value="yearly">{t('yearly')}</option>
                             </select>
                             </div>
                             <div>
-                                <label className="block font-medium mb-1">Start Date</label>
+                                <label className="block font-medium mb-1">{t('startDate')}</label>
                                 <div className="flex">
                                 <input
                                     type="date"
                                     name="startDate"
                                     onChange={handleInputChange}
                                     value={pricingFormData.startDate}
-                                    placeholder="Start Date"
-                                    className="border border-purple-300 rounded flex-1 border-t border-b border-r rounded-r px-3 py-2"
+                                    placeholder={t('startDate')}
+                                    className="border border-purple-300 rounded flex-1 border-t border-b border-e rounded-e px-3 py-2"
                                     min={new Date().toISOString().split("T")[0]}
                                     required
                                 />
@@ -645,51 +647,51 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                             {/* <div>
                                 <label className="block font-medium mb-1">Amount</label>
                                 <div className="flex">
-                                    <input className="border border-purple-300 rounded flex-1 border-t border-b border-r rounded-r px-3 py-2" name='amount' onChange={handleInputChange} value={pricingFormData.amount}   placeholder="Amount" readOnly />
+                                    <input className="border border-purple-300 rounded flex-1 border-t border-b border-e rounded-e px-3 py-2" name='amount' onChange={handleInputChange} value={pricingFormData.amount}   placeholder="Amount" readOnly />
                                 </div>
                             </div>  */}
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-3 text-gray-700">Details</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-3 text-gray-700">{t('details')}</h3>
                     <div className="mb-4">
-                        <label htmlFor="companyName" className="block font-medium mb-1">Company Name<span className="text-red-500">*</span></label>
-                        <input id="companyName" type='text' onChange={handleInputChange} name='companyName' value={pricingFormData.companyName} className="w-full border rounded px-3 py-2" placeholder="Company Name" required />
+                        <label htmlFor="companyName" className="block font-medium mb-1">{t('companyName')}<span className="text-red-500">*</span></label>
+                        <input id="companyName" type='text' onChange={handleInputChange} name='companyName' value={pricingFormData.companyName} className="w-full border rounded px-3 py-2" placeholder={t('companyName')} required />
                         {serverErrors.companyName && <div className="text-red-500 text-xs mt-1">{serverErrors.companyName}</div>}
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <label htmlFor="companyEmail" className="block font-medium mb-1">Company Email<span className="text-red-500">*</span></label>
-                        <input id="companyEmail" type='email' onChange={handleInputChange} name='companyEmail' value={pricingFormData.companyEmail} className="w-full border rounded px-3 py-2" placeholder="Company Email" required />
+                        <label htmlFor="companyEmail" className="block font-medium mb-1">{t('companyEmail')}<span className="text-red-500">*</span></label>
+                        <input id="companyEmail" type='email' onChange={handleInputChange} name='companyEmail' value={pricingFormData.companyEmail} className="w-full border rounded px-3 py-2" placeholder={t('companyEmail')} required />
                         {serverErrors.companyEmail && <div className="text-red-500 text-xs mt-1">{serverErrors.companyEmail}</div>}
                     </div>
                     <div>
-                        <label htmlFor="mobileNumber" className="block font-medium mb-1">Mobile Number<span className="text-red-500">*</span></label>
+                        <label htmlFor="mobileNumber" className="block font-medium mb-1">{t('mobileNumber')}<span className="text-red-500">*</span></label>
                         <div className="flex">
                             <select
-                                className="border rounded-l px-2 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                                className="border rounded-s px-2 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-200"
                                 name='countryCode'
                                 id="countryCode"
                                 value={pricingFormData.countryCode}
                                 onChange={handleInputChange}
-                                style={{ minWidth: 90 }}
+                                style={{ minWidth: 90 }} dir="ltr"
                             >
-                                <option value="+91">India (+91)</option>
-                                <option value="+1">USA (+1)</option>
-                                <option value="+27">Africa (+27)</option>
-                                <option value="+44">Europe (+44)</option>
+                                <option value="+91">{t('callingCodes.+91')}</option>
+                                <option value="+1">{t('callingCodes.+1')}</option>
+                                <option value="+27">{t('callingCodes.+27')}</option>
+                                <option value="+44">{t('callingCodes.+44')}</option>
                             </select>
-                            <input id="mobileNumber" className="flex-1 border-t border-b border-r rounded-r px-3 py-2" name='mobileNumber' onChange={handleInputChange} value={pricingFormData.mobileNumber}   placeholder="Mobile Number" required />
+                            <input id="mobileNumber" className="flex-1 border-t border-b border-e rounded-e px-3 py-2" name='mobileNumber' onChange={handleInputChange} value={pricingFormData.mobileNumber}   placeholder={t('mobileNumber')} required />
                         </div>
                         {phoneNumberError && <div className="text-red-500 text-xs mt-1">{phoneNumberError}</div>}
                         {serverErrors.business_mobile_number && <div className="text-red-500 text-xs mt-1">{serverErrors.business_mobile_number}</div>}
                     </div>
                     <div>
-                        <label htmlFor="country" className="block font-medium mb-1">Country <span className="text-red-500">*</span></label>
+                        <label htmlFor="country" className="block font-medium mb-1">{t('country')} <span className="text-red-500">*</span></label>
                         <select id="country" className="w-full border rounded px-3 py-2" onChange={handleInputChange} value={pricingFormData.country} name='country' required>
                             <option value="">--</option>
-                            <option value="IN">India</option>
-                            <option value="US">USA</option>
-                            <option value="GB">UK</option>
-                            <option value="ZA">South Africa</option>
+                            <option value="IN">{t('countries.IN')}</option>
+                            <option value="US">{t('countries.US')}</option>
+                            <option value="GB">{t('countries.GB')}</option>
+                            <option value="ZA">{t('countries.ZA')}</option>
                         </select>
                         {serverErrors.country && <div className="text-red-500 text-xs mt-1">{serverErrors.country}</div>}
                     </div>
@@ -698,7 +700,7 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                         <div className="relative">
                         <input
                             type={showPassword ? 'text' : 'password'}
-                            className="w-full border rounded px-3 py-2 pr-10" name='password'
+                            className="w-full border rounded px-3 py-2 pe-10" name='password'
                             placeholder="Create Password" onChange={handleInputChange} value={pricingFormData.password}
                             required
                         />
@@ -715,20 +717,20 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                     
                     
                     <div>
-                        <label htmlFor="state" className="block font-medium mb-1">State <span className="text-red-500">*</span></label>
-                        <input id="state" className="w-full border rounded px-3 py-2" name='state' placeholder="State" onChange={handleInputChange} value={pricingFormData.state} required />
+                        <label htmlFor="state" className="block font-medium mb-1">{t('state')} <span className="text-red-500">*</span></label>
+                        <input id="state" className="w-full border rounded px-3 py-2" name='state' placeholder={t('state')} onChange={handleInputChange} value={pricingFormData.state} required />
                         {serverErrors.state && <div className="text-red-500 text-xs mt-1">{serverErrors.state}</div>}
                         {stateError && <div className="text-red-500 text-xs mt-1">{stateError}</div>}
                     </div>
                     <div className="relative mb-4">
-                        <label htmlFor="pincode" className="block font-medium mb-1">Pincode <span className="text-red-500">*</span></label>
-                        <input id="pincode" className="w-full border rounded px-3 py-2" name='pincode' onChange={handleInputChange} value={pricingFormData.pincode} placeholder="Pincode" required />
+                        <label htmlFor="pincode" className="block font-medium mb-1">{t('pincode')} <span className="text-red-500">*</span></label>
+                        <input id="pincode" className="w-full border rounded px-3 py-2" name='pincode' onChange={handleInputChange} value={pricingFormData.pincode} placeholder={t('pincode')} required />
                         {serverErrors.pincode && <div className={`text-red-500 text-xs  max-w-full absolute ${pricingFormData.country == 'US' ? '-bottom-8' : '-bottom-5'}`}>{serverErrors.pincode}</div>}
                         
                         {/* {serverErrors?.adminPassword && <div className="">{serverErrors?.adminPassword}</div>} */}
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="timezone" className="block font-medium mb-1">Timezone <span className="text-red-500">*</span></label>
+                        <label htmlFor="timezone" className="block font-medium mb-1">{t('timezone')} <span className="text-red-500">*</span></label>
                        <select
                         id="timezone"
                         name="timezone"
@@ -746,11 +748,11 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                         {serverErrors.timezone && <div className="text-red-500 text-xs mt-1">{serverErrors.timezone}</div>}
                     </div>
                     <div>
-                        <label htmlFor="website" className="block text-sm font-medium mb-1" >Website<span className="text-red-500">*</span></label>
+                        <label htmlFor="website" className="block text-sm font-medium mb-1" >{t('website')}<span className="text-red-500">*</span></label>
                         <input
                         id="website"
                         className="w-full border rounded px-3 py-2 text-sm placeholder:opacity-60 placeholder:text-gray-400"
-                        placeholder="e.g. https://www.example.com"
+                        placeholder={t('websitePlaceholder')} dir="ltr"
                         type="url"
                         name="website"
                         onChange={handleInputChange} value={pricingFormData.website}
@@ -762,16 +764,16 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                     </div>
                     </div>
                     {/* Business Admin Details */}
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-700 mt-4">Business Administrator Details</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-700 mt-4">{t('adminSection')}</h3>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     <div>
-                        <label htmlFor="adminName" className="block font-medium mb-1">Name <span className="text-red-500">*</span></label>
+                        <label htmlFor="adminName" className="block font-medium mb-1">{t('adminName')} <span className="text-red-500">*</span></label>
                         <input
                         id="adminName"
                         type="text"
                         name="adminName"
-                        placeholder="Enter admin name"
+                        placeholder={t('adminNamePlaceholder')}
                         value={pricingFormData.adminName}
                         onChange={handleInputChange}
                         required
@@ -780,12 +782,12 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                         {serverErrors.admin_name && <div className="text-red-500 text-xs mt-1">{serverErrors.admin_name}</div>}
                     </div>
                     <div>
-                        <label htmlFor="adminEmail" className="block font-medium mb-1">Email <span className="text-red-500">*</span></label>
+                        <label htmlFor="adminEmail" className="block font-medium mb-1">{t('adminEmail')} <span className="text-red-500">*</span></label>
                         <input
                         id="adminEmail"
                         type="email"
                         name="adminEmail"
-                        placeholder="Enter admin email"
+                        placeholder={t('adminEmailPlaceholder')} dir="ltr"
                         value={pricingFormData.adminEmail}
                         onChange={handleInputChange}
                         required
@@ -795,21 +797,21 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                     </div>
 
                     <div className="relative">
-                        <label className="block font-medium mb-1">Admin Password <span className="text-red-500">*</span></label>
+                        <label className="block font-medium mb-1">{t('adminPassword')} <span className="text-red-500">*</span></label>
                         <div className="relative">
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 name="adminPassword"
-                                placeholder="Create a secure password"
+                                placeholder={t('adminPasswordPlaceholder')} dir="ltr"
                                 value={pricingFormData.adminPassword}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full border rounded px-3 py-2 pr-10"
+                                className="w-full border rounded px-3 py-2 pe-10"
                             />
 
                             <button
                                 type="button"
-                                className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700"
+                                className="absolute end-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700"
                                 tabIndex={-1}
                                 onClick={() => setShowPassword((v) => !v)}
                             >
@@ -823,10 +825,10 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                 </div>
 
                     <div className="flex items-center mt-10 mb-4">
-                        <input type="checkbox" id="terms" required className="mr-2" />
+                        <input type="checkbox" id="terms" required className="me-2" />
                         <label htmlFor="terms" className="text-sm text-gray-700 select-none">
-                        <span className="text-red-500 mr-1">*</span>
-                        I agree to the <a href="/terms-and-conditions" target="_blank" className="text-purple-600 underline">Terms of Service</a> and <a href="/privacy" target="_blank" className="text-purple-600 underline">Privacy Policy</a>
+                        <span className="text-red-500 me-1">*</span>
+                        {t('agreePrefix')} <Link href="/terms-and-conditions" target="_blank" className="text-purple-600 underline">{t('terms')}</Link> {t('and')} <Link href="/privacy" target="_blank" className="text-purple-600 underline">{t('privacy')}</Link>
                         </label>
                     </div>
 
@@ -838,16 +840,16 @@ const PricingForm: React.FC<PricingFormProps> = ({ selectedPlan, selectedTab, on
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
                                 </svg>
-                                Submitting...
+                                {t('submitting')}
                                 </span>
                             ) : (
-                                'Submit'
+                                t('submit')
                             )}
                         </button>
-                        <button type="button" className="border border-gray-400 rounded-lg px-6 py-2 text-black" onClick={() => onClose(false)}>Cancel</button>
+                        <button type="button" className="border border-gray-400 rounded-lg px-6 py-2 text-black" onClick={() => onClose(false)}>{t('cancel')}</button>
                     </div>
 
-                    <button type="button" className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl font-bold" onClick={() => onClose(false)}>&times;</button>
+                    <button type="button" className="absolute top-3 end-3 text-gray-400 hover:text-gray-600 text-2xl font-bold" onClick={() => onClose(false)}>&times;</button>
                 </form>
             <Modal open={isOpen} onClose={closePopup}>
                 <Response message={message} type={type ?? "error"} onClose={closePopup} />

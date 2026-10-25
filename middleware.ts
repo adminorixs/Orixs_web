@@ -1,19 +1,34 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import createIntlMiddleware from 'next-intl/middleware';
 import { jwtVerify } from 'jose';
+import { routing, isAppLocale } from './i18n/routing';
 
-export async function middleware(request: NextRequest) {
-  // Only protect /cmsuser routes
-  if (request.nextUrl.pathname.startsWith('/cmsuser')) {
+const intlMiddleware = createIntlMiddleware(routing);
+
+/**
+ * 1. next-intl resolves and prefixes the locale (/en, /es, /ar) and redirects unprefixed entry URLs.
+ * 2. CMS routes (/<locale>/cmsuser/...) keep their cookie/JWT gate; redirects stay inside the visitor's locale.
+ */
+export default async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  const segments = pathname.split('/');
+  const maybeLocale = segments[1];
+  const locale = isAppLocale(maybeLocale) ? maybeLocale : null;
+  const pathWithoutLocale = locale ? '/' + segments.slice(2).join('/') : pathname;
+
+  if (locale && pathWithoutLocale.startsWith('/cmsuser')) {
+    const loginPath = `/${locale}/cmsuser/login`;
+
     // Allow access to login page
-    if (request.nextUrl.pathname === '/cmsuser/login') {
-      return NextResponse.next();
+    if (pathWithoutLocale === '/cmsuser/login') {
+      return intlMiddleware(request);
     }
 
     const token = request.cookies.get('auth_token');
 
     if (!token) {
-      return NextResponse.redirect(new URL('/cmsuser/login', request.url));
+      return NextResponse.redirect(new URL(loginPath, request.url));
     }
 
     try {
@@ -22,16 +37,17 @@ export async function middleware(request: NextRequest) {
         process.env.JWT_SECRET || 'your_jwt_secret_key_here'
       );
       await jwtVerify(token.value, secret);
-      return NextResponse.next();
+      return intlMiddleware(request);
     } catch (error) {
       // Token is invalid or expired
-      return NextResponse.redirect(new URL('/cmsuser/login', request.url));
+      return NextResponse.redirect(new URL(loginPath, request.url));
     }
   }
 
-  return NextResponse.next();
+  return intlMiddleware(request);
 }
 
 export const config = {
-  matcher: '/cmsuser/:path*',
-}; 
+  // Everything except API routes, Next internals and files with an extension (images, fonts, favicon...).
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+};

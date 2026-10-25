@@ -1,7 +1,8 @@
 'use client';
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { useRouter } from '@/i18n/navigation';
 import { createActionExecutor } from '@/lib/copilot/actionExecutor';
 import { useContextEngine } from '@/lib/copilot/contextEngine';
 import { parseCopilotStream } from '@/lib/copilot/streamParser';
@@ -50,6 +51,7 @@ function getStoredBoolean(key: string, fallback: boolean) {
 }
 
 export function CopilotProvider({ children }: { children: React.ReactNode }) {
+  const t = useTranslations('Copilot');
   const router = useRouter();
   const context = useContextEngine();
   const executeAction = useMemo(() => createActionExecutor(router), [router]);
@@ -70,18 +72,11 @@ export function CopilotProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    const controller = new AbortController();
-    fetch('/api/copilot/suggestions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ pageType: context.pageType, route: context.route }),
-      signal: controller.signal,
-    })
-      .then((response) => response.json())
-      .then((data) => setSuggestions(Array.isArray(data.suggestions) ? data.suggestions : []))
-      .catch(() => setSuggestions([]));
-    return () => controller.abort();
-  }, [context.pageType, context.route]);
+    // Suggested questions are interface copy, so they come from the locale dictionary.
+    const key = `suggestions.${context.pageType}`;
+    setSuggestions(t.has(key) ? (t.raw(key) as string[]) : (t.raw('suggestions.unknown') as string[]));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [context.pageType, context.route, context.locale]);
 
   const dismissProactivePrompt = useCallback(() => setProactivePrompt(null), []);
 
@@ -111,10 +106,10 @@ export function CopilotProvider({ children }: { children: React.ReactNode }) {
             : 1000;
 
     const copy: Record<string, string> = {
-      'homepage-tour': 'Not sure where to start? I can show you around.',
-      'pricing-help': 'Need help comparing plans?',
-      'signup-help': 'I can explain what happens after you sign up.',
-      'resource-industry': 'Want to see how this applies to your industry?',
+      'homepage-tour': t('proactive.homepageTour'),
+      'pricing-help': t('proactive.pricingHelp'),
+      'signup-help': t('proactive.signupHelp'),
+      'resource-industry': t('proactive.resourceIndustry'),
     };
 
     const timeout = window.setTimeout(() => {
@@ -132,6 +127,7 @@ export function CopilotProvider({ children }: { children: React.ReactNode }) {
       window.removeEventListener('pointerdown', dismiss);
       window.removeEventListener('keydown', dismiss);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [context.pageType, context.scrollDepth, isOpen, proactiveEnabled, proactivePrompt]);
 
   const setProactiveEnabled = useCallback((enabled: boolean) => {
@@ -208,13 +204,13 @@ export function CopilotProvider({ children }: { children: React.ReactNode }) {
     } catch {
       setMessages((current) => current.map((item) => (
         item.id === assistantMessage.id
-          ? { ...item, content: "I'm temporarily unavailable. You can still browse Use Cases, Pricing, Blogs, and Case Studies from the site navigation.", status: 'error' }
+          ? { ...item, content: t('unavailable'), status: 'error' }
           : item
       )));
     } finally {
       setIsSending(false);
     }
-  }, [context, executeAction, isSending, messages]);
+  }, [context, executeAction, isSending, messages, t]);
 
   const value: CopilotContextValue = {
     isOpen,

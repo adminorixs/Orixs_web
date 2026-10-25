@@ -1,0 +1,10 @@
+{
+  "processing": "Processing your payment…",
+  "loading": "Loading…",
+  "doneTitle": "Payment Done!",
+  "doneMessage": "Thank you for your secure online payment.",
+  "paymentId": "Payment ID:",
+  "goBack": "GO BACK",
+  "failedTitle": "Payment Failed!",
+  "failedMessage": "Your payment could not be processed."
+}

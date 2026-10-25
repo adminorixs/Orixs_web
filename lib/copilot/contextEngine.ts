@@ -1,6 +1,8 @@
 'use client';
 
-import { useParams, usePathname } from 'next/navigation';
+import { useParams } from 'next/navigation';
+import { useLocale } from 'next-intl';
+import { usePathname } from '@/i18n/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { copilotEventBus } from './eventBus';
 import type { CopilotContext, DeviceType, PageType } from './types';
@@ -50,8 +52,10 @@ function getDevice(width: number): DeviceType {
 }
 
 export function useContextEngine(): CopilotContext {
+  // Locale-stripped pathname so page detection works the same in every language.
   const pathname = usePathname() || '/';
   const params = useParams();
+  const locale = useLocale();
   const conversationId = useRef(createConversationId());
   const [visibleSection, setVisibleSection] = useState('hero');
   const [activeTab, setActiveTab] = useState<string | undefined>();
@@ -138,7 +142,7 @@ export function useContextEngine(): CopilotContext {
   return {
     route: pathname,
     routeParams: Object.fromEntries(
-      Object.entries(params || {}).map(([key, value]) => [key, Array.isArray(value) ? value.join('/') : String(value)])
+      Object.entries(params || {}).filter(([key]) => key !== 'locale').map(([key, value]) => [key, Array.isArray(value) ? value.join('/') : String(value)])
     ),
     pageType,
     pageTitle: getPageTitle(pageType, pathname),
@@ -151,5 +155,6 @@ export function useContextEngine(): CopilotContext {
     scrollDepth,
     pagesVisited,
     conversationId: conversationId.current,
+    locale,
   };
 }

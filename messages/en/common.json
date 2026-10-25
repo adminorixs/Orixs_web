@@ -1,0 +1,57 @@
+{
+  "brand": "Orixs",
+  "language": {
+    "label": "Language",
+    "switchTo": "Change language"
+  },
+  "nav": {
+    "primary": "Primary navigation",
+    "home": "Orixs home",
+    "howItWorks": "How Orixs Works",
+    "platform": "Platform",
+    "useCases": "Use Cases",
+    "contact": "Contact",
+    "requestDemo": "Request a demo",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "footer": {
+    "navigation": "Footer navigation",
+    "tagline": "A connected workspace for clearer business decisions and more purposeful action.",
+    "product": "Product",
+    "howItWorks": "How Orixs works",
+    "platform": "Platform",
+    "useCases": "Use cases",
+    "getStarted": "Get started",
+    "requestDemo": "Request a demo",
+    "login": "Log in or register",
+    "company": "Company",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "builtWith": "AI Copilot for Business Excellence, built with",
+    "regions": "USA | KSA | SINGAPORE",
+    "rights": "© 2026 Orixs. All rights reserved."
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "edit": "Edit",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "tryAgain": "Try again",
+    "backToHome": "Back to home"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved."
+  },
+  "popup": {
+    "success": "Success!",
+    "submitted": "Form submitted successfully!"
+  }
+}

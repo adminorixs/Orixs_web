@@ -84,7 +84,7 @@ Designation: ${form.designation}`;
       {/* Form container — responsive positioning */}
       <form
         onSubmit={handleSubmit}
-        className="relative bg-white rounded-2xl p-0 w-[calc(100%-2rem)] max-w-[440px] sm:w-[440px] shadow-xl flex flex-row gap-0 overflow-hidden min-h-[320px] max-h-[calc(100vh-5rem)] overflow-y-auto mt-20 sm:mt-32 mx-4 sm:mx-0 sm:mr-6"
+        className="relative bg-white rounded-2xl p-0 w-[calc(100%-2rem)] max-w-[440px] sm:w-[440px] shadow-xl flex flex-row gap-0 overflow-hidden min-h-[320px] max-h-[calc(100vh-5rem)] overflow-y-auto mt-20 sm:mt-32 mx-4 sm:mx-0 sm:me-6"
       >
         {/* Simple success popup without auto-close functionality */}
         {showSuccess && (

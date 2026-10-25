@@ -1,0 +1,139 @@
+{
+  "backToHome": "Back to Home",
+  "translationNotice": "",
+  "privacy": {
+    "lastUpdated": "Last updated: September 5, 2026",
+    "title": "Privacy Policy for Orixs and askOrixs.ai",
+    "lead": "This policy is written to clearly explain how Orixs handles user, workspace, Google, and AI copilot data across our website and SaaS applications.",
+    "sections": {
+      "s1": {
+        "title": "1. Who We Are",
+        "body": "Orixs and askOrixs.ai are operated by Trusphere Technologies Private Limited (\"Orixs\", \"we\", \"our\", or \"us\"). Orixs provides business operating platforms, workspace tools, and AI copilot features for teams using modules such as CRM, work management, finance, HR, payroll, recruitment, support, email, calendar, and reporting."
+      },
+      "s2": {
+        "title": "2. Scope Of This Policy",
+        "body": "This Privacy Policy explains how we collect, use, store, share, and protect information when you use orixs.io, askOrixs.ai, our SaaS applications, our AI copilot, and connected integrations including Google Sign-In, Gmail, and Google Calendar."
+      },
+      "s3": {
+        "title": "3. Information We Collect",
+        "body": "We collect information you provide directly, information created while using the platform, and information received from integrations you connect. This may include account profile details, business contact details, company and workspace data, CRM records, project records, forms, invoices, expenses, payments, attendance, leave, payroll-related records, recruitment records, tickets, notices, files, messages, calendar events, usage logs, device information, browser information, IP address, cookies, support messages, and billing or subscription information."
+      },
+      "s4": {
+        "title": "4. Google Sign-In Data",
+        "body": "If you choose to sign in with Google, we may receive your Google account identifier, name, email address, profile image, and authentication tokens needed to securely sign you in. We use this information only to authenticate your account, prevent unauthorized access, and connect your Orixs workspace to the correct user profile. We do not receive or store your Google password."
+      },
+      "s5": {
+        "title": "5. Gmail And Calendar Data",
+        "body": "If you separately connect Gmail or Google Calendar features, Orixs may access the Google data required for the features you enable. Gmail data may include email address, message metadata, message content, labels, threads, attachments, drafts, and sent messages where needed to show, search, summarize, draft, send, or sync mailbox activity. Calendar data may include calendar lists, event titles, attendees, dates, times, locations, descriptions, and meeting details where needed to show, create, update, or sync calendar events. These integrations are optional and can be disconnected by the user or workspace administrator."
+      },
+      "s6": {
+        "title": "6. How We Use Information",
+        "body": "We use information to provide and secure the platform, create and manage user accounts, operate enabled modules, process user requests, sync connected integrations, provide AI copilot responses and actions, personalize workspace context, send service notices, provide support, detect abuse, maintain audit logs, improve reliability, process billing, comply with legal obligations, and enforce our terms."
+      },
+      "s7": {
+        "title": "7. AI Copilot Processing",
+        "body": "When you use Orixs AI or askOrixs.ai, your prompt, workspace context, selected records, and relevant module data may be processed to answer your request or perform an action. The copilot can read, create, update, or delete records only according to your account permissions, company workspace boundaries, enabled modules, and confirmation rules. High-risk actions such as sending emails, deleting records, approvals, payroll, or other sensitive changes require confirmation before execution."
+      },
+      "s8": {
+        "title": "8. Google API Limited Use Disclosure",
+        "bodyBefore": "Orixs' use and transfer of information received from Google APIs will adhere to the",
+        "linkText": "Google API Services User Data Policy",
+        "bodyAfter": ", including the Limited Use requirements. We use Google user data only to provide or improve user-facing features that you request or enable, such as Google Sign-In, mailbox sync, email drafting or sending, calendar sync, workspace search, summaries, and copilot actions. We do not sell Google user data. We do not use Google user data for advertising. We do not use Google Workspace API data to train or improve generalized AI or machine learning models. Human access to Google user data is limited to cases where you ask us for support, where access is required for security or abuse investigation, or where required by law."
+      },
+      "s9": {
+        "title": "9. How We Share Information",
+        "body": "We may share information with service providers that help us operate the platform, including hosting, database, storage, analytics, payment, email delivery, customer support, security, and AI infrastructure providers. These providers are allowed to process information only as needed to provide services to Orixs and must protect it under appropriate confidentiality and security obligations. We may also share information when required by law, to protect rights and safety, during a business transfer, or when you direct us to share data through an integration or workspace action."
+      },
+      "s10": {
+        "title": "10. Data Storage And Retention",
+        "body": "We retain account, workspace, and integration data for as long as needed to provide the services, comply with legal obligations, resolve disputes, maintain security, and enforce agreements. OAuth tokens for Google integrations are retained only while the integration remains connected or as otherwise needed for security and audit purposes. Audit logs may be retained to preserve security, compliance, and operational history. When data is no longer needed, we delete it or de-identify it according to our retention practices."
+      },
+      "s11": {
+        "title": "11. Your Choices And Controls",
+        "body": "You may access, update, export, or request deletion of your personal information by using available account settings or contacting us. You can disconnect Google integrations inside Orixs where the feature is available, or revoke Orixs access from your Google Account permissions page. Workspace administrators may control user access, modules, permissions, and retention settings for their organization. You may opt out of marketing communications while still receiving important service or security messages."
+      },
+      "s12": {
+        "title": "12. Security",
+        "body": "We use administrative, technical, and organizational safeguards designed to protect information from unauthorized access, loss, misuse, or alteration. These safeguards may include HTTPS, access controls, tenant-level company scoping, role permissions, audit logs, token protection, secure deployment practices, monitoring, and restricted access to production systems. No method of transmission or storage is completely secure, but we work to protect your information in line with the sensitivity of the data we process."
+      },
+      "s13": {
+        "title": "13. International Transfers",
+        "body": "Orixs may process and store information in countries other than the country where you are located. Where required, we use appropriate safeguards for international transfers and process information according to this Privacy Policy."
+      },
+      "s14": {
+        "title": "14. Children",
+        "body": "Orixs is intended for business users and is not directed to children. We do not knowingly collect personal information from children under the age required by applicable law. If we learn that a child has provided personal information without appropriate consent, we will take steps to delete it."
+      },
+      "s15": {
+        "title": "15. Changes To This Policy",
+        "body": "We may update this Privacy Policy from time to time. If we make material changes, we will provide notice through the website, application, email, or another appropriate method. If a change affects how we use Google user data, we will request any required consent before using that data for a new purpose."
+      },
+      "s16": {
+        "title": "16. Contact Us",
+        "bodyBefore": "If you have questions about this Privacy Policy, Google data, account deletion, or your privacy choices, contact us at",
+        "bodyAfter": "."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions for askOrixs.ai (Orixs Platform)",
+    "sections": {
+      "s1": {
+        "title": "1. Introduction",
+        "body": "Welcome to askOrixs.ai, a platform provided by Trusphere Technologies Private Limited (\"Company\", \"we\", \"our\", or \"us\"). These Terms and Conditions (\"Terms\") govern your use of our website and services provided through the Orixs platform (\"Service\"). By accessing or using the Service, you agree to be bound by these Terms."
+      },
+      "s2": {
+        "title": "2. Eligibility",
+        "body": "You must be at least 18 years old or the legal age of majority in your jurisdiction to use our Service. By using the Service, you represent and warrant that you meet these requirements."
+      },
+      "s3": {
+        "title": "3. Use of the Service",
+        "lines": [
+          "You agree to use the Service only for lawful purposes.",
+          "You will not use the Service to transmit any content that is unlawful, harmful, abusive, or otherwise objectionable.",
+          "You will not attempt to gain unauthorized access to any part of the Service."
+        ]
+      },
+      "s4": {
+        "title": "4. Account Registration",
+        "body": "Some features of the Service may require registration. You agree to provide accurate and complete information and to keep it up to date. You are responsible for maintaining the confidentiality of your login credentials."
+      },
+      "s5": {
+        "title": "5. Intellectual Property",
+        "body": "All content, trademarks, logos, and other intellectual property on the Service are the property of Trusphere Technologies Private Limited or its licensors. You may not reproduce, distribute, or use any content without our prior written consent."
+      },
+      "s6": {
+        "title": "6. User-Generated Content",
+        "body": "You retain ownership of any content you submit to the Service, but you grant us a non-exclusive, worldwide, royalty-free license to use, reproduce, and distribute such content in connection with the Service."
+      },
+      "s7": {
+        "title": "7. Third-Party Services",
+        "body": "Our Service may contain links to third-party websites or services. We are not responsible for the content, policies, or practices of third-party services."
+      },
+      "s8": {
+        "title": "8. Disclaimers",
+        "body": "The Service is provided \"as is\" and \"as available\" without warranties of any kind. We do not warrant that the Service will be uninterrupted or error-free."
+      },
+      "s9": {
+        "title": "9. Limitation of Liability",
+        "body": "To the fullest extent permitted by law, Trusphere Technologies Private Limited shall not be liable for any indirect, incidental, or consequential damages arising out of your use of the Service."
+      },
+      "s10": {
+        "title": "10. Indemnification",
+        "body": "You agree to indemnify and hold harmless Trusphere Technologies Private Limited from any claims, damages, or expenses arising out of your use of the Service or your violation of these Terms."
+      },
+      "s11": {
+        "title": "11. Termination",
+        "body": "We reserve the right to suspend or terminate your access to the Service at our sole discretion, with or without notice, for conduct that we believe violates these Terms or is harmful to other users or us."
+      },
+      "s12": {
+        "title": "12. Governing Law",
+        "body": "These Terms shall be governed by the laws of India, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bangalore, Karnataka."
+      },
+      "s13": {
+        "title": "13. Contact Information",
+        "bodyBefore": "For any questions about these Terms, please contact us at:"
+      }
+    }
+  }
+}

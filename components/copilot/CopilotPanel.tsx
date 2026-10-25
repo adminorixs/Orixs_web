@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { PanelRightClose, X } from 'lucide-react';
 import { Drawer as DrawerPrimitive } from 'vaul';
+import { useTranslations } from 'next-intl';
 import { Switch } from '@/components/ui/switch';
 import { cn } from '@/lib/utils';
 import { CopilotInput } from './CopilotInput';
@@ -22,6 +23,7 @@ function useIsMobile() {
 }
 
 function PanelBody() {
+  const t = useTranslations('Copilot');
   const { messages, proactiveEnabled, setProactiveEnabled } = useCopilot();
   const listRef = useRef<HTMLDivElement>(null);
 
@@ -34,8 +36,8 @@ function PanelBody() {
       <div ref={listRef} className="flex-1 overflow-y-auto bg-gray-50/60 p-4">
         {messages.length === 0 ? (
           <div className="rounded-2xl border border-purple-100 bg-white p-4 text-sm leading-relaxed text-gray-600 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <p className="font-semibold text-gray-900">Hi, I am Orixs AI.</p>
-            <p className="mt-2">Ask me about platforms, plans, modules, use cases, or where to go next.</p>
+            <p className="font-semibold text-gray-900">{t('greeting')}</p>
+            <p className="mt-2">{t('greetingHelp')}</p>
           </div>
         ) : (
           <div className="space-y-3">
@@ -46,8 +48,8 @@ function PanelBody() {
         )}
       </div>
       <div className="flex items-center justify-between border-t border-gray-100 px-4 py-2 text-xs text-gray-500">
-        <span>Proactive suggestions</span>
-        <Switch checked={proactiveEnabled} onCheckedChange={setProactiveEnabled} aria-label="Toggle proactive Copilot suggestions" />
+        <span>{t('proactiveLabel')}</span>
+        <Switch checked={proactiveEnabled} onCheckedChange={setProactiveEnabled} aria-label={t('proactiveToggle')} />
       </div>
       <CopilotInput />
     </>
@@ -55,6 +57,7 @@ function PanelBody() {
 }
 
 function PanelHeader({ onClose }: { onClose: () => void }) {
+  const t = useTranslations('Copilot');
   return (
     <div className="flex h-16 items-center justify-between border-b border-gray-100 px-4">
       <div className="flex items-center gap-2">
@@ -69,14 +72,14 @@ function PanelHeader({ onClose }: { onClose: () => void }) {
         </div>
         <div>
           <h2 className="text-base font-semibold text-gray-900">Orixs AI</h2>
-          <p className="text-xs text-gray-400">Product and website guide</p>
+          <p className="text-xs text-gray-400">{t('subtitle')}</p>
         </div>
       </div>
       <button
         type="button"
         onClick={onClose}
         className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
-        aria-label="Close Orixs AI"
+        aria-label={t('close')}
       >
         <X className="h-4 w-4" />
       </button>
@@ -116,7 +119,7 @@ export default function CopilotPanel() {
     <AnimatePresence>
       {isOpen && (
         <motion.aside
-          className={cn('fixed right-0 top-0 z-40 flex h-screen w-[var(--copilot-sidebar-width)] flex-col overflow-hidden border-l border-gray-100 bg-white shadow-[-6px_0_24px_rgba(15,23,42,0.08)]')}
+          className={cn('fixed end-0 top-0 z-40 flex h-screen w-[var(--copilot-sidebar-width)] flex-col overflow-hidden border-s border-gray-100 bg-white shadow-[-6px_0_24px_rgba(15,23,42,0.08)]')}
           initial={{ x: '100%', opacity: 0.98 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: '100%', opacity: 0.98 }}
@@ -124,7 +127,7 @@ export default function CopilotPanel() {
         >
           <PanelHeader onClose={close} />
           <PanelBody />
-          <PanelRightClose className="pointer-events-none absolute right-4 top-5 h-4 w-4 opacity-0" />
+          <PanelRightClose className="pointer-events-none absolute end-4 top-5 h-4 w-4 opacity-0" />
         </motion.aside>
       )}
     </AnimatePresence>

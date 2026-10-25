@@ -2,10 +2,12 @@
 
 import { FormEvent, KeyboardEvent, useState } from 'react';
 import { SendHorizontal } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { useCopilot } from './CopilotProvider';
 
 export function CopilotInput() {
+  const t = useTranslations('Copilot');
   const { sendMessage, suggestions, isSending } = useCopilot();
   const [value, setValue] = useState('');
 
@@ -37,7 +39,7 @@ export function CopilotInput() {
               key={suggestion}
               type="button"
               onClick={() => void submit(suggestion)}
-              className="min-h-9 rounded-full border border-purple-100 bg-purple-50 px-3 py-1.5 text-left text-xs font-medium text-purple-700 transition hover:border-purple-200 hover:bg-purple-100 md:whitespace-nowrap"
+              className="min-h-9 rounded-full border border-purple-100 bg-purple-50 px-3 py-1.5 text-start text-xs font-medium text-purple-700 transition hover:border-purple-200 hover:bg-purple-100 md:whitespace-nowrap"
             >
               {suggestion}
             </button>
@@ -51,7 +53,7 @@ export function CopilotInput() {
           onKeyDown={handleKeyDown}
           rows={1}
           maxLength={2000}
-          placeholder="Ask about Orixs..."
+          placeholder={t('placeholder')}
           className="max-h-28 min-h-11 flex-1 resize-none rounded-xl border border-gray-200 px-3 py-3 text-sm outline-none transition focus:border-purple-300 focus:ring-2 focus:ring-purple-100"
           disabled={isSending}
         />
@@ -60,7 +62,7 @@ export function CopilotInput() {
           size="icon"
           disabled={!value.trim() || isSending}
           className="h-11 w-11 flex-shrink-0 rounded-xl bg-purple-600 text-white hover:bg-purple-700"
-          aria-label="Send message"
+          aria-label={t('send')}
         >
           <SendHorizontal className="h-4 w-4" />
         </Button>

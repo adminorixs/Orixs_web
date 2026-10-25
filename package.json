@@ -65,6 +65,7 @@
     "lucide-react": "^0.446.0",
     "mongoose": "^8.14.2",
     "next": "^15.3.2",
+    "next-intl": "^4.14.9",
     "next-themes": "^0.3.0",
     "postcss": "^8.5.3",
     "react": "18.2.0",
