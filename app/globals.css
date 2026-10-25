@@ -8,7 +8,7 @@
 
 .orixs-site-shell {
   min-height: 100vh;
-  transition: margin-right 280ms ease;
+  transition: margin-inline-end 280ms ease;
 }
 
 @media (min-width: 1024px) {
@@ -17,13 +17,18 @@
   }
 
   body.orixs-copilot-docked .orixs-site-shell {
-    margin-right: var(--copilot-sidebar-width);
+    margin-inline-end: var(--copilot-sidebar-width);
   }
 
   body.orixs-copilot-docked nav {
-    right: var(--copilot-sidebar-width);
-    transition: right 280ms ease;
+    inset-inline-end: var(--copilot-sidebar-width);
+    transition: inset-inline-end 280ms ease;
   }
+}
+
+/* Arabic pages use Noto Sans Arabic first; Latin glyphs fall through to Inter. */
+body.font-arabic, .font-arabic {
+  font-family: var(--font-arabic), 'Noto Sans Arabic', Tahoma, sans-serif;
 }
 
 .copilot-highlight {

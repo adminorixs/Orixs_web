@@ -26,6 +26,8 @@ export interface CopilotContext {
   scrollDepth: number;
   pagesVisited: string[];
   conversationId: string;
+  /** Interface language of the visitor (en | es | ar); the assistant answers in it. */
+  locale: string;
 }
 
 export type CopilotRole = 'user' | 'assistant' | 'system';

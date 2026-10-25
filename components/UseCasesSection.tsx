@@ -153,7 +153,7 @@ export function UseCasesSection() {
               {active === idx && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute bottom-0 left-6 right-6 h-0.5 bg-purple-600 rounded-full"
+                  className="absolute bottom-0 start-6 end-6 h-0.5 bg-purple-600 rounded-full"
                   transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 />
               )}

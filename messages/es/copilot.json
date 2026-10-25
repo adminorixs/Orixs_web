@@ -1,0 +1,31 @@
+{
+  "open": "Pregunta a Orixs AI",
+  "close": "Cerrar Orixs AI",
+  "subtitle": "Guía del producto y del sitio web",
+  "greeting": "Hola, soy Orixs AI.",
+  "greetingHelp": "Pregúntame sobre plataformas, planes, módulos, casos de uso o adónde ir a continuación.",
+  "proactiveLabel": "Sugerencias proactivas",
+  "proactiveToggle": "Activar o desactivar las sugerencias proactivas del Copiloto",
+  "placeholder": "Pregunta sobre Orixs...",
+  "send": "Enviar mensaje",
+  "dismiss": "Descartar el aviso del Copiloto",
+  "unavailable": "No estoy disponible temporalmente. Aun así, puedes explorar Casos de uso, Precios, Blogs y Casos de éxito desde la navegación del sitio.",
+  "proactive": {
+    "homepageTour": "¿No sabes por dónde empezar? Puedo mostrarte el sitio.",
+    "pricingHelp": "¿Necesitas ayuda para comparar planes?",
+    "signupHelp": "Puedo explicarte qué ocurre después de registrarte.",
+    "resourceIndustry": "¿Quieres ver cómo se aplica esto a tu sector?"
+  },
+  "suggestions": {
+    "homepage": ["¿Qué es Orixs en palabras sencillas?", "¿Qué plataforma encaja con mi negocio?", "Muéstrame los módulos principales.", "¿Cómo empiezo?"],
+    "use-cases": ["Compara Empresas, Seguros y Construcción.", "¿Qué puede hacer Orixs por los equipos de seguros?", "¿Cómo ayuda Orixs a los proyectos de construcción?", "Llévame al registro."],
+    "get-started": ["¿Qué pasa después de registrarme?", "¿Necesito una tarjeta de crédito?", "¿Qué datos debo proporcionar?", "¿Puedo cambiar de sector?"],
+    "pricing": ["Compara los planes disponibles.", "¿Hay una prueba gratuita?", "Muéstrame los precios de seguros.", "¿Qué significan los créditos de IA?"],
+    "blog": ["Resúmeme este tema.", "¿Cómo se aplica esto a mi empresa?", "Muéstrame recursos relacionados de Orixs."],
+    "case-study": ["Resume los resultados.", "¿Qué módulos de Orixs ayudaron aquí?", "Muéstrame un caso de uso similar."],
+    "about": ["¿Quién está detrás de Orixs?", "¿Dónde está Orixs?", "¿Qué problema se creó Orixs para resolver?"],
+    "legal": ["Resume esta política.", "¿Qué deben saber los clientes?", "¿Dónde encuentro información del producto?"],
+    "payment": ["¿Qué hago si el pago está pendiente?", "Llévame de vuelta a los precios.", "¿Cómo contacto con el soporte?"],
+    "unknown": ["¿Qué es Orixs?", "Muéstrame los casos de uso.", "Muéstrame los precios."]
+  }
+}

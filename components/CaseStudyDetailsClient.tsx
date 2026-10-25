@@ -1,10 +1,12 @@
 ﻿'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRef, useState, FormEvent } from 'react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 export default function CaseStudyDetailsClient({ caseStudy }: { caseStudy: any }) {
+  const t = useTranslations('Content.caseStudyDetails');
   const [showRequestForm, setShowRequestForm] = useState(false);
   const [showDemoForm, setShowDemoForm] = useState(false);
   
@@ -112,9 +114,9 @@ Interested in: ${caseStudy.title}`;
       <div className="max-w-7xl mx-auto pt-4 sm:pt-6 md:pt-8 lg:pt-10">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6 sm:mb-8 md:mb-10">
-          <Link href="/" className="hover:text-purple-600 transition">Home</Link>
+          <Link href="/" className="hover:text-purple-600 transition">{t('home')}</Link>
           <span>/</span>
-          <Link href="/case-studies" className="hover:text-purple-600 transition">Case Studies</Link>
+          <Link href="/case-studies" className="hover:text-purple-600 transition">{t('caseStudies')}</Link>
           <span>/</span>
           <span className="text-gray-600 font-medium" style={{ display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', overflow: 'hidden', maxWidth: '300px' }}>{caseStudy.title}</span>
         </nav>
@@ -156,7 +158,7 @@ Interested in: ${caseStudy.title}`;
           
           {/* Key Benefits - better mobile layout */}
           <div className="w-full lg:w-[35%] bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-md border border-gray-100 flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6 h-fit self-center">
-            <div className="font-semibold text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2 md:mb-3">Key Benefits</div>
+            <div className="font-semibold text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2 md:mb-3">{t('keyBenefits')}</div>
             <ul className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6">
               {caseStudy.benefits.map((b: any, i: number) => {
                 let title = b.title || (typeof b === 'string' ? b.split('\n')[0] : '');
@@ -174,7 +176,7 @@ Interested in: ${caseStudy.title}`;
                 );
               })}
             </ul>
-            <button onClick={() => setShowRequestForm(true)} className="mt-2 sm:mt-3 md:mt-4 border border-purple-600 text-purple-600 rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 md:py-2.5 font-medium sm:font-semibold text-sm sm:text-base hover:bg-purple-50 transition">Request a Similar Solution</button>
+            <button onClick={() => setShowRequestForm(true)} className="mt-2 sm:mt-3 md:mt-4 border border-purple-600 text-purple-600 rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 md:py-2.5 font-medium sm:font-semibold text-sm sm:text-base hover:bg-purple-50 transition">{t('requestSimilar')}</button>
           </div>
         </div>
         
@@ -183,9 +185,9 @@ Interested in: ${caseStudy.title}`;
           <div className="flex-1 lg:max-w-[65%]">
             {/* Overview */}
             <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">Overview</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">{t('overview')}</h2>
               {Array.isArray(caseStudy.content.overview) ? (
-                <ul className="list-disc pl-6 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed space-y-2">
+                <ul className="list-disc ps-6 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed space-y-2">
                   {caseStudy.content.overview.map((item: string, idx: number) => (
                     <li key={idx}>{item.replace(/^\*\s?/, "")}</li>
                   ))}
@@ -197,7 +199,7 @@ Interested in: ${caseStudy.title}`;
             
             {/* Challenges - better grid layout for mobile */}
             <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">Challenges</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">{t('challenges')}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
                 {caseStudy.content.challenges.map((c: string, i: number) => (
                   <div key={i} className="bg-white rounded-lg sm:rounded-xl border border-purple-100 p-3 sm:p-4 md:p-5 lg:p-6 text-gray-700 font-medium shadow-sm">
@@ -209,9 +211,9 @@ Interested in: ${caseStudy.title}`;
             
             {/* Solution - better spacing for readability */}
             <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">Solution</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">{t('solution')}</h2>
               <div className="text-gray-700 text-sm sm:text-base md:text-lg mb-4 sm:mb-5 md:mb-6 lg:mb-8">{caseStudy.content.solutionIntro}</div>
-              <ul className="list-none pl-0 text-gray-700 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
+              <ul className="list-none ps-0 text-gray-700 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
                 {caseStudy.content.solution.map((s: any, i: number) => (
                   <li key={i} className="flex items-start gap-2 sm:gap-3 md:gap-4 lg:gap-5">
                     <span className="mt-1 flex-shrink-0">
@@ -229,16 +231,16 @@ Interested in: ${caseStudy.title}`;
             {/* Implementation Process - Improved vertical stepper */}
             <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
               {/* <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">Implementation Process</h2> */}
-              <div className="relative ml-3 sm:ml-4 md:ml-5 lg:ml-6">
-                <div className="absolute left-4 top-8 bottom-8 w-0.5 sm:w-1 bg-purple-200 z-0" style={{borderRadius: '4px'}}></div>
-                <ul className="list-none pl-0 text-gray-700">
+              <div className="relative ms-3 sm:ms-4 md:ms-5 lg:ms-6">
+                <div className="absolute start-4 top-8 bottom-8 w-0.5 sm:w-1 bg-purple-200 z-0" style={{borderRadius: '4px'}}></div>
+                <ul className="list-none ps-0 text-gray-700">
                   {caseStudy.content.process.map((step: any, i: number) => (
                     <li key={i} className="relative flex items-start mb-6 sm:mb-8 md:mb-10 lg:mb-12">
                       {/* Numbered circle with better sizing for mobile */}
-                      <span className="absolute -left-3 sm:-left-4 md:-left-5 top-0 z-10 flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-purple-500 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold rounded-full border-2 sm:border-4 border-white shadow">
+                      <span className="absolute -start-3 sm:-start-4 md:-start-5 top-0 z-10 flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-purple-500 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold rounded-full border-2 sm:border-4 border-white shadow">
                         {i + 1}
                       </span>
-                      <div className="ml-6 sm:ml-7 md:ml-8 lg:ml-10 flex-1">
+                      <div className="ms-6 sm:ms-7 md:ms-8 lg:ms-10 flex-1">
                         <div className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-black mb-1 sm:mb-2">{step.title || (typeof step === 'string' ? step.split('\n')[0] : '')}</div>
                         <div className="text-gray-600 text-xs sm:text-sm md:text-base lg:text-lg leading-snug mb-1 sm:mb-2">{step.desc || (typeof step === 'string' ? step.split('\n').slice(1).join(' ') : '')}</div>
                         {step.duration && (
@@ -256,9 +258,9 @@ Interested in: ${caseStudy.title}`;
             
             {/* Results */}
             <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">Results</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">{t('results')}</h2>
               {Array.isArray(caseStudy.content.results) ? (
-                <ul className="list-disc pl-6 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed space-y-2">
+                <ul className="list-disc ps-6 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed space-y-2">
                   {caseStudy.content.results.map((item: string, idx: number) => (
                     <li key={idx}>{item}</li>
                   ))}
@@ -274,16 +276,16 @@ Interested in: ${caseStudy.title}`;
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-purple-500"><path d="M7.5 7C6.11929 7 5 8.11929 5 9.5V13.5C5 14.8807 6.11929 16 7.5 16C8.88071 16 10 14.8807 10 13.5V9.5C10 8.11929 8.88071 7 7.5 7ZM7.5 7V6M7.5 16V18M16.5 7C15.1193 7 14 8.11929 14 9.5V13.5C14 14.8807 15.1193 16 16.5 16C17.8807 16 19 14.8807 19 13.5V9.5C19 8.11929 17.8807 7 16.5 7ZM16.5 7V6M16.5 16V18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   Quote from the Founder
                 </h3>
-                <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-l-2 sm:border-l-4 border-purple-400 pl-3 sm:pl-4 md:pl-5 lg:pl-6 py-1 sm:py-2">
+                <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-s-2 sm:border-s-4 border-purple-400 ps-3 sm:ps-4 md:ps-5 lg:ps-6 py-1 sm:py-2">
                   “I used to manage projects with my gut and my phone. Now, I have answers before I even ask the questions.”
                 </blockquote>
               </div>
             )}
             {/* Testimonial */}
             <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">Testimonial</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-5 md:mb-6">{t('testimonial')}</h2>
               {caseStudy.slug === 'saas-founder-bottleneck' ? (
-                <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-l-2 sm:border-l-4 border-purple-400 pl-3 sm:pl-4 md:pl-5 lg:pl-6 py-1 sm:py-2">
+                <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-s-2 sm:border-s-4 border-purple-400 ps-3 sm:ps-4 md:ps-5 lg:ps-6 py-1 sm:py-2">
                   <span>
                     Founders deserve to think again. Start with <span className="text-purple-700 font-extrabold text-lg sm:text-xl">Orixs</span>.<br />
                     <span className="font-extrabold text-purple-700 text-lg sm:text-xl">Orixs</span> is your AI Copilot for business automation. Streamline operations and boost productivity.
@@ -291,7 +293,7 @@ Interested in: ${caseStudy.title}`;
                 </blockquote>
               ) : caseStudy.slug === 'construction-firm-blindspots' ? (
                 <>
-                  <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-l-2 sm:border-l-4 border-purple-400 pl-3 sm:pl-4 md:pl-5 lg:pl-6 py-1 sm:py-2">
+                  <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-s-2 sm:border-s-4 border-purple-400 ps-3 sm:ps-4 md:ps-5 lg:ps-6 py-1 sm:py-2">
                     <span>
                       If your construction sites still run on WhatsApp, you're not managing. You're guessing. <span className="text-purple-700 font-extrabold text-lg sm:text-xl">Orixs</span> fixes that.<br />
                       <span className="font-extrabold text-purple-700 text-lg sm:text-xl">Orixs</span> - AI Copilot for Business Excellence.<br />
@@ -300,7 +302,7 @@ Interested in: ${caseStudy.title}`;
                   </blockquote>
                 </>
               ) : caseStudy.slug === 'abuja-sme-finance' ? (
-                <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-l-2 sm:border-l-4 border-purple-400 pl-3 sm:pl-4 md:pl-5 lg:pl-6 py-1 sm:py-2">
+                <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-s-2 sm:border-s-4 border-purple-400 ps-3 sm:ps-4 md:ps-5 lg:ps-6 py-1 sm:py-2">
                   We didn't just get a tool. We got our time back. Want to stop chasing numbers and start leading with them?
                   <span className="text-purple-700 font-extrabold text-lg sm:text-xl"> <b>Meet <span className="tracking-wider">Orixs</span></b></span>.
                   <br />
@@ -309,7 +311,7 @@ Interested in: ${caseStudy.title}`;
                   <span className="font-bold text-purple-700"><b>Orixs</b></span> is your AI Copilot for business automation. Streamline operations and boost productivity.
                 </blockquote>
               ) : (
-                <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-l-2 sm:border-l-4 border-purple-400 pl-3 sm:pl-4 md:pl-5 lg:pl-6 py-1 sm:py-2">
+                <blockquote className="italic text-purple-700 text-sm sm:text-base md:text-lg border-s-2 sm:border-s-4 border-purple-400 ps-3 sm:ps-4 md:ps-5 lg:ps-6 py-1 sm:py-2">
                   {caseStudy.content.testimonial}
                 </blockquote>
               )}
@@ -321,9 +323,9 @@ Interested in: ${caseStudy.title}`;
       {/* Call-to-action section with better padding and spacing */}
       <section className="w-full flex justify-center py-6 sm:py-8 md:py-10 lg:py-12">
         <div className="bg-white rounded-xl sm:rounded-2xl shadow-md border border-gray-100 px-4 sm:px-6 md:px-8 lg:px-10 py-5 sm:py-6 md:py-8 lg:py-10 max-w-2xl sm:max-w-3xl md:max-w-4xl w-full text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 sm:mb-3 md:mb-4">Ready to streamline your operations?</h2>
-          <div className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-5 md:mb-6 lg:mb-8">Discover how Orixs can replace your scattered tools with one unified platform while maintaining flexibility for your unique needs.</div>
-          <button onClick={() => setShowDemoForm(true)} className="border-2 border-purple-500 text-purple-600 rounded-lg px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base md:text-lg font-semibold hover:bg-purple-50 transition">Schedule a Demo</button>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 sm:mb-3 md:mb-4">{t('ctaTitle')}</h2>
+          <div className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-5 md:mb-6 lg:mb-8">{t('ctaDescription')}</div>
+          <button onClick={() => setShowDemoForm(true)} className="border-2 border-purple-500 text-purple-600 rounded-lg px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base md:text-lg font-semibold hover:bg-purple-50 transition">{t('scheduleDemo')}</button>
         </div>
       </section>
       
@@ -331,11 +333,11 @@ Interested in: ${caseStudy.title}`;
       {showRequestForm && (
         <div className="fixed inset-0 bg-black/40 flex items-start sm:items-center justify-center z-50 p-3 sm:p-4 md:p-6 pt-10 sm:pt-3 overflow-y-auto">
           <form onSubmit={handleRequestFormSubmit} className="bg-white rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-xl flex flex-col gap-3 sm:gap-4 my-4 sm:my-0 overflow-y-auto max-h-[90vh]">
-            <div className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 text-black">Request a Similar Solution</div>
+            <div className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 text-black">{t('requestSimilar')}</div>
             <input 
               type="text" 
               name="fullName" 
-              placeholder="Full Name" 
+              placeholder={t('form.fullName')} 
               className="border rounded px-3 py-2 text-sm sm:text-base" 
               required 
               value={requestFormData.fullName}
@@ -344,7 +346,7 @@ Interested in: ${caseStudy.title}`;
             <input 
               type="email" 
               name="email" 
-              placeholder="Email" 
+              placeholder={t('form.email')} 
               className="border rounded px-3 py-2 text-sm sm:text-base" 
               required 
               value={requestFormData.email}
@@ -366,7 +368,7 @@ Interested in: ${caseStudy.title}`;
               <input 
                 type="tel" 
                 name="contactNumber" 
-                placeholder="Contact Number" 
+                placeholder={t('form.contactNumber')} 
                 className="border rounded px-3 py-2 flex-1 text-sm sm:text-base" 
                 required 
                 value={requestFormData.contactNumber}
@@ -376,7 +378,7 @@ Interested in: ${caseStudy.title}`;
             <input 
               type="text" 
               name="organisation" 
-              placeholder="Organisation" 
+              placeholder={t('form.organisation')} 
               className="border rounded px-3 py-2 text-sm sm:text-base" 
               required 
               value={requestFormData.organisation}
@@ -385,15 +387,15 @@ Interested in: ${caseStudy.title}`;
             <input 
               type="text" 
               name="designation" 
-              placeholder="Designation" 
+              placeholder={t('form.designation')} 
               className="border rounded px-3 py-2 text-sm sm:text-base" 
               required 
               value={requestFormData.designation}
               onChange={handleRequestFormChange}
             />
             <div className="flex gap-2 mt-2 mb-2">
-              <button type="submit" className="flex-1 bg-purple-600 text-white rounded-lg px-3 py-2 text-sm sm:text-base font-semibold hover:bg-purple-700 transition">Submit</button>
-              <button type="button" className="flex-1 border border-gray-400 rounded-lg px-3 py-2 text-sm sm:text-base" onClick={() => setShowRequestForm(false)}>Cancel</button>
+              <button type="submit" className="flex-1 bg-purple-600 text-white rounded-lg px-3 py-2 text-sm sm:text-base font-semibold hover:bg-purple-700 transition">{t('form.submit')}</button>
+              <button type="button" className="flex-1 border border-gray-400 rounded-lg px-3 py-2 text-sm sm:text-base" onClick={() => setShowRequestForm(false)}>{t('form.cancel')}</button>
             </div>
           </form>
         </div>
@@ -403,11 +405,11 @@ Interested in: ${caseStudy.title}`;
       {showDemoForm && (
         <div className="fixed inset-0 bg-black/40 flex items-start sm:items-center justify-center z-50 p-3 sm:p-4 md:p-6 pt-10 sm:pt-3 overflow-y-auto">
           <form onSubmit={handleDemoFormSubmit} className="bg-white rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-xl flex flex-col gap-3 sm:gap-4 my-4 sm:my-0 overflow-y-auto max-h-[90vh]">
-            <div className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 text-black">Schedule a Demo</div>
+            <div className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 text-black">{t('scheduleDemo')}</div>
             <input 
               type="text" 
               name="fullName" 
-              placeholder="Full Name" 
+              placeholder={t('form.fullName')} 
               className="border rounded px-3 py-2 text-sm sm:text-base" 
               required 
               value={demoFormData.fullName}
@@ -416,7 +418,7 @@ Interested in: ${caseStudy.title}`;
             <input 
               type="email" 
               name="email" 
-              placeholder="Email" 
+              placeholder={t('form.email')} 
               className="border rounded px-3 py-2 text-sm sm:text-base" 
               required 
               value={demoFormData.email}
@@ -438,7 +440,7 @@ Interested in: ${caseStudy.title}`;
               <input 
                 type="tel" 
                 name="contactNumber" 
-                placeholder="Contact Number" 
+                placeholder={t('form.contactNumber')} 
                 className="border rounded px-3 py-2 flex-1 text-sm sm:text-base" 
                 required 
                 value={demoFormData.contactNumber}
@@ -448,7 +450,7 @@ Interested in: ${caseStudy.title}`;
             <input 
               type="text" 
               name="organisation" 
-              placeholder="Organisation" 
+              placeholder={t('form.organisation')} 
               className="border rounded px-3 py-2 text-sm sm:text-base" 
               required 
               value={demoFormData.organisation}
@@ -457,14 +459,14 @@ Interested in: ${caseStudy.title}`;
             <input 
               type="text" 
               name="designation" 
-              placeholder="Designation" 
+              placeholder={t('form.designation')} 
               className="border rounded px-3 py-2 text-sm sm:text-base" 
               required 
               value={demoFormData.designation}
               onChange={handleDemoFormChange}
             />
             <div className="flex flex-col gap-2">
-              <div className="text-sm font-medium text-gray-700 mb-1">Preferred Date and Time (optional)</div>
+              <div className="text-sm font-medium text-gray-700 mb-1">{t('form.preferredDateTime')}</div>
               <div className="flex flex-col sm:flex-row gap-2">
                 <input 
                   type="date" 
@@ -484,14 +486,14 @@ Interested in: ${caseStudy.title}`;
             </div>
             <textarea 
               name="specificTopics"
-              placeholder="Any specific topics you'd like to cover during the demo?" 
+              placeholder={t('form.topics')} 
               className="border rounded px-3 py-2 text-sm sm:text-base min-h-[80px]"
               value={demoFormData.specificTopics}
               onChange={handleDemoFormChange}
             ></textarea>
             <div className="flex gap-2 mt-2 mb-2">
-              <button type="submit" className="flex-1 bg-purple-600 text-white rounded-lg px-3 py-2 text-sm sm:text-base font-semibold hover:bg-purple-700 transition">Submit</button>
-              <button type="button" className="flex-1 border border-gray-400 rounded-lg px-3 py-2 text-sm sm:text-base" onClick={() => setShowDemoForm(false)}>Cancel</button>
+              <button type="submit" className="flex-1 bg-purple-600 text-white rounded-lg px-3 py-2 text-sm sm:text-base font-semibold hover:bg-purple-700 transition">{t('form.submit')}</button>
+              <button type="button" className="flex-1 border border-gray-400 rounded-lg px-3 py-2 text-sm sm:text-base" onClick={() => setShowDemoForm(false)}>{t('form.cancel')}</button>
             </div>
           </form>
         </div>

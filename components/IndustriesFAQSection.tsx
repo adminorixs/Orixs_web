@@ -36,16 +36,16 @@ export function IndustriesFAQSection() {
         {faqs.map((faq, idx) => (
           <div key={idx} className="border-b pb-1.5 sm:pb-2 md:pb-3">
             <button
-              className="w-full flex justify-between items-start text-left text-sm sm:text-base md:text-lg lg:text-xl font-semibold py-1.5 sm:py-2 md:py-2.5"
+              className="w-full flex justify-between items-start text-start text-sm sm:text-base md:text-lg lg:text-xl font-semibold py-1.5 sm:py-2 md:py-2.5"
               onClick={() => setOpen(open === idx ? null : idx)}
             >
-              <span className="pr-2">{faq.q}</span>
+              <span className="pe-2">{faq.q}</span>
               <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-purple-600 flex-shrink-0 leading-none">
                 {open === idx ? '−' : '+'}
               </span>
             </button>
             {open === idx && (
-              <div className="mt-1 sm:mt-1.5 md:mt-2 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg pl-0 md:pl-2 pb-1.5 sm:pb-2">
+              <div className="mt-1 sm:mt-1.5 md:mt-2 text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg ps-0 md:ps-2 pb-1.5 sm:pb-2">
                 {faq.a}
               </div>
             )}

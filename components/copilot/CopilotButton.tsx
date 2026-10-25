@@ -1,9 +1,11 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useCopilot } from './CopilotProvider';
 import { ProactivePrompt } from './ProactivePrompt';
 
 export default function CopilotButton() {
+  const t = useTranslations('Copilot');
   const { toggleOpen, context, isOpen } = useCopilot();
 
   if (isOpen && context.device === 'desktop') return <ProactivePrompt />;
@@ -14,8 +16,8 @@ export default function CopilotButton() {
       <button
         type="button"
         onClick={toggleOpen}
-        className="fixed bottom-4 right-4 z-40 flex h-20 w-20 items-center justify-center bg-transparent p-0 transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-300 sm:bottom-6 sm:right-6"
-        aria-label={isOpen ? 'Close Orixs AI' : 'Ask Orixs AI'}
+        className="fixed bottom-4 end-4 z-40 flex h-20 w-20 items-center justify-center bg-transparent p-0 transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-300 sm:bottom-6 sm:end-6"
+        aria-label={isOpen ? t('close') : t('open')}
         aria-expanded={isOpen}
       >
         <img

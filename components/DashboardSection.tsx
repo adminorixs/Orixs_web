@@ -9,7 +9,7 @@ export function DashboardSection() {
         <div className="max-w-6xl mx-auto relative mt-0 sm:mt-2 md:mt-4 overflow-hidden md:overflow-visible">
         {/* Curved Arrow - hidden on mobile to prevent overflow */}
         <motion.div
-          className="absolute hidden md:block md:left-[-70px] md:top-[-60px] md:w-[80px] md:h-[80px] z-20"
+          className="absolute hidden md:block md:start-[-70px] md:top-[-60px] md:w-[80px] md:h-[80px] z-20"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -24,7 +24,7 @@ export function DashboardSection() {
         </motion.div>
 
         {/* Google Calendar Icon - hidden on mobile */}
-        <div className="absolute hidden md:block md:right-[20px] md:top-[-80px] md:w-[80px] md:h-[80px] z-20 rotate-[-15deg]">
+        <div className="absolute hidden md:block md:end-[20px] md:top-[-80px] md:w-[80px] md:h-[80px] z-20 rotate-[-15deg]">
           <Image
             src="/google-calendar.png"
             alt="Google Calendar"
@@ -35,7 +35,7 @@ export function DashboardSection() {
           />
         </div>
         {/* Teams Icon - hidden on mobile */}
-        <div className="absolute hidden md:block md:right-[-100px] md:top-[-50px] md:w-[80px] md:h-[80px] z-20 rotate-[10deg]">
+        <div className="absolute hidden md:block md:end-[-100px] md:top-[-50px] md:w-[80px] md:h-[80px] z-20 rotate-[10deg]">
           <Image
             src="/Teams 1.png"
             alt="Teams"
@@ -46,7 +46,7 @@ export function DashboardSection() {
           />
         </div>
         {/* Mail Icon (Gmail) - hidden on mobile */}
-        <div className="absolute hidden md:block md:right-[-100px] md:top-[90px] md:w-[80px] md:h-[80px] z-20 rotate-[-10deg]">
+        <div className="absolute hidden md:block md:end-[-100px] md:top-[90px] md:w-[80px] md:h-[80px] z-20 rotate-[-10deg]">
           <Image
             src="/ma 1.png"
             alt="Mail"

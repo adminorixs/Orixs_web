@@ -51,10 +51,10 @@ export function UseCasesFAQSection() {
               }`}
             >
               <button
-                className="w-full flex justify-between items-center text-left px-5 sm:px-6 py-4 sm:py-5"
+                className="w-full flex justify-between items-center text-start px-5 sm:px-6 py-4 sm:py-5"
                 onClick={() => setOpen(open === idx ? null : idx)}
               >
-                <span className="text-sm sm:text-base font-semibold text-gray-900 pr-4">
+                <span className="text-sm sm:text-base font-semibold text-gray-900 pe-4">
                   {faq.q}
                 </span>
                 <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-200 ${

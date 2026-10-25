@@ -1,0 +1,10 @@
+{
+  "processing": "Procesando tu pago…",
+  "loading": "Cargando…",
+  "doneTitle": "¡Pago completado!",
+  "doneMessage": "Gracias por tu pago seguro en línea.",
+  "paymentId": "ID de pago:",
+  "goBack": "VOLVER",
+  "failedTitle": "¡El pago ha fallado!",
+  "failedMessage": "No se pudo procesar tu pago."
+}

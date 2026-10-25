@@ -1,17 +1,11 @@
 ﻿'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
 import { useRef, useState, useEffect, useLayoutEffect } from 'react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
-const sectionList = [
-  { id: 'introduction', label: 'Introduction' },
-  { id: 'challenge', label: 'Understanding The Challenge' },
-  { id: 'approach', label: 'The Orixs Approach' },
-  { id: 'strategy', label: 'Implementation Strategy' },
-  { id: 'measuring', label: 'Measuring Success' },
-  { id: 'conclusion', label: 'Conclusion' },
-];
+const sectionIds = ['introduction', 'challenge', 'approach', 'strategy', 'measuring', 'conclusion'] as const;
 
 // Add a style block for line clamping
 const textStyles = `
@@ -91,7 +85,7 @@ function BlogImageSlideshow({ images }: { images: string[] }) {
   }, [current]);
 
   return (
-    <div className="w-full flex flex-col items-center mb-8">
+    <div dir="ltr" className="w-full flex flex-col items-center mb-8">
       <style>{`
         @keyframes zoomIn {
           from { transform: scale(1); }
@@ -106,14 +100,14 @@ function BlogImageSlideshow({ images }: { images: string[] }) {
         <div className="absolute inset-0 z-20 pointer-events-none" style={{ background: 'linear-gradient(180deg,rgba(162,89,230,0.10) 0%,rgba(255,255,255,0.00) 60%,rgba(162,89,230,0.08) 100%)' }} />
         <div
           ref={containerRef}
-          className="absolute top-0 left-0 w-full h-full flex"
+          className="absolute top-0 start-0 w-full h-full flex"
         >
           {[...images, images[0]].map((img, idx) => (
             <div key={img + '-' + idx} className="w-full h-full flex-shrink-0 relative">
               <Image
                 key={idx === (current === total ? 0 : current) ? animKey : undefined} // force re-mount for animation
                 src={img}
-                alt={`Orixs Launch Africa Slide ${((idx) % total) + 1}`}
+                alt={`${((idx) % total) + 1} / ${total}`}
                 fill
                 className={
                   `object-cover w-full h-full rounded-xl sm:rounded-2xl md:rounded-[2.5rem]` +
@@ -134,6 +128,9 @@ function BlogImageSlideshow({ images }: { images: string[] }) {
 }
 
 export default function BlogDetailsClient({ blog, related }: { blog: any, related: any[] }) {
+  const t = useTranslations('Content.blogDetails');
+  // Article section headings are part of the page chrome; the article text itself is authored content.
+  const sectionList = sectionIds.map((id) => ({ id, label: t(`sections.${id}`) }));
   // For blog 3, generate headings from content
   let dynamicHeadings: { id: string; label: string }[] = [];
   if (blog.slug === 'RINI-launch-africa') {
@@ -310,9 +307,9 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
       <div className="max-w-7xl mx-auto">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6 sm:mb-8 md:mb-10">
-          <Link href="/" className="hover:text-purple-600 transition">Home</Link>
+          <Link href="/" className="hover:text-purple-600 transition">{t('home')}</Link>
           <span>/</span>
-          <Link href="/blogs" className="hover:text-purple-600 transition">Blog</Link>
+          <Link href="/blogs" className="hover:text-purple-600 transition">{t('blog')}</Link>
           <span>/</span>
           <span className="text-gray-600 font-medium" style={{ display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', overflow: 'hidden', maxWidth: '300px' }}>{blog.title}</span>
         </nav>
@@ -322,7 +319,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
           <span className="text-purple-600 text-xl sm:text-2xl">👤</span>
           <div className="flex flex-col">
             <span className="font-bold text-lg sm:text-xl md:text-2xl text-gray-800">{blog.author}</span>
-            <span className="text-gray-400 text-sm sm:text-base md:text-lg">Author</span>
+            <span className="text-gray-400 text-sm sm:text-base md:text-lg">{t('author')}</span>
           </div>
         </div>
         
@@ -365,7 +362,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
         
         {/* Blog meta */}
         <div className="flex flex-wrap gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-3 sm:gap-y-4 md:gap-y-6 items-center text-gray-500 mb-6 sm:mb-8 md:mb-10 text-base sm:text-lg md:text-xl" style={{wordSpacing: '0.2em'}}>
-          <span>🕒 10 min read</span>
+          <span>🕒 {t('readTime', { minutes: 10 })}</span>
           {!(blog.title === "If You're Juggling 6 Tools and Still Don't Know What's Going On, Read This." || blog.title === "The Day I Realized My Team Had No Idea What I Was Building") && (
             <span className="bg-purple-100 text-purple-600 px-3 sm:px-4 py-1 sm:py-2 rounded-3xl text-sm sm:text-base font-semibold" style={{fontSize: '1.1rem'}}>{blog.tag}</span>
           )}
@@ -378,12 +375,12 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
               <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
               <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
             </svg>
-            Share
+            {t('share')}
           </span>
           
           {/* Share link popup */}
           {showShare && (
-            <span className="flex items-center gap-2 bg-white border border-gray-300 rounded-lg px-2 sm:px-3 py-1 sm:py-2 ml-0 sm:ml-2 w-full sm:w-auto">
+            <span className="flex items-center gap-2 bg-white border border-gray-300 rounded-lg px-2 sm:px-3 py-1 sm:py-2 ms-0 sm:ms-2 w-full sm:w-auto">
               <span className="text-xs sm:text-sm text-gray-700 select-all truncate">{typeof window !== 'undefined' ? window.location.href : ''}</span>
               <button
                 className="text-purple-600 font-semibold text-2xs sm:text-xs md:text-sm border border-purple-500 rounded px-1 sm:px-2 py-0.5 sm:py-1 hover:bg-purple-50 transition whitespace-nowrap"
@@ -395,7 +392,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
                   }
                 }}
               >
-                {copied ? 'Copied!' : 'Copy Link'}
+                {copied ? t('copied') : t('copyLink')}
               </button>
             </span>
           )}
@@ -407,7 +404,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
             onClick={() => setShowMobileNav(!showMobileNav)}
             className="w-full flex items-center justify-between bg-black text-white rounded-lg p-3"
           >
-            <span className="font-medium">Table of Contents</span>
+            <span className="font-medium">{t('tableOfContents')}</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform ${showMobileNav ? 'transform rotate-180' : ''}`}>
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
@@ -423,7 +420,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
                     handleNavClick(s.id);
                     setShowMobileNav(false);
                   }} 
-                  className="text-left py-2 px-3 rounded hover:bg-purple-700/30 transition font-medium text-sm flex items-center gap-2 w-full"
+                  className="text-start py-2 px-3 rounded hover:bg-purple-700/30 transition font-medium text-sm flex items-center gap-2 w-full"
                 >
                   <span className="text-purple-400">•</span>
                   {s.label}
@@ -436,7 +433,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
         {/* Main Content Layout */}
         <div className="flex flex-col md:flex-row gap-8">
           {/* Main Content */}
-          <div className="flex-1 md:max-w-[60%] md:ml-6 lg:ml-16">
+          <div className="flex-1 md:max-w-[60%] md:ms-6 lg:ms-16">
             {blog.title !== "If You're Juggling 6 Tools and Still Don't Know What's Going On, Read This." && blog.title !== "The Day I Realized My Team Had No Idea What I Was Building"
               ? (() => {
                   let headingIdx = 0;
@@ -522,7 +519,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
           {/* Desktop Sidebar Navigation - Hidden on Mobile */}
           <div className="hidden md:block w-[25%] bg-black text-white rounded-xl p-6 flex-col gap-3 h-fit sticky top-32">
             {(blog.slug === 'RINI-launch-africa' ? dynamicHeadings : sectionList).map((s) => (
-              <button key={s.id} onClick={() => handleNavClick(s.id)} className="text-left py-2 px-3 rounded hover:bg-purple-700/30 transition font-medium text-sm flex items-center gap-2 whitespace-nowrap">
+              <button key={s.id} onClick={() => handleNavClick(s.id)} className="text-start py-2 px-3 rounded hover:bg-purple-700/30 transition font-medium text-sm flex items-center gap-2 whitespace-nowrap">
                 <span className="text-purple-400">•</span>
                 {s.label}
               </button>
@@ -533,7 +530,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
       
       {/* Related Blogs */}
       <section className="max-w-7xl mx-auto py-8 sm:py-10 md:py-12 px-4">
-        <div className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Related Blog{related.length > 1 ? 's' : ''}</div>
+        <div className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">{t('related', { count: related.length })}</div>
         
         {/* Mobile scrollable cards */}
         <div className="relative">
@@ -556,7 +553,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
                   <div className="flex-1">
                     <div className="font-semibold text-sm sm:text-base mb-2 whitespace-normal break-words line-clamp-2">{b.title}</div>
                     <div className="text-gray-600 text-xs sm:text-sm mb-3 whitespace-normal break-words line-clamp-2">{b.summary}</div>
-                    <span className="text-purple-500 text-xs sm:text-sm font-medium hover:underline inline-block px-3 sm:px-4 py-1 border border-purple-500 rounded-full">Read More</span>
+                    <span className="text-purple-500 text-xs sm:text-sm font-medium hover:underline inline-block px-3 sm:px-4 py-1 border border-purple-500 rounded-full">{t('readMore')}</span>
                   </div>
                 </Link>
               ))}
@@ -564,7 +561,7 @@ export default function BlogDetailsClient({ blog, related }: { blog: any, relate
           </div>
           
           {/* Navigation arrow - hidden on small devices */}
-          <div className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 cursor-pointer hover:bg-purple-50">
+          <div className="hidden sm:block absolute end-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 cursor-pointer hover:bg-purple-50 rtl:-scale-x-100">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>

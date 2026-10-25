@@ -1,26 +1,29 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-
-const navigation = [
-  { label: 'How Orixs Works', href: '/#how-it-works' },
-  { label: 'Platform', href: '/#platform' },
-  { label: 'Use Cases', href: '/#use-cases' },
-  { label: 'Contact', href: '/#contact' },
-];
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export function Navbar() {
+  const t = useTranslations('Common.nav');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigation = [
+    { label: t('howItWorks'), href: '/#how-it-works' },
+    { label: t('platform'), href: '/#platform' },
+    { label: t('useCases'), href: '/#use-cases' },
+    { label: t('contact'), href: '/#contact' },
+  ];
 
   const closeMenu = () => setMobileMenuOpen(false);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
-      <nav aria-label="Primary navigation" className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-        <Link href="/" aria-label="Orixs home" className="flex shrink-0 items-center" onClick={closeMenu}>
+      <nav aria-label={t('primary')} className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+        <Link href="/" aria-label={t('home')} className="flex shrink-0 items-center" onClick={closeMenu}>
           <Image src="/worksuite-logo.jpeg" alt="Orixs" width={120} height={40} priority className="h-auto w-[104px]" />
         </Link>
 
@@ -32,9 +35,10 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-4 lg:flex">
+          <LanguageSwitcher />
           <Link href="/get-started/business" className="inline-flex h-10 items-center justify-center rounded-md bg-[#2f275a] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#211b43] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2f275a]">
-            Request a demo
+            {t('requestDemo')}
           </Link>
         </div>
 
@@ -42,7 +46,7 @@ export function Navbar() {
           type="button"
           className="inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-800 transition-colors hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2f275a] lg:hidden"
           onClick={() => setMobileMenuOpen((open) => !open)}
-          aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-label={mobileMenuOpen ? t('closeMenu') : t('openMenu')}
           aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <X aria-hidden="true" size={22} /> : <Menu aria-hidden="true" size={22} />}
@@ -57,8 +61,11 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
+            <div className="px-3 py-3">
+              <LanguageSwitcher />
+            </div>
             <Link href="/get-started/business" onClick={closeMenu} className="mt-3 inline-flex h-11 items-center justify-center rounded-md bg-[#2f275a] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#211b43]">
-              Request a demo
+              {t('requestDemo')}
             </Link>
           </div>
         </div>
