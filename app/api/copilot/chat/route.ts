@@ -8,7 +8,7 @@ import type { CopilotChatRequest, ConversationTurn, CopilotStreamEvent } from '@
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const MODEL_NAME = 'gemini-2.5-flash';
+const MODEL_NAME = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 const MESSAGE_LIMIT = 2000;
 const HISTORY_TURN_LIMIT = 10;
 const HISTORY_CHAR_LIMIT = 16000;
