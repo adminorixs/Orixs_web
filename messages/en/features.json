@@ -1,0 +1,514 @@
+{
+  "eyebrow": "Features",
+  "title": "One platform. Every part of the business.",
+  "description": "Explore the menus of Orixs and open any module to see what is inside and how it connects.",
+  "menuNavLabel": "Orixs menus",
+  "modulesLabel": "Modules in this menu",
+  "insideLabel": "Inside this module",
+  "previewLabel": "Orixs menu preview",
+  "openIn": "Opens from",
+  "moduleCount": "{count} modules",
+  "statMenus": "menus",
+  "statModules": "modules",
+  "statStores": "stores and marketplaces",
+  "statGateways": "payment gateways",
+  "statLanguages": "languages",
+  "play": "Play the tour",
+  "pause": "Pause the tour",
+  "next": "Next module",
+  "cta": "Get started with Orixs",
+  "ctaNote": "Free setup · No credit card · Live in under a week",
+  "selectModule": "Select a module to see what it does",
+  "menus": {
+    "overview": {
+      "name": "Overview",
+      "tagline": "Your day at a glance",
+      "description": "Dashboards, the calendar and reports that give every role a clear starting point."
+    },
+    "customers": {
+      "name": "Customers",
+      "tagline": "CRM from first lead to signed contract",
+      "description": "Capture leads, manage clients and move proposals, estimates and contracts forward in one place."
+    },
+    "work": {
+      "name": "Work",
+      "tagline": "Plan, track and deliver the work",
+      "description": "Tasks, time, cost centers, tenders, documents and travel connected to the same people and projects."
+    },
+    "finance": {
+      "name": "Finance",
+      "tagline": "Billing, purchasing and a full ledger",
+      "description": "From invoices and purchase orders to journal entries, inventory and financial statements."
+    },
+    "marketplace": {
+      "name": "Marketplace",
+      "tagline": "Sell online and keep every store in sync",
+      "description": "Product catalogs and online orders from Amazon, Shopify, eBay and WooCommerce in one workspace."
+    },
+    "people": {
+      "name": "People",
+      "tagline": "Hire, manage and pay your team",
+      "description": "Team records, attendance and leave, payroll, recruitment and performance for the whole organization."
+    },
+    "service": {
+      "name": "Messages & Service",
+      "tagline": "Conversations that lead somewhere",
+      "description": "Mailbox, notices, support tickets and chat, tied to the customers and work they relate to."
+    },
+    "settings": {
+      "name": "Settings",
+      "tagline": "Configure it once, for everyone",
+      "description": "Security and roles, payment gateways, notifications, HR and workflow rules, languages and automation."
+    }
+  },
+  "modules": {
+    "myDashboard": {
+      "name": "My Dashboard",
+      "description": "A personal home with the numbers, tasks and follow-ups that matter to you today.",
+      "items": [
+        "Key figures",
+        "Tasks due",
+        "Follow-ups"
+      ]
+    },
+    "calendarMeetings": {
+      "name": "Calendar & Meetings",
+      "description": "Schedule meetings, send invitations and keep holidays on the same calendar.",
+      "items": [
+        "Calendar",
+        "Meeting list",
+        "Holidays"
+      ]
+    },
+    "operationalDashboards": {
+      "name": "Operational Dashboards",
+      "description": "Live dashboards for each area of the business, built from the same shared data.",
+      "items": [
+        "CRM",
+        "Work",
+        "Finance",
+        "People"
+      ]
+    },
+    "reports": {
+      "name": "Reports",
+      "description": "Ready-to-share reports for sales, leads and the rest of the operation.",
+      "items": [
+        "Lead report",
+        "Sales report",
+        "Exports"
+      ]
+    },
+    "crmDashboard": {
+      "name": "CRM Dashboard",
+      "description": "See pipeline health, new leads and client activity before you open a single record.",
+      "items": [
+        "Pipeline",
+        "New leads",
+        "Client activity"
+      ]
+    },
+    "marketing": {
+      "name": "Marketing & Leads",
+      "description": "Capture leads from forms and social posts and move them through a visual sales funnel.",
+      "items": [
+        "Leads",
+        "Forms",
+        "Social poster",
+        "Sales funnel"
+      ]
+    },
+    "clients": {
+      "name": "Clients",
+      "description": "One record per client with contacts, notes, documents and history in context.",
+      "items": [
+        "Contacts",
+        "Notes",
+        "Documents"
+      ]
+    },
+    "proposals": {
+      "name": "Proposals",
+      "description": "Create, send and track proposals so every follow-up has context.",
+      "items": [
+        "Create",
+        "Send",
+        "Track"
+      ]
+    },
+    "estimates": {
+      "name": "Estimates",
+      "description": "Prepare itemized estimates and turn the approved ones into invoices.",
+      "items": [
+        "Itemized estimates",
+        "Approval",
+        "Convert to invoice"
+      ]
+    },
+    "contracts": {
+      "name": "Contracts",
+      "description": "Keep contracts, discussions and files together from draft to signature.",
+      "items": [
+        "Drafts",
+        "Discussions",
+        "Files"
+      ]
+    },
+    "intelligence": {
+      "name": "Company Intelligence",
+      "description": "AI-assisted insight into your accounts and business data, with the Orixs Copilot alongside.",
+      "items": [
+        "AI insight",
+        "Copilot",
+        "Suggestions"
+      ]
+    },
+    "tasks": {
+      "name": "Tasks",
+      "description": "Assign work, set priorities and see what is on track and what is blocked.",
+      "items": [
+        "Task board",
+        "Sub-tasks",
+        "Files",
+        "Notes"
+      ]
+    },
+    "timesheet": {
+      "name": "Timesheet",
+      "description": "Log time against tasks and cost centers for accurate delivery and billing.",
+      "items": [
+        "Time logs",
+        "Timers",
+        "Reports"
+      ]
+    },
+    "costCenters": {
+      "name": "Cost Centers",
+      "description": "Organize work by project or cost center, with members, milestones and budgets.",
+      "items": [
+        "Members",
+        "Milestones",
+        "Files",
+        "Budget"
+      ]
+    },
+    "tenders": {
+      "name": "Tender Module",
+      "description": "Run tenders end to end with a vendor list and a searchable vendor directory.",
+      "items": [
+        "Tenders",
+        "Vendors",
+        "Vendor directory"
+      ]
+    },
+    "documents": {
+      "name": "Documents",
+      "description": "A shared document center so teams find the latest file in one place.",
+      "items": [
+        "Document center",
+        "Sharing",
+        "Search"
+      ]
+    },
+    "travel": {
+      "name": "Travel Planner",
+      "description": "Plan trips, book travel and keep bookings with the work they belong to.",
+      "items": [
+        "Dashboard",
+        "Book",
+        "Bookings"
+      ]
+    },
+    "billing": {
+      "name": "Billing",
+      "description": "Send invoices, record receipts and issue credit notes, all linked to the client.",
+      "items": [
+        "Invoices",
+        "Receipts",
+        "Credit notes"
+      ]
+    },
+    "purchases": {
+      "name": "Purchases",
+      "description": "Raise purchase orders, receive goods and match supplier invoices and debit notes.",
+      "items": [
+        "Purchase orders",
+        "Receive notes",
+        "Purchase invoices",
+        "Debit notes"
+      ]
+    },
+    "expenses": {
+      "name": "Expenses",
+      "description": "Capture expenses with receipts and approvals, and keep them on the right project.",
+      "items": [
+        "Expense claims",
+        "Receipts",
+        "Approvals"
+      ]
+    },
+    "ledgerSetup": {
+      "name": "Ledger Setup",
+      "description": "Define account groups, accounts and financial years, then load opening balances.",
+      "items": [
+        "Account groups",
+        "Accounts",
+        "Financial years",
+        "Opening balances"
+      ]
+    },
+    "accounting": {
+      "name": "Accounting",
+      "description": "Post journal entries, reconcile bank statements and track your asset register.",
+      "items": [
+        "Journal entries",
+        "Bank reconciliation",
+        "Asset register"
+      ]
+    },
+    "inventory": {
+      "name": "Inventory",
+      "description": "Track stock across warehouses with levels, transfers, adjustments and reorder alerts.",
+      "items": [
+        "Warehouses",
+        "Stock levels",
+        "Transfers",
+        "Adjustments"
+      ]
+    },
+    "financialReports": {
+      "name": "Financial Reports",
+      "description": "Trial balance, profit and loss and balance sheet, straight from the ledger.",
+      "items": [
+        "Trial balance",
+        "Profit & loss",
+        "Balance sheet"
+      ]
+    },
+    "marketplaceDashboard": {
+      "name": "Marketplace Dashboard",
+      "description": "Store health and the work that needs attention across every connected channel.",
+      "items": [
+        "Connected stores",
+        "Needs attention",
+        "Sync health"
+      ]
+    },
+    "catalogs": {
+      "name": "Product Catalogs",
+      "description": "One catalog, published to several stores and marketplaces, with imported listings kept separate.",
+      "items": [
+        "Catalog",
+        "Published",
+        "Imported",
+        "Attention"
+      ]
+    },
+    "onlineOrders": {
+      "name": "Online Orders",
+      "description": "Manual orders and orders imported from your stores, in one list.",
+      "items": [
+        "All orders",
+        "Imported orders",
+        "Manual orders"
+      ]
+    },
+    "amazon": {
+      "name": "Amazon",
+      "description": "Connect your Amazon store to import listings and orders.",
+      "items": [
+        "Connect",
+        "Listings",
+        "Orders"
+      ]
+    },
+    "shopify": {
+      "name": "Shopify",
+      "description": "Connect Shopify stores and keep products and orders in step.",
+      "items": [
+        "Connect",
+        "Products",
+        "Orders"
+      ]
+    },
+    "ebay": {
+      "name": "eBay",
+      "description": "Connect eBay, prepare listing drafts and bring orders into Orixs.",
+      "items": [
+        "Connect",
+        "Listing drafts",
+        "Orders"
+      ]
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "Connect WooCommerce stores and manage them with the rest of the marketplace.",
+      "items": [
+        "Connect",
+        "Products",
+        "Orders"
+      ]
+    },
+    "orgDashboard": {
+      "name": "People Dashboard",
+      "description": "Headcount, attendance and hiring activity at a glance.",
+      "items": [
+        "Headcount",
+        "Attendance",
+        "Hiring"
+      ]
+    },
+    "team": {
+      "name": "Team",
+      "description": "Employee records with shifts, assets, penalties and transfers kept in one profile.",
+      "items": [
+        "People",
+        "Shifts",
+        "Assets",
+        "Penalties",
+        "Transfers"
+      ]
+    },
+    "attendance": {
+      "name": "Attendance & Leave",
+      "description": "Clock in and out, request leave and see who is available.",
+      "items": [
+        "Attendance",
+        "Leaves",
+        "Holidays"
+      ]
+    },
+    "payroll": {
+      "name": "Payroll",
+      "description": "Salaries, taxes, TDS declarations and payslips handled in one flow.",
+      "items": [
+        "Employee salary",
+        "Taxes",
+        "TDS",
+        "Payslips"
+      ]
+    },
+    "recruitment": {
+      "name": "Recruitment",
+      "description": "Post jobs, track applicants, schedule interviews and send offers.",
+      "items": [
+        "Jobs",
+        "Applicants",
+        "Interviews",
+        "Offers",
+        "Talent database"
+      ]
+    },
+    "performance": {
+      "name": "Performance",
+      "description": "Appraisal cycles and skills so reviews are consistent and easy to run.",
+      "items": [
+        "Appraisals",
+        "Skills",
+        "Review cycles"
+      ]
+    },
+    "hierarchy": {
+      "name": "Hierarchy & Careers",
+      "description": "Departments, designations and a public careers page for your open roles.",
+      "items": [
+        "Departments",
+        "Designations",
+        "Careers page"
+      ]
+    },
+    "mailbox": {
+      "name": "Mailbox",
+      "description": "Connect Gmail or Microsoft Mail and work your inbox next to the customers it concerns.",
+      "items": [
+        "Gmail",
+        "Microsoft Mail",
+        "Folders"
+      ]
+    },
+    "noticeBoard": {
+      "name": "Notice Board",
+      "description": "Company-wide announcements that reach the right teams.",
+      "items": [
+        "Announcements",
+        "Audiences"
+      ]
+    },
+    "support": {
+      "name": "Support",
+      "description": "Tickets with agents, types, channels and reply templates for consistent service.",
+      "items": [
+        "Tickets",
+        "Agents",
+        "Reply templates"
+      ]
+    },
+    "chat": {
+      "name": "Chat",
+      "description": "Quick team conversations without leaving your workspace.",
+      "items": [
+        "Direct messages",
+        "Groups"
+      ]
+    },
+    "accountSecurity": {
+      "name": "Account & Security",
+      "description": "Company profile, roles and permissions, two-factor sign-in and privacy controls.",
+      "items": [
+        "Roles & permissions",
+        "Two-factor",
+        "GDPR"
+      ]
+    },
+    "payments": {
+      "name": "Payments",
+      "description": "Accept payments through nine gateways plus offline methods, with your own currencies and taxes.",
+      "items": [
+        "Stripe",
+        "PayPal",
+        "Razorpay",
+        "Paystack",
+        "Flutterwave"
+      ]
+    },
+    "communication": {
+      "name": "Notifications & Email",
+      "description": "Choose what gets sent, where and when, across email, Slack and push.",
+      "items": [
+        "Email",
+        "Slack",
+        "Push",
+        "Templates"
+      ]
+    },
+    "hrSettings": {
+      "name": "HR Settings",
+      "description": "Attendance, leave, payroll, recruitment and appraisal rules set up once.",
+      "items": [
+        "Attendance",
+        "Leave",
+        "Payroll",
+        "Recruitment"
+      ]
+    },
+    "workflowSettings": {
+      "name": "Work & Sales Settings",
+      "description": "Project, task, ticket and lead rules, sources, statuses and categories.",
+      "items": [
+        "Projects",
+        "Tasks",
+        "Tickets",
+        "Leads"
+      ]
+    },
+    "platform": {
+      "name": "Platform",
+      "description": "Modules, languages, storage, backups, custom fields, integrations and the Automation Center.",
+      "items": [
+        "Languages",
+        "Custom fields",
+        "Automation Center"
+      ]
+    }
+  }
+}

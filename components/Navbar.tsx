@@ -14,7 +14,7 @@ export function Navbar() {
   const navigation = [
     { label: t('howItWorks'), href: '/#how-it-works' },
     { label: t('platform'), href: '/#platform' },
-    { label: t('useCases'), href: '/#use-cases' },
+    { label: t('features'), href: '/#features' },
     { label: t('contact'), href: '/#contact' },
   ];
 
