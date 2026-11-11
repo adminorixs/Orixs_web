@@ -93,6 +93,12 @@ export function OnePageProductSections() {
             {t('contact.title')}
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">{t('contact.description')}</p>
+          <p className="mt-4 text-base text-slate-600">
+            {t('contact.writeToUs')}{' '}
+            <a href="mailto:adminorixs@gmail.com" dir="ltr" className="font-semibold text-[#2f275a] underline underline-offset-4 hover:text-[#211b43]">
+              adminorixs@gmail.com
+            </a>
+          </p>
           <Link href="/get-started/business" className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[#2f275a] px-5 text-base font-semibold text-white transition-colors hover:bg-[#211b43] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2f275a]">
             {t('contact.requestDemo')}
             <ArrowRight aria-hidden="true" size={17} className="rtl:rotate-180" />

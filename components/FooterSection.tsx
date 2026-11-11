@@ -28,6 +28,7 @@ export function FooterSection() {
         { label: t('contact'), href: '/#contact' },
         { label: t('privacy'), href: '/privacy' },
         { label: t('terms'), href: '/terms-and-conditions' },
+        { label: 'adminorixs@gmail.com', href: 'mailto:adminorixs@gmail.com' },
       ],
     },
   ];
@@ -50,9 +51,15 @@ export function FooterSection() {
                 <ul className="mt-4 space-y-3 text-sm">
                   {group.links.map((link) => (
                     <li key={link.href + link.label}>
-                      <Link href={link.href} className="text-slate-500 transition-colors hover:text-[#2f2760]">
-                        {link.label}
-                      </Link>
+                      {link.href.startsWith('mailto:') ? (
+                        <a href={link.href} dir="ltr" className="text-slate-500 transition-colors hover:text-[#2f2760]">
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link href={link.href} className="text-slate-500 transition-colors hover:text-[#2f2760]">
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
