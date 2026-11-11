@@ -20,7 +20,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
         lead={t('privacy.lead')}
         notice={t('translationNotice')}
         sections={sections}
-        contact={{ title: t('privacy.contact.title'), intro: t('privacy.contact.intro'), email: 'contact@askOrixs.ai' }}
+        contact={{ title: t('privacy.contact.title'), intro: t('privacy.contact.intro'), email: 'adminorixs@gmail.com' }}
       />
       <FooterSection />
     </main>

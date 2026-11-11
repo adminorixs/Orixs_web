@@ -20,7 +20,7 @@ export default async function TermsAndConditionsPage({ params }: { params: Promi
         lead={t('terms.lead')}
         notice={t('translationNotice')}
         sections={sections}
-        contact={{ title: t('terms.contact.title'), intro: t('terms.contact.intro'), email: 'contact@askOrixs.ai' }}
+        contact={{ title: t('terms.contact.title'), intro: t('terms.contact.intro'), email: 'adminorixs@gmail.com' }}
       />
       <FooterSection />
     </main>
