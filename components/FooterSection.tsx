@@ -12,7 +12,7 @@ export function FooterSection() {
       links: [
         { label: t('howItWorks'), href: '/#how-it-works' },
         { label: t('platform'), href: '/#platform' },
-        { label: t('useCases'), href: '/#use-cases' },
+        { label: t('features'), href: '/#features' },
       ],
     },
     {

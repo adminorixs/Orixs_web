@@ -32,7 +32,7 @@ function getPageType(pathname: string): PageType {
 function getPageTitle(pageType: PageType, pathname: string) {
   const titles: Record<PageType, string> = {
     homepage: 'Homepage',
-    'use-cases': 'Use Cases',
+    'use-cases': 'Features',
     'get-started': 'Get Started',
     pricing: 'Pricing',
     blog: pathname === '/blogs' ? 'Blogs' : 'Blog Detail',

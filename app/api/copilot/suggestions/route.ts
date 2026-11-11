@@ -9,9 +9,9 @@ const suggestionsByPage: Record<PageType, string[]> = {
     'How do I get started?',
   ],
   'use-cases': [
-    'Compare Business, Insurance, and Construction.',
-    'What can Orixs do for insurance teams?',
-    'How does Orixs help construction projects?',
+    'Show me the Finance modules.',
+    'What is inside the Marketplace menu?',
+    'How does Orixs handle meetings and calendar?',
     'Take me to signup.',
   ],
   'get-started': [
@@ -53,7 +53,7 @@ const suggestionsByPage: Record<PageType, string[]> = {
   ],
   unknown: [
     'What is Orixs?',
-    'Show me use cases.',
+    'Show me the features.',
     'Show me pricing.',
   ],
 };

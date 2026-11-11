@@ -9,7 +9,7 @@
   "placeholder": "Ask about Orixs...",
   "send": "Send message",
   "dismiss": "Dismiss Copilot prompt",
-  "unavailable": "I'm temporarily unavailable. You can still browse Use Cases, Pricing, Blogs, and Case Studies from the site navigation.",
+  "unavailable": "I'm temporarily unavailable. You can still browse Features, Pricing, Blogs, and Case Studies from the site navigation.",
   "proactive": {
     "homepageTour": "Not sure where to start? I can show you around.",
     "pricingHelp": "Need help comparing plans?",
@@ -18,7 +18,7 @@
   },
   "suggestions": {
     "homepage": ["What is Orixs in plain English?", "Which platform fits my business?", "Show me the main modules.", "How do I get started?"],
-    "use-cases": ["Compare Business, Insurance, and Construction.", "What can Orixs do for insurance teams?", "How does Orixs help construction projects?", "Take me to signup."],
+    "use-cases": ["Show me the Finance modules.", "What is inside the Marketplace menu?", "How does Orixs handle meetings and calendar?", "Take me to signup."],
     "get-started": ["What happens after I sign up?", "Do I need a credit card?", "Which details do I need to provide?", "Can I switch industries?"],
     "pricing": ["Compare the available plans.", "Is there a free trial?", "Show me insurance pricing.", "What do AI credits mean?"],
     "blog": ["Summarize this topic for me.", "How does this apply to my company?", "Show related Orixs resources."],

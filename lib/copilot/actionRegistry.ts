@@ -42,11 +42,11 @@ export const allowedElementIds = [
   'login-form',
 ] as const;
 
-export const allowedUseCaseTabs = ['business', 'insurance', 'construction'] as const;
+export const allowedUseCaseTabs = ['overview', 'customers', 'work', 'finance', 'marketplace', 'people', 'service', 'settings'] as const;
 export const allowedPricingTabs = ['RINI', 'Insurance', 'Construction', 'Scene One', 'Intern Africa'] as const;
 export const allowedBillingPeriods = ['monthly', 'yearly'] as const;
 export const allowedCurrencies = ['USD', 'INR', 'GBP', 'ZAR'] as const;
-export const allowedIndustries = ['business', 'insurance', 'construction'] as const;
+export const allowedIndustries = ['overview', 'customers', 'work', 'finance', 'marketplace', 'people', 'service', 'settings'] as const;
 export const allowedModalIds = ['demo-request', 'newsletter', 'pricing-form'] as const;
 
 const rawActionFunctionDeclarations = [

@@ -9,9 +9,9 @@
   {
     "route": "/use-cases",
     "pageType": "use-cases",
-    "title": "Use Cases",
+    "title": "Features",
     "sections": ["use-cases", "footer"],
-    "description": "Shows Business Operations, Insurance, and Construction tabs with features, benefits, FAQ, and signup CTAs."
+    "description": "Interactive tour of the Orixs menus and modules: Overview, Customers, Work, Finance, Marketplace, People, Messages & Service, and Settings, with a signup CTA."
   },
   {
     "route": "/pricing",
