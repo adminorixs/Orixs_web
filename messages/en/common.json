@@ -11,6 +11,7 @@
     "platform": "Platform",
     "features": "Features",
     "contact": "Contact",
+    "login": "Login",
     "requestDemo": "Request a demo",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu"

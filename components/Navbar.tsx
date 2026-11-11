@@ -37,9 +37,9 @@ export function Navbar() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageSwitcher />
-          <Link href="/get-started/business" className="inline-flex h-10 items-center justify-center rounded-md bg-[#2f275a] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#211b43] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2f275a]">
-            {t('requestDemo')}
-          </Link>
+          <a href="https://dev.orixs.io/login" className="inline-flex h-10 items-center justify-center rounded-md bg-[#2f275a] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#211b43] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2f275a]">
+            {t('login')}
+          </a>
         </div>
 
         <button
@@ -64,9 +64,9 @@ export function Navbar() {
             <div className="px-3 py-3">
               <LanguageSwitcher />
             </div>
-            <Link href="/get-started/business" onClick={closeMenu} className="mt-3 inline-flex h-11 items-center justify-center rounded-md bg-[#2f275a] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#211b43]">
-              {t('requestDemo')}
-            </Link>
+            <a href="https://dev.orixs.io/login" onClick={closeMenu} className="mt-3 inline-flex h-11 items-center justify-center rounded-md bg-[#2f275a] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#211b43]">
+              {t('login')}
+            </a>
           </div>
         </div>
       )}
