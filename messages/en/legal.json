@@ -1,139 +1,294 @@
 {
   "backToHome": "Back to Home",
+  "contentsLabel": "Contents",
   "translationNotice": "",
   "privacy": {
-    "lastUpdated": "Last updated: September 5, 2026",
-    "title": "Privacy Policy for Orixs and askOrixs.ai",
-    "lead": "This policy is written to clearly explain how Orixs handles user, workspace, Google, and AI copilot data across our website and SaaS applications.",
-    "sections": {
-      "s1": {
-        "title": "1. Who We Are",
-        "body": "Orixs and askOrixs.ai are operated by HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED (\"Orixs\", \"we\", \"our\", or \"us\"). Orixs provides business operating platforms, workspace tools, and AI copilot features for teams using modules such as CRM, work management, finance, HR, payroll, recruitment, support, email, calendar, and reporting."
-      },
-      "s2": {
-        "title": "2. Scope Of This Policy",
-        "body": "This Privacy Policy explains how we collect, use, store, share, and protect information when you use orixs.io, askOrixs.ai, our SaaS applications, our AI copilot, and connected integrations including Google Sign-In, Gmail, and Google Calendar."
-      },
-      "s3": {
-        "title": "3. Information We Collect",
-        "body": "We collect information you provide directly, information created while using the platform, and information received from integrations you connect. This may include account profile details, business contact details, company and workspace data, CRM records, project records, forms, invoices, expenses, payments, attendance, leave, payroll-related records, recruitment records, tickets, notices, files, messages, calendar events, usage logs, device information, browser information, IP address, cookies, support messages, and billing or subscription information."
-      },
-      "s4": {
-        "title": "4. Google Sign-In Data",
-        "body": "If you choose to sign in with Google, we may receive your Google account identifier, name, email address, profile image, and authentication tokens needed to securely sign you in. We use this information only to authenticate your account, prevent unauthorized access, and connect your Orixs workspace to the correct user profile. We do not receive or store your Google password."
-      },
-      "s5": {
-        "title": "5. Gmail And Calendar Data",
-        "body": "If you separately connect Gmail or Google Calendar features, Orixs may access the Google data required for the features you enable. Gmail data may include email address, message metadata, message content, labels, threads, attachments, drafts, and sent messages where needed to show, search, summarize, draft, send, or sync mailbox activity. Calendar data may include calendar lists, event titles, attendees, dates, times, locations, descriptions, and meeting details where needed to show, create, update, or sync calendar events. These integrations are optional and can be disconnected by the user or workspace administrator."
-      },
-      "s6": {
-        "title": "6. How We Use Information",
-        "body": "We use information to provide and secure the platform, create and manage user accounts, operate enabled modules, process user requests, sync connected integrations, provide AI copilot responses and actions, personalize workspace context, send service notices, provide support, detect abuse, maintain audit logs, improve reliability, process billing, comply with legal obligations, and enforce our terms."
-      },
-      "s7": {
-        "title": "7. AI Copilot Processing",
-        "body": "When you use Orixs AI or askOrixs.ai, your prompt, workspace context, selected records, and relevant module data may be processed to answer your request or perform an action. The copilot can read, create, update, or delete records only according to your account permissions, company workspace boundaries, enabled modules, and confirmation rules. High-risk actions such as sending emails, deleting records, approvals, payroll, or other sensitive changes require confirmation before execution."
-      },
-      "s8": {
-        "title": "8. Google API Limited Use Disclosure",
-        "bodyBefore": "Orixs' use and transfer of information received from Google APIs will adhere to the",
-        "linkText": "Google API Services User Data Policy",
-        "bodyAfter": ", including the Limited Use requirements. We use Google user data only to provide or improve user-facing features that you request or enable, such as Google Sign-In, mailbox sync, email drafting or sending, calendar sync, workspace search, summaries, and copilot actions. We do not sell Google user data. We do not use Google user data for advertising. We do not use Google Workspace API data to train or improve generalized AI or machine learning models. Human access to Google user data is limited to cases where you ask us for support, where access is required for security or abuse investigation, or where required by law."
-      },
-      "s9": {
-        "title": "9. How We Share Information",
-        "body": "We may share information with service providers that help us operate the platform, including hosting, database, storage, analytics, payment, email delivery, customer support, security, and AI infrastructure providers. These providers are allowed to process information only as needed to provide services to Orixs and must protect it under appropriate confidentiality and security obligations. We may also share information when required by law, to protect rights and safety, during a business transfer, or when you direct us to share data through an integration or workspace action."
-      },
-      "s10": {
-        "title": "10. Data Storage And Retention",
-        "body": "We retain account, workspace, and integration data for as long as needed to provide the services, comply with legal obligations, resolve disputes, maintain security, and enforce agreements. OAuth tokens for Google integrations are retained only while the integration remains connected or as otherwise needed for security and audit purposes. Audit logs may be retained to preserve security, compliance, and operational history. When data is no longer needed, we delete it or de-identify it according to our retention practices."
-      },
-      "s11": {
-        "title": "11. Your Choices And Controls",
-        "body": "You may access, update, export, or request deletion of your personal information by using available account settings or contacting us. You can disconnect Google integrations inside Orixs where the feature is available, or revoke Orixs access from your Google Account permissions page. Workspace administrators may control user access, modules, permissions, and retention settings for their organization. You may opt out of marketing communications while still receiving important service or security messages."
-      },
-      "s12": {
-        "title": "12. Security",
-        "body": "We use administrative, technical, and organizational safeguards designed to protect information from unauthorized access, loss, misuse, or alteration. These safeguards may include HTTPS, access controls, tenant-level company scoping, role permissions, audit logs, token protection, secure deployment practices, monitoring, and restricted access to production systems. No method of transmission or storage is completely secure, but we work to protect your information in line with the sensitivity of the data we process."
-      },
-      "s13": {
-        "title": "13. International Transfers",
-        "body": "Orixs may process and store information in countries other than the country where you are located. Where required, we use appropriate safeguards for international transfers and process information according to this Privacy Policy."
-      },
-      "s14": {
-        "title": "14. Children",
-        "body": "Orixs is intended for business users and is not directed to children. We do not knowingly collect personal information from children under the age required by applicable law. If we learn that a child has provided personal information without appropriate consent, we will take steps to delete it."
-      },
-      "s15": {
-        "title": "15. Changes To This Policy",
-        "body": "We may update this Privacy Policy from time to time. If we make material changes, we will provide notice through the website, application, email, or another appropriate method. If a change affects how we use Google user data, we will request any required consent before using that data for a new purpose."
-      },
-      "s16": {
-        "title": "16. Contact Us",
-        "bodyBefore": "If you have questions about this Privacy Policy, Google data, account deletion, or your privacy choices, contact us at",
-        "bodyAfter": "."
-      }
-    }
-  },
-  "terms": {
-    "title": "Terms and Conditions for askOrixs.ai (Orixs Platform)",
-    "sections": {
-      "s1": {
-        "title": "1. Introduction",
-        "body": "Welcome to askOrixs.ai, a platform provided by HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED (\"Company\", \"we\", \"our\", or \"us\"). These Terms and Conditions (\"Terms\") govern your use of our website and services provided through the Orixs platform (\"Service\"). By accessing or using the Service, you agree to be bound by these Terms."
-      },
-      "s2": {
-        "title": "2. Eligibility",
-        "body": "You must be at least 18 years old or the legal age of majority in your jurisdiction to use our Service. By using the Service, you represent and warrant that you meet these requirements."
-      },
-      "s3": {
-        "title": "3. Use of the Service",
-        "lines": [
-          "You agree to use the Service only for lawful purposes.",
-          "You will not use the Service to transmit any content that is unlawful, harmful, abusive, or otherwise objectionable.",
-          "You will not attempt to gain unauthorized access to any part of the Service."
+    "lastUpdated": "Last updated: November 11, 2026",
+    "title": "Privacy Policy",
+    "lead": "This Privacy Policy explains what personal data HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED collects through Orixs and askOrixs.ai, why we collect it, how we protect it, and the rights and choices you have.",
+    "contact": {
+      "title": "Contact Us",
+      "intro": "For privacy questions, data requests, account deletion or complaints, write to us at"
+    },
+    "sections": [
+      {
+        "title": "Who We Are And Our Role",
+        "paragraphs": [
+          "Orixs and askOrixs.ai are operated by HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED (\"Orixs\", \"we\", \"our\" or \"us\"). Orixs provides business operating software and AI copilot features for teams, covering areas such as customer management, work management, finance, people and HR, marketplace operations, support, email and calendar.",
+          "We act as a data controller (or equivalent) for personal data about visitors to our websites, people who create an account or contact us, and our own business relationships.",
+          "When a company uses Orixs to run its business, that company is the controller of the data it puts into its workspace (\"Customer Data\", for example its clients, employees, orders and records) and we act as its processor (or service provider) and handle that data on its documented instructions. If your data sits in a company's workspace, please contact that company first about your rights."
         ]
       },
-      "s4": {
-        "title": "4. Account Registration",
-        "body": "Some features of the Service may require registration. You agree to provide accurate and complete information and to keep it up to date. You are responsible for maintaining the confidentiality of your login credentials."
+      {
+        "title": "Scope Of This Policy",
+        "paragraphs": [
+          "This policy applies to orixs.io, askOrixs.ai, our web and SaaS applications, our AI copilot, our support channels, and the integrations you choose to connect, including Google Sign-In, Gmail and Google Calendar. It does not apply to third-party sites or services that we link to."
+        ]
       },
-      "s5": {
-        "title": "5. Intellectual Property",
-        "body": "All content, trademarks, logos, and other intellectual property on the Service are the property of HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED or its licensors. You may not reproduce, distribute, or use any content without our prior written consent."
+      {
+        "title": "Information We Collect",
+        "paragraphs": ["We collect information in three ways: you give it to us, we create it while you use the platform, and we receive it from integrations you connect."],
+        "items": [
+          "Account and profile data: name, email address, phone number, job title, company name, profile image, language and login credentials.",
+          "Workspace and business data you enter or upload: contacts, clients, proposals, projects, tasks, timesheets, invoices, expenses, orders, inventory, attendance, leave, payroll-related and recruitment records, tickets, notices, files, messages and calendar events.",
+          "Billing data: plan, invoices and payment status. Card and bank details are handled by our payment providers and are not stored by us in full.",
+          "Usage and device data: log data, IP address, browser and device type, pages and features used, timestamps and error reports.",
+          "Cookies and similar technologies, as described below.",
+          "Communications: messages to our support or sales teams, demo and signup requests, survey answers and feedback.",
+          "AI copilot data: the prompts you enter, the workspace context needed to answer them, and the responses and actions produced."
+        ]
       },
-      "s6": {
-        "title": "6. User-Generated Content",
-        "body": "You retain ownership of any content you submit to the Service, but you grant us a non-exclusive, worldwide, royalty-free license to use, reproduce, and distribute such content in connection with the Service."
+      {
+        "title": "Google User Data",
+        "paragraphs": [
+          "Google Sign-In. If you sign in with Google, we receive your Google account identifier, name, email address, profile image and the authentication tokens needed to sign you in securely. We use them only to authenticate you, prevent unauthorized access and link your Orixs workspace to the right profile. We never receive your Google password.",
+          "Gmail and Google Calendar. If you separately connect these integrations, Orixs accesses only the Google data needed for the features you enable. Gmail data may include message metadata, content, labels, threads, attachments, drafts and sent messages, so that we can show, search, summarize, draft, send or sync mailbox activity. Calendar data may include calendar lists, event titles, attendees, dates, times, locations and descriptions, so that we can show, create, update or sync events.",
+          "These integrations are optional. You or your workspace administrator can disconnect them at any time inside Orixs, or revoke Orixs' access from your Google Account permissions page."
+        ]
       },
-      "s7": {
-        "title": "7. Third-Party Services",
-        "body": "Our Service may contain links to third-party websites or services. We are not responsible for the content, policies, or practices of third-party services."
+      {
+        "title": "Google API Limited Use Disclosure",
+        "paragraphs": [
+          "Orixs' use and transfer to any other app of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.",
+          "We use Google user data only to provide or improve user-facing features that you request or enable, such as Google Sign-In, mailbox and calendar sync, email drafting or sending, workspace search, summaries and copilot actions. We do not sell Google user data. We do not use it for advertising, including retargeting or interest-based ads. We do not use Google Workspace API data to develop, improve or train generalized AI or machine learning models. Humans read Google user data only where you ask us to for support, where it is needed to investigate abuse or protect security, or where the law requires."
+        ],
+        "link": { "text": "Google API Services User Data Policy", "href": "https://developers.google.com/terms/api-services-user-data-policy" }
       },
-      "s8": {
-        "title": "8. Disclaimers",
-        "body": "The Service is provided \"as is\" and \"as available\" without warranties of any kind. We do not warrant that the Service will be uninterrupted or error-free."
+      {
+        "title": "How We Use Information And Our Legal Bases",
+        "paragraphs": ["We use personal data only for specified purposes and, where data protection law such as the GDPR applies, only where we have a legal basis:"],
+        "items": [
+          "To provide and operate the platform, create and manage accounts, run the modules you enable, sync integrations and give support. Basis: performance of our contract with you or your organization.",
+          "To secure the platform, prevent fraud and abuse, keep audit logs and troubleshoot. Basis: our legitimate interests in running a safe and reliable service.",
+          "To improve and develop the product, measure usage and plan capacity. Basis: our legitimate interests, or your consent where the law requires it.",
+          "To send service notices, billing messages and security alerts. Basis: contract and legitimate interests.",
+          "To send marketing about Orixs. Basis: your consent or, where permitted, our legitimate interests. You can opt out at any time.",
+          "To comply with legal, tax, accounting and regulatory obligations and to establish or defend legal claims. Basis: legal obligation and legitimate interests.",
+          "Where we rely on consent, you may withdraw it at any time without affecting earlier processing."
+        ]
       },
-      "s9": {
-        "title": "9. Limitation of Liability",
-        "body": "To the fullest extent permitted by law, HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED shall not be liable for any indirect, incidental, or consequential damages arising out of your use of the Service."
+      {
+        "title": "AI Copilot Processing",
+        "paragraphs": [
+          "When you use Orixs AI or askOrixs.ai, your prompt, the workspace context you allow and relevant module data are processed to answer your request or perform an action. The copilot can read, create, update or delete records only within your account permissions, your company workspace boundaries and the modules that are enabled. High-risk actions, such as sending emails, deleting records, approvals or payroll changes, require your confirmation before they run.",
+          "AI output can be incomplete or inaccurate. Please review it before relying on it, especially for legal, financial, employment or compliance decisions. We use third-party AI infrastructure providers to process these requests under confidentiality and security obligations. Google user data is never used to train generalized models, as stated above."
+        ]
       },
-      "s10": {
-        "title": "10. Indemnification",
-        "body": "You agree to indemnify and hold harmless HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED from any claims, damages, or expenses arising out of your use of the Service or your violation of these Terms."
+      {
+        "title": "Cookies And Similar Technologies",
+        "paragraphs": ["We use cookies and local storage that are strictly necessary to sign you in, keep your session secure, remember your language and protect against abuse. Where we use analytics or other non-essential cookies, we do so to understand how the site is used and to improve it, and, where the law requires, only with your consent. You can control or delete cookies in your browser settings; blocking essential cookies may stop parts of the service from working."]
       },
-      "s11": {
-        "title": "11. Termination",
-        "body": "We reserve the right to suspend or terminate your access to the Service at our sole discretion, with or without notice, for conduct that we believe violates these Terms or is harmful to other users or us."
+      {
+        "title": "How We Share Information",
+        "paragraphs": ["We do not sell personal data and we do not share it for cross-context behavioral advertising. We share it only in these cases:"],
+        "items": [
+          "Service providers (subprocessors) that help us run Orixs, such as cloud hosting, database and storage, email delivery, analytics, payment processing, customer support, security monitoring and AI infrastructure. They may process data only on our instructions and under confidentiality and security terms.",
+          "Integrations and actions you direct, for example when you connect a Google account or send a message through a connected channel.",
+          "Professional advisers, auditors and insurers under duties of confidentiality.",
+          "Authorities, courts or other parties where required by law or to protect rights, safety and security.",
+          "A successor in a merger, acquisition, financing or sale of assets, with notice to you where required."
+        ]
       },
-      "s12": {
-        "title": "12. Governing Law",
-        "body": "These Terms shall be governed by the laws of India, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bangalore, Karnataka."
+      {
+        "title": "International Transfers",
+        "paragraphs": ["Orixs may process and store personal data in countries other than your own, including India and the countries where our providers operate. Where the law requires, we transfer data only with appropriate safeguards, such as standard contractual clauses, adequacy decisions or other lawful transfer mechanisms, and we process it in line with this policy."]
       },
-      "s13": {
-        "title": "13. Contact Information",
-        "bodyBefore": "For any questions about these Terms, please contact us at:"
+      {
+        "title": "Data Retention",
+        "paragraphs": [
+          "We keep personal data only for as long as needed for the purposes in this policy. In general, account and workspace data is kept while the account is active and for a limited period afterwards so you can export it or reactivate. Google OAuth tokens are kept only while the integration is connected, or as needed for security and audit. Billing and tax records are kept for the period required by law. Audit and security logs are kept for a limited period to protect the service.",
+          "When data is no longer needed, we delete it or de-identify it, subject to backups that roll off on a regular cycle and to any legal hold."
+        ]
+      },
+      {
+        "title": "Security",
+        "paragraphs": ["We use administrative, technical and organizational safeguards designed to protect personal data against unauthorized access, loss, misuse and alteration. These include encryption in transit (HTTPS), access controls, tenant-level company scoping, role-based permissions, audit logs, token protection, secure deployment practices, monitoring, and restricted access to production systems. No system is completely secure, but we work to keep our protections in line with the sensitivity of the data."]
+      },
+      {
+        "title": "Personal Data Breaches",
+        "paragraphs": ["If we become aware of a personal data breach that affects you or your organization, we will investigate and contain it, and notify affected customers and, where required, the relevant authorities and individuals without undue delay and within the time limits set by applicable law."]
+      },
+      {
+        "title": "Your Rights And Choices",
+        "paragraphs": ["Depending on where you live, you may have some or all of the following rights over your personal data. We honor them as the law requires, whichever country you are in:"],
+        "items": [
+          "Access and portability: know what we hold about you and receive a copy in a common format.",
+          "Correction: have inaccurate or incomplete data updated.",
+          "Deletion: ask us to erase your data, subject to legal retention duties.",
+          "Restriction and objection: limit or object to certain processing, including direct marketing.",
+          "Withdraw consent at any time where processing is based on consent.",
+          "Opt out of the sale or sharing of personal data (we do not sell or share it) and of targeted advertising.",
+          "Non-discrimination for exercising your privacy rights.",
+          "Nominate another person to exercise your rights, and use available grievance redress, where your law provides (for example under India's Digital Personal Data Protection Act, 2023).",
+          "Lodge a complaint with your data protection authority."
+        ],
+        "link": { "text": "Google Account permissions", "href": "https://myaccount.google.com/permissions" }
+      },
+      {
+        "title": "How To Exercise Your Rights",
+        "paragraphs": [
+          "Use the settings in your account where available, or email us using the address in the Contact section. We may ask you to verify your identity before acting on a request. We respond within the time required by applicable law, generally within 30 days, and tell you if we need more time or cannot fully comply and why.",
+          "Workspace administrators control users, modules, permissions and retention settings for their organization. If your request concerns Customer Data, we will refer you to your organization or help it respond."
+        ]
+      },
+      {
+        "title": "Customer Data And Data Processing Terms",
+        "paragraphs": ["Where we process Customer Data as a processor, we do so only on the customer's documented instructions, ensure personnel are bound by confidentiality, apply appropriate security measures, use subprocessors under written terms, help the customer respond to data subject requests and security incidents, and delete or return Customer Data at the end of the services as described above. A data processing agreement is available to business customers on request."]
+      },
+      {
+        "title": "Children",
+        "paragraphs": ["Orixs is built for business users and is not directed to children. We do not knowingly collect personal data from children below the age set by applicable law. If you believe a child has given us personal data, contact us and we will delete it."]
+      },
+      {
+        "title": "Third-Party Links",
+        "paragraphs": ["Our service may link to or integrate with third-party websites and services. Their privacy practices are their own and we are not responsible for them. Please read their policies before using them."]
+      },
+      {
+        "title": "Changes To This Policy",
+        "paragraphs": ["We may update this policy from time to time. The date at the top shows when it was last changed. If we make material changes, we will notify you through the website, the application or by email. If a change affects how we use Google user data, we will ask for any consent that is required before using the data for a new purpose."]
       }
-    }
+    ]
+  },
+  "terms": {
+    "lastUpdated": "Last updated: November 11, 2026",
+    "title": "Terms and Conditions",
+    "lead": "These Terms govern your use of the Orixs platform, askOrixs.ai and our websites, provided by HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED. Please read them carefully.",
+    "contact": {
+      "title": "Contact Information",
+      "intro": "For questions about these Terms, legal notices or support, contact us at"
+    },
+    "sections": [
+      {
+        "title": "Agreement To These Terms",
+        "paragraphs": [
+          "These Terms and Conditions (\"Terms\") are a binding agreement between you and HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED (\"Orixs\", \"Company\", \"we\", \"our\" or \"us\"). They apply to the Orixs platform, askOrixs.ai, our AI copilot, our websites and related services (together, the \"Service\").",
+          "By creating an account, clicking to accept, or using the Service, you agree to these Terms and to our Privacy Policy. If you use the Service for an organization, you confirm that you have authority to bind that organization, and \"you\" includes it. If you do not agree, do not use the Service. Any signed order form or written agreement between you and us prevails over these Terms where they conflict."
+        ]
+      },
+      {
+        "title": "Eligibility",
+        "paragraphs": ["You must be at least 18 years old, or the age of majority where you live, and able to form a binding contract. The Service is intended for business use. You may not use it if you are barred from doing so under applicable law, including trade sanctions."]
+      },
+      {
+        "title": "The Service",
+        "paragraphs": [
+          "Orixs provides software for running a business, with modules such as customer management, work management, finance, marketplace operations, people and HR, support, email and calendar, plus AI-assisted features. The modules available to you depend on your plan and your workspace settings.",
+          "We may improve, add, change or retire features. If we make a change that materially reduces core functionality for paying customers, we will give reasonable notice."
+        ]
+      },
+      {
+        "title": "Accounts And Workspaces",
+        "paragraphs": [
+          "Some features need an account. You agree to give accurate, complete information and keep it current, to keep your credentials confidential, and to tell us promptly of any unauthorized access. You are responsible for all activity under your account.",
+          "Each workspace has administrators who control users, roles, modules, permissions and integrations. The organization that owns the workspace is responsible for the actions of its users and administrators."
+        ]
+      },
+      {
+        "title": "Plans, Fees And Payment",
+        "paragraphs": [
+          "Paid plans are charged as stated on our pricing page or in your order form. Unless stated otherwise, fees are billed in advance, are non-cancellable and non-refundable except where required by law, and exclude taxes such as GST, VAT or withholding, which you are responsible for.",
+          "Subscriptions renew for the same period unless you cancel before the renewal date in your account or by written notice. We may change prices for a future renewal period with advance notice. If a payment fails, we may suspend the paid features until it is resolved.",
+          "Usage-based items, such as AI credits, are limited to the amounts included in your plan or purchased by you, and may expire as described when you buy them."
+        ]
+      },
+      {
+        "title": "Free Trials And Beta Features",
+        "paragraphs": ["Trials, free plans and beta or preview features are provided for evaluation, may be limited, and may be changed or withdrawn at any time. They are provided \"as is\", without commitments on availability or support, to the extent the law permits."]
+      },
+      {
+        "title": "Acceptable Use",
+        "paragraphs": ["You agree to use the Service lawfully and in line with these Terms. You must not:"],
+        "items": [
+          "upload or transmit anything unlawful, infringing, defamatory, abusive, harassing, or that you have no right to use;",
+          "attempt to gain unauthorized access to the Service, other accounts or our systems, or probe, scan or test their vulnerability without our written permission;",
+          "interfere with or disrupt the Service, including by malware, excessive automated requests or circumventing usage limits or security controls;",
+          "copy, reverse engineer, decompile or create derivative works of the Service, except where the law allows it despite this restriction;",
+          "resell or provide the Service to third parties other than as we expressly permit;",
+          "send spam or unsolicited bulk messages, or use the Service to violate others' privacy or rights;",
+          "use the Service or AI outputs to build a competing product, or to train a competing AI model;",
+          "use the Service for any purpose that breaches sanctions, export control, anti-corruption or other applicable laws."
+        ]
+      },
+      {
+        "title": "Your Data",
+        "paragraphs": [
+          "You keep all rights in the data, files and content you or your users put into the Service (\"Customer Data\"). You give us a limited, non-exclusive, worldwide licence to host, process, transmit and display Customer Data only as needed to provide, secure, support and improve the Service for you and to meet legal obligations.",
+          "You are responsible for Customer Data, including its accuracy and legality, for having the rights and legal basis (such as consents and notices to your employees and clients) to put it into the Service, and for your own backups and exports where you need them."
+        ]
+      },
+      {
+        "title": "Privacy And Data Protection",
+        "paragraphs": ["We process personal data under our Privacy Policy. Where we process personal data in Customer Data on your behalf, we act as your processor or service provider, and a data processing agreement is available on request. Each party will comply with the data protection laws that apply to it."]
+      },
+      {
+        "title": "AI Features",
+        "paragraphs": [
+          "The Service includes AI features that can draft content, summarize information, answer questions and, with your confirmation, take actions in your workspace. AI output may be inaccurate, incomplete or similar to output given to others. It is not legal, financial, tax, medical or employment advice.",
+          "You are responsible for reviewing AI output and the actions you approve before relying on them, and for decisions you make using them. Actions run within your permissions, and high-risk actions need your confirmation. Our Privacy Policy explains how data is processed for AI features, including our commitments for Google user data."
+        ]
+      },
+      {
+        "title": "Third-Party Services And Integrations",
+        "paragraphs": ["The Service may connect to third-party services, such as Google, payment gateways and marketplaces including Amazon, Shopify, eBay and WooCommerce. Your use of them is governed by their own terms and privacy policies. We do not control and are not responsible for third-party services, and you authorize us to exchange data with the integrations you connect."]
+      },
+      {
+        "title": "Intellectual Property",
+        "paragraphs": [
+          "The Service, including its software, design, text, trademarks and logos, belongs to Orixs or its licensors and is protected by intellectual property laws. Subject to these Terms, we give you a limited, non-exclusive, non-transferable, revocable right to use the Service for your internal business purposes during your subscription. We reserve all rights not expressly granted.",
+          "If you give us feedback or suggestions, we may use them without obligation to you."
+        ]
+      },
+      {
+        "title": "Confidentiality",
+        "paragraphs": ["Each party will protect the other's non-public information that is marked or reasonably understood to be confidential, use it only to perform or use the Service, and disclose it only to people who need to know and are bound by similar duties, or as the law requires. This does not apply to information that is public, already known, independently developed or lawfully received from others without restriction."]
+      },
+      {
+        "title": "Suspension And Termination",
+        "paragraphs": [
+          "You may stop using the Service and cancel your subscription at any time. We may suspend or terminate access, in whole or in part, if you materially breach these Terms, fail to pay, create a security or legal risk, or if required by law. Where reasonable, we will give notice and an opportunity to fix the issue first.",
+          "On termination your right to use the Service ends. Fees already due remain payable. We will make Customer Data available for export for a limited period after termination and then delete it as described in our Privacy Policy. Sections that by nature should survive, including those on intellectual property, confidentiality, disclaimers, liability and governing law, continue after termination."
+        ]
+      },
+      {
+        "title": "Disclaimers",
+        "paragraphs": ["To the fullest extent permitted by law, the Service is provided \"as is\" and \"as available\". We disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose, non-infringement and uninterrupted or error-free operation. We do not guarantee that the Service or AI output will meet your requirements, be accurate, or be free of defects or harmful components."]
+      },
+      {
+        "title": "Limitation Of Liability",
+        "paragraphs": [
+          "To the fullest extent permitted by law, neither party will be liable for indirect, incidental, special, consequential or punitive damages, or for lost profits, revenue, goodwill or data, arising out of or related to the Service, even if advised of the possibility.",
+          "Our total liability arising out of or related to these Terms and the Service will not exceed the fees you paid to us for the Service in the twelve months before the event giving rise to the claim. Nothing in these Terms limits liability that cannot be limited by law, such as for fraud, wilful misconduct, or death or personal injury caused by negligence."
+        ]
+      },
+      {
+        "title": "Indemnification",
+        "paragraphs": ["You will defend and indemnify Orixs, its affiliates and their personnel against third-party claims and resulting losses, damages and reasonable costs arising from Customer Data, your use of the Service in breach of these Terms or the law, or your violation of others' rights. We will tell you promptly of any claim and reasonably cooperate, at your expense, and you may not settle a claim in a way that admits fault for us without our consent."]
+      },
+      {
+        "title": "Force Majeure",
+        "paragraphs": ["Neither party is liable for delay or failure to perform caused by events beyond its reasonable control, including natural disasters, war, terrorism, labor disputes, pandemics, power, internet or telecommunications failures, government action, or failures of third-party hosting or cloud providers. Payment obligations are not excused."]
+      },
+      {
+        "title": "Export Controls And Compliance",
+        "paragraphs": ["You will comply with all applicable export control, sanctions, anti-bribery and anti-corruption laws, and will not use or give access to the Service in violation of them or from a sanctioned country or to a sanctioned person."]
+      },
+      {
+        "title": "Governing Law And Disputes",
+        "paragraphs": [
+          "These Terms are governed by the laws of India, without regard to conflict-of-law rules. Before starting formal proceedings, the parties will try in good faith to resolve a dispute through written notice and discussion for at least 30 days.",
+          "Subject to that, the courts at Bangalore, Karnataka have exclusive jurisdiction, except that either party may seek urgent injunctive relief to protect intellectual property or confidential information in any competent court. If you are a consumer with mandatory rights under the law of your country, those rights are not affected."
+        ]
+      },
+      {
+        "title": "Changes To These Terms",
+        "paragraphs": ["We may update these Terms from time to time. We will post the new version with a new date and, for material changes, notify you through the Service or by email. Changes take effect on the date stated, and your continued use after that date means you accept them. If you do not agree, you must stop using the Service and may cancel."]
+      },
+      {
+        "title": "General",
+        "paragraphs": [
+          "These Terms, with any order form and the documents they refer to, are the entire agreement between us about the Service. If a provision is unenforceable, the rest remains in effect. A failure to enforce a right is not a waiver. You may not assign these Terms without our written consent; we may assign them to an affiliate or a successor to our business. There are no third-party beneficiaries. We may give notices by email, in the Service or by posting on our website, and you may give notice to the email address in the Contact section. These Terms are written in English, and any translation is for convenience only; the English version prevails."
+        ]
+      }
+    ]
   }
 }

@@ -1,5 +1,5 @@
 import { getRequestConfig } from 'next-intl/server';
-import { hasLocale } from 'next-intl';
+import { hasLocale, type AbstractIntlMessages } from 'next-intl';
 import { routing } from './routing';
 
 export default getRequestConfig(async ({ requestLocale }) => {
@@ -14,12 +14,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale,
-    messages: locale === 'en' ? localized.default : deepMerge(fallback.default, localized.default),
+    messages: (locale === 'en' ? localized.default : deepMerge(fallback.default, localized.default)) as AbstractIntlMessages,
     timeZone: 'UTC',
   };
 });
 
-type Dict = { [key: string]: string | string[] | Dict };
+type Dict = { [key: string]: string | unknown[] | Dict };
 
 const isDict = (value: unknown): value is Dict => typeof value === 'object' && value !== null && !Array.isArray(value);
 
