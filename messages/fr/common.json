@@ -1,0 +1,57 @@
+{
+  "brand": "Orixs",
+  "language": {
+    "label": "Langue",
+    "switchTo": "Changer de langue"
+  },
+  "nav": {
+    "primary": "Navigation principale",
+    "home": "Accueil Orixs",
+    "howItWorks": "Comment fonctionne Orixs",
+    "platform": "Plateforme",
+    "useCases": "Cas d'usage",
+    "contact": "Contact",
+    "requestDemo": "Demander une démo",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation"
+  },
+  "footer": {
+    "navigation": "Navigation du pied de page",
+    "tagline": "Un espace de travail connecté pour des décisions plus claires et une action plus déterminée.",
+    "product": "Produit",
+    "howItWorks": "Comment fonctionne Orixs",
+    "platform": "Plateforme",
+    "useCases": "Cas d'usage",
+    "getStarted": "Commencer",
+    "requestDemo": "Demander une démo",
+    "login": "Se connecter ou s'inscrire",
+    "company": "Entreprise",
+    "contact": "Contact",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "builtWith": "Copilote IA pour l'excellence opérationnelle, conçu avec",
+    "regions": "USA | KSA | SINGAPOUR",
+    "rights": "© 2026 Orixs. Tous droits réservés."
+  },
+  "actions": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "submit": "Envoyer",
+    "back": "Retour",
+    "next": "Suivant",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "loading": "Chargement...",
+    "tryAgain": "Réessayer",
+    "backToHome": "Retour à l'accueil"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée."
+  },
+  "popup": {
+    "success": "Succès !",
+    "submitted": "Formulaire envoyé avec succès !"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "eyebrow": "Espace de travail IA Orixs",
+    "title": "Mettez chaque décision d'entreprise au clair.",
+    "description": "Orixs réunit votre travail, vos conversations, vos clients et vos données opérationnelles pour que chaque équipe comprenne ce qui compte et fasse avancer l'entreprise.",
+    "requestDemo": "Demander une démo",
+    "seeHow": "Voir comment ça marche",
+    "note": "Un espace de travail connecté pour les questions, le travail et les décisions qui font avancer votre entreprise.",
+    "imageAlt": "Espace de travail Orixs affichant les tâches, l'activité des projets, la finance et le Copilot Orixs"
+  },
+  "howItWorks": {
+    "eyebrow": "Comment fonctionne Orixs",
+    "title": "Un chemin simple de la question à l'action.",
+    "description": "Orixs est conçu autour de la façon dont le travail se déroule réellement : une question se pose, il faut du contexte, et quelqu'un doit passer à l'étape suivante.",
+    "steps": {
+      "ask": {
+        "title": "Demandez en langage naturel",
+        "description": "Partez de la question qui se pose, d'une mise à jour de projet à un suivi client ou une priorité opérationnelle."
+      },
+      "see": {
+        "title": "Voyez la vue d'ensemble",
+        "description": "Orixs réunit dans une seule vue le travail, les informations et les personnes concernés, avec le contexte pour les comprendre."
+      },
+      "act": {
+        "title": "Transformez la clarté en action",
+        "description": "Passez de l'analyse à la tâche suivante, au transfert, à la décision ou au flux de travail sans perdre le fil."
+      }
+    }
+  },
+  "platform": {
+    "eyebrow": "La plateforme Orixs",
+    "title": "La couche opérationnelle du quotidien en entreprise.",
+    "description": "Réunissez les personnes, le travail, les informations clients et l'activité financière dans un espace connecté qui donne à chaque équipe le contexte pour agir en confiance.",
+    "imageAlt": "Plateforme tout-en-un Orixs pour des opérations d'entreprise connectées",
+    "capabilities": {
+      "copilot": {
+        "title": "Un copilote au cœur du travail",
+        "description": "Offrez aux équipes un moyen direct de poser des questions, de résumer et de trouver la meilleure action suivante sans courir après l'information d'un outil à l'autre."
+      },
+      "communication": {
+        "title": "Une communication qui mène quelque part",
+        "description": "Gardez les conversations importantes reliées aux personnes, aux tâches et aux suivis qu'elles génèrent."
+      },
+      "view": {
+        "title": "Une vue en direct pour mieux décider",
+        "description": "Rassemblez les signaux opérationnels pour que les dirigeants voient les priorités, l'avancement et les points qui demandent de l'attention."
+      }
+    }
+  },
+  "useCases": {
+    "eyebrow": "Cas d'usage",
+    "title": "Un espace de travail connecté pour votre secteur.",
+    "description": "Choisissez votre mode de fonctionnement actuel, puis découvrez les fonctionnalités Orixs et l'expérience de compte construites autour.",
+    "groupLabel": "Cas d'usage par secteur",
+    "getStarted": "Commencer avec {name}",
+    "industries": {
+      "business": {
+        "name": "Opérations d'entreprise",
+        "tagline": "Votre centre de commande IA",
+        "title": "L'intelligence qui fait avancer toute l'entreprise",
+        "description": "Reliez l'activité des projets, les relations clients et les priorités financières dans un seul espace pour que les équipes agissent avec le même contexte.",
+        "features": {
+          "dashboards": { "title": "Tableaux de bord en direct", "description": "Gardez la performance, l'activité des équipes et les priorités visibles au même endroit." },
+          "customers": { "title": "Travail client connecté", "description": "Rapprochez les suivis et le contexte client du travail qu'ils génèrent." },
+          "resources": { "title": "Visibilité des ressources", "description": "Donnez aux responsables une vue plus claire des personnes, des budgets et du travail partagé." },
+          "automation": { "title": "Automatisation des flux de travail", "description": "Faites avancer les transferts et approbations de routine avec moins de coordination manuelle." },
+          "reporting": { "title": "Rapports prêts à partager", "description": "Transformez les informations opérationnelles en rapports clairs pour ceux qui en ont besoin." },
+          "priorities": { "title": "Suivi des priorités", "description": "Voyez ce qui avance, ce qui est bloqué et ce qui demande de l'attention ensuite." }
+        }
+      },
+      "insurance": {
+        "name": "Assurance",
+        "tagline": "Sinistres, souscription, conformité",
+        "title": "Une vue opérationnelle plus claire sur tout le cycle de l'assurance",
+        "description": "Réunissez sinistres, souscription, gestion des polices et communication client dans une vision opérationnelle partagée pour agir plus vite et de façon plus cohérente.",
+        "features": {
+          "risk": { "title": "Contexte de risque", "description": "Donnez aux équipes les informations nécessaires pour examiner et évaluer chaque dossier." },
+          "claims": { "title": "Coordination des sinistres", "description": "Suivez les étapes d'examen, les documents et les transferts tout au long du processus de sinistre." },
+          "policy": { "title": "Suivi des polices", "description": "Suivez plus facilement les mises à jour de polices, les renouvellements et les dossiers clés." },
+          "service": { "title": "Service client", "description": "Reliez les demandes des clients aux personnes et au travail nécessaires pour les résoudre." },
+          "compliance": { "title": "Flux de conformité", "description": "Appuyez des contrôles, approbations et étapes opérationnelles cohérents et auditables." },
+          "reporting": { "title": "Reporting opérationnel", "description": "Donnez aux dirigeants une vue plus claire de la charge de travail, de l'avancement et de l'activité de service." }
+        }
+      },
+      "construction": {
+        "name": "Construction",
+        "tagline": "Projets, équipes, budgets",
+        "title": "Une visibilité totale sur chaque chantier",
+        "description": "Reliez calendriers, équipes, budgets et activité du chantier pour que les équipes projet décident en connaissance de cause, de la préconstruction à la livraison.",
+        "features": {
+          "planning": { "title": "Planification de projet", "description": "Gardez le travail, les jalons et le contexte de planification visibles pour toute l'équipe." },
+          "crews": { "title": "Coordination des équipes", "description": "Facilitez l'attribution des tâches, les points de contrôle et le suivi de l'activité sur les différents sites." },
+          "budget": { "title": "Maîtrise du budget", "description": "Intégrez l'activité des coûts et les priorités budgétaires aux échanges du projet." },
+          "safety": { "title": "Flux de sécurité", "description": "Coordonnez les actions de sécurité, les listes de contrôle et le suivi des incidents sur les sites." },
+          "delivery": { "title": "Jalons de livraison", "description": "Gardez l'activité des sous-traitants, les calendriers et les jalons alignés sur le plan." },
+          "reporting": { "title": "Reporting de projet", "description": "Donnez aux parties prenantes une vue à jour de l'avancement, de la charge de travail et des risques de livraison." }
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Découvrez ce qu'un espace de travail connecté peut apporter à votre entreprise.",
+    "description": "Voyez comment Orixs peut donner à vos équipes, votre travail et vos décisions un rythme opérationnel plus clair.",
+    "requestDemo": "Demander une démo"
+  }
+}

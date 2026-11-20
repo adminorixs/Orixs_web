@@ -1,0 +1,139 @@
+{
+  "backToHome": "Retour à l'accueil",
+  "translationNotice": "Cette traduction est fournie uniquement pour faciliter la lecture et est en attente de révision juridique. En cas de divergence, la version anglaise prévaut.",
+  "privacy": {
+    "lastUpdated": "Dernière mise à jour : 5 septembre 2026",
+    "title": "Politique de confidentialité d'Orixs et d'askOrixs.ai",
+    "lead": "Cette politique explique clairement comment Orixs traite les données des utilisateurs, des espaces de travail, de Google et du copilote IA sur notre site web et nos applications SaaS.",
+    "sections": {
+      "s1": {
+        "title": "1. Qui sommes-nous",
+        "body": "Orixs et askOrixs.ai sont exploités par HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED (« Orixs », « nous » ou « notre »). Orixs fournit des plateformes opérationnelles, des outils d'espace de travail et des fonctionnalités de copilote IA aux équipes utilisant des modules tels que le CRM, la gestion du travail, la finance, les RH, la paie, le recrutement, le support, la messagerie, le calendrier et le reporting."
+      },
+      "s2": {
+        "title": "2. Champ d'application de cette politique",
+        "body": "Cette politique de confidentialité explique comment nous collectons, utilisons, stockons, partageons et protégeons les informations lorsque vous utilisez orixs.io, askOrixs.ai, nos applications SaaS, notre copilote IA et les intégrations connectées, notamment Google Sign-In, Gmail et Google Calendar."
+      },
+      "s3": {
+        "title": "3. Informations que nous collectons",
+        "body": "Nous collectons les informations que vous nous fournissez directement, celles générées lors de l'utilisation de la plateforme et celles reçues des intégrations que vous connectez. Il peut s'agir des informations de profil du compte, des coordonnées professionnelles, des données de l'entreprise et de l'espace de travail, des fiches CRM, des projets, des formulaires, des factures, des notes de frais, des paiements, des présences, des congés, des données liées à la paie, des dossiers de recrutement, des tickets, des avis, des fichiers, des messages, des événements de calendrier, des journaux d'utilisation, des informations sur l'appareil et le navigateur, de l'adresse IP, des cookies, des messages d'assistance et des informations de facturation ou d'abonnement."
+      },
+      "s4": {
+        "title": "4. Données de connexion Google",
+        "body": "Si vous choisissez de vous connecter avec Google, nous pouvons recevoir l'identifiant de votre compte Google, votre nom, votre adresse e-mail, votre photo de profil et les jetons d'authentification nécessaires pour vous connecter en toute sécurité. Nous utilisons ces informations uniquement pour authentifier votre compte, empêcher les accès non autorisés et relier votre espace de travail Orixs au bon profil utilisateur. Nous ne recevons ni ne stockons votre mot de passe Google."
+      },
+      "s5": {
+        "title": "5. Données Gmail et Calendrier",
+        "body": "Si vous connectez séparément les fonctionnalités Gmail ou Google Calendar, Orixs peut accéder aux données Google nécessaires aux fonctionnalités que vous activez. Les données Gmail peuvent inclure l'adresse e-mail, les métadonnées et le contenu des messages, les libellés, les conversations, les pièces jointes, les brouillons et les messages envoyés, lorsque cela est nécessaire pour afficher, rechercher, résumer, rédiger, envoyer ou synchroniser l'activité de la boîte de réception. Les données du calendrier peuvent inclure les listes de calendriers, les titres d'événements, les participants, les dates, les heures, les lieux, les descriptions et les détails des réunions, lorsque cela est nécessaire pour afficher, créer, modifier ou synchroniser des événements. Ces intégrations sont facultatives et peuvent être déconnectées par l'utilisateur ou l'administrateur de l'espace de travail."
+      },
+      "s6": {
+        "title": "6. Comment nous utilisons les informations",
+        "body": "Nous utilisons les informations pour fournir et sécuriser la plateforme, créer et gérer les comptes utilisateurs, exploiter les modules activés, traiter les demandes des utilisateurs, synchroniser les intégrations connectées, fournir les réponses et actions du copilote IA, personnaliser le contexte de l'espace de travail, envoyer des avis de service, assurer l'assistance, détecter les abus, tenir des journaux d'audit, améliorer la fiabilité, traiter la facturation, respecter nos obligations légales et faire appliquer nos conditions."
+      },
+      "s7": {
+        "title": "7. Traitement par le copilote IA",
+        "body": "Lorsque vous utilisez Orixs AI ou askOrixs.ai, votre demande, le contexte de votre espace de travail, les enregistrements sélectionnés et les données pertinentes des modules peuvent être traités pour répondre à votre demande ou effectuer une action. Le copilote ne peut lire, créer, modifier ou supprimer des enregistrements que dans le respect des autorisations de votre compte, des limites de l'espace de travail de l'entreprise, des modules activés et des règles de confirmation. Les actions à haut risque, comme l'envoi d'e-mails, la suppression d'enregistrements, les approbations, la paie ou d'autres modifications sensibles, nécessitent une confirmation avant exécution."
+      },
+      "s8": {
+        "title": "8. Déclaration d'utilisation limitée des API Google",
+        "bodyBefore": "L'utilisation et le transfert par Orixs des informations reçues des API Google respecteront la",
+        "linkText": "Politique de données utilisateur des services d'API Google",
+        "bodyAfter": ", y compris les exigences d'utilisation limitée. Nous utilisons les données utilisateur Google uniquement pour fournir ou améliorer les fonctionnalités destinées aux utilisateurs que vous demandez ou activez, telles que Google Sign-In, la synchronisation de la messagerie, la rédaction ou l'envoi d'e-mails, la synchronisation du calendrier, la recherche dans l'espace de travail, les résumés et les actions du copilote. Nous ne vendons pas les données utilisateur Google. Nous ne les utilisons pas à des fins publicitaires. Nous n'utilisons pas les données des API Google Workspace pour entraîner ou améliorer des modèles d'IA ou d'apprentissage automatique généralistes. L'accès humain aux données utilisateur Google est limité aux cas où vous nous demandez une assistance, où l'accès est nécessaire pour une enquête de sécurité ou sur des abus, ou lorsque la loi l'exige."
+      },
+      "s9": {
+        "title": "9. Comment nous partageons les informations",
+        "body": "Nous pouvons partager des informations avec des prestataires qui nous aident à exploiter la plateforme, notamment pour l'hébergement, les bases de données, le stockage, l'analytique, le paiement, l'envoi d'e-mails, l'assistance client, la sécurité et l'infrastructure d'IA. Ces prestataires ne sont autorisés à traiter les informations que dans la mesure nécessaire à la fourniture de services à Orixs et doivent les protéger dans le cadre d'obligations appropriées de confidentialité et de sécurité. Nous pouvons également partager des informations lorsque la loi l'exige, pour protéger des droits et la sécurité, lors d'un transfert d'activité, ou lorsque vous nous demandez de partager des données via une intégration ou une action de l'espace de travail."
+      },
+      "s10": {
+        "title": "10. Stockage et conservation des données",
+        "body": "Nous conservons les données de compte, d'espace de travail et d'intégration aussi longtemps que nécessaire pour fournir les services, respecter nos obligations légales, résoudre les litiges, maintenir la sécurité et faire appliquer les accords. Les jetons OAuth des intégrations Google ne sont conservés que tant que l'intégration reste connectée ou dans la mesure nécessaire à la sécurité et à l'audit. Les journaux d'audit peuvent être conservés pour préserver l'historique de sécurité, de conformité et d'exploitation. Lorsque les données ne sont plus nécessaires, nous les supprimons ou les anonymisons conformément à nos pratiques de conservation."
+      },
+      "s11": {
+        "title": "11. Vos choix et vos contrôles",
+        "body": "Vous pouvez accéder à vos informations personnelles, les mettre à jour, les exporter ou en demander la suppression via les paramètres du compte ou en nous contactant. Vous pouvez déconnecter les intégrations Google dans Orixs lorsque la fonctionnalité est disponible, ou révoquer l'accès d'Orixs depuis la page des autorisations de votre compte Google. Les administrateurs de l'espace de travail peuvent contrôler l'accès des utilisateurs, les modules, les autorisations et les paramètres de conservation de leur organisation. Vous pouvez vous désinscrire des communications marketing tout en continuant à recevoir les messages importants relatifs au service ou à la sécurité."
+      },
+      "s12": {
+        "title": "12. Sécurité",
+        "body": "Nous mettons en œuvre des mesures administratives, techniques et organisationnelles destinées à protéger les informations contre l'accès non autorisé, la perte, l'utilisation abusive ou l'altération. Ces mesures peuvent inclure HTTPS, les contrôles d'accès, le cloisonnement par entreprise, les autorisations par rôle, les journaux d'audit, la protection des jetons, des pratiques de déploiement sécurisées, la surveillance et l'accès restreint aux systèmes de production. Aucune méthode de transmission ou de stockage n'est totalement sûre, mais nous nous efforçons de protéger vos informations en fonction de la sensibilité des données que nous traitons."
+      },
+      "s13": {
+        "title": "13. Transferts internationaux",
+        "body": "Orixs peut traiter et stocker des informations dans des pays autres que celui où vous vous trouvez. Lorsque cela est requis, nous appliquons des garanties appropriées aux transferts internationaux et traitons les informations conformément à la présente politique de confidentialité."
+      },
+      "s14": {
+        "title": "14. Enfants",
+        "body": "Orixs s'adresse aux utilisateurs professionnels et non aux enfants. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants n'ayant pas atteint l'âge requis par la loi applicable. Si nous apprenons qu'un enfant a fourni des informations personnelles sans consentement approprié, nous prendrons des mesures pour les supprimer."
+      },
+      "s15": {
+        "title": "15. Modifications de cette politique",
+        "body": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. En cas de modification importante, nous vous en informerons via le site web, l'application, par e-mail ou par un autre moyen approprié. Si une modification affecte la façon dont nous utilisons les données utilisateur Google, nous demanderons tout consentement requis avant d'utiliser ces données pour une nouvelle finalité."
+      },
+      "s16": {
+        "title": "16. Nous contacter",
+        "bodyBefore": "Pour toute question sur cette politique de confidentialité, les données Google, la suppression de compte ou vos choix en matière de confidentialité, contactez-nous à l'adresse",
+        "bodyAfter": "."
+      }
+    }
+  },
+  "terms": {
+    "title": "Conditions générales d'askOrixs.ai (plateforme Orixs)",
+    "sections": {
+      "s1": {
+        "title": "1. Introduction",
+        "body": "Bienvenue sur askOrixs.ai, une plateforme fournie par HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED (la « Société », « nous » ou « notre »). Les présentes conditions générales (les « Conditions ») régissent votre utilisation de notre site web et des services fournis via la plateforme Orixs (le « Service »). En accédant au Service ou en l'utilisant, vous acceptez d'être lié par ces Conditions."
+      },
+      "s2": {
+        "title": "2. Éligibilité",
+        "body": "Vous devez avoir au moins 18 ans ou l'âge légal de la majorité dans votre juridiction pour utiliser notre Service. En utilisant le Service, vous déclarez et garantissez remplir ces conditions."
+      },
+      "s3": {
+        "title": "3. Utilisation du Service",
+        "lines": [
+          "Vous vous engagez à n'utiliser le Service qu'à des fins licites.",
+          "Vous n'utiliserez pas le Service pour transmettre un contenu illicite, nuisible, injurieux ou autrement répréhensible.",
+          "Vous ne tenterez pas d'accéder sans autorisation à une partie quelconque du Service."
+        ]
+      },
+      "s4": {
+        "title": "4. Création de compte",
+        "body": "Certaines fonctionnalités du Service peuvent nécessiter une inscription. Vous vous engagez à fournir des informations exactes et complètes et à les tenir à jour. Vous êtes responsable de la confidentialité de vos identifiants de connexion."
+      },
+      "s5": {
+        "title": "5. Propriété intellectuelle",
+        "body": "Tous les contenus, marques, logos et autres éléments de propriété intellectuelle du Service sont la propriété de HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED ou de ses concédants. Vous ne pouvez pas reproduire, distribuer ou utiliser un contenu sans notre accord écrit préalable."
+      },
+      "s6": {
+        "title": "6. Contenu généré par les utilisateurs",
+        "body": "Vous conservez la propriété de tout contenu que vous soumettez au Service, mais vous nous accordez une licence non exclusive, mondiale et gratuite pour utiliser, reproduire et distribuer ce contenu dans le cadre du Service."
+      },
+      "s7": {
+        "title": "7. Services tiers",
+        "body": "Notre Service peut contenir des liens vers des sites web ou services tiers. Nous ne sommes pas responsables du contenu, des politiques ou des pratiques de ces services tiers."
+      },
+      "s8": {
+        "title": "8. Exclusions de garantie",
+        "body": "Le Service est fourni « tel quel » et « selon disponibilité », sans garantie d'aucune sorte. Nous ne garantissons pas que le Service sera ininterrompu ou exempt d'erreurs."
+      },
+      "s9": {
+        "title": "9. Limitation de responsabilité",
+        "body": "Dans toute la mesure permise par la loi, HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED ne pourra être tenue responsable des dommages indirects, accessoires ou consécutifs résultant de votre utilisation du Service."
+      },
+      "s10": {
+        "title": "10. Indemnisation",
+        "body": "Vous vous engagez à indemniser et à garantir HAPPYEXPRESS ECOMMERCE PRIVATE LIMITED contre toute réclamation, tout dommage ou toute dépense résultant de votre utilisation du Service ou de votre violation des présentes Conditions."
+      },
+      "s11": {
+        "title": "11. Résiliation",
+        "body": "Nous nous réservons le droit de suspendre ou de résilier votre accès au Service à notre seule discrétion, avec ou sans préavis, en cas de comportement que nous jugeons contraire aux présentes Conditions ou nuisible aux autres utilisateurs ou à nous-mêmes."
+      },
+      "s12": {
+        "title": "12. Droit applicable",
+        "body": "Les présentes Conditions sont régies par le droit indien, sans égard à ses règles de conflit de lois. Tout litige relèvera de la compétence exclusive des tribunaux de Bangalore, Karnataka."
+      },
+      "s13": {
+        "title": "13. Coordonnées",
+        "bodyBefore": "Pour toute question concernant ces Conditions, veuillez nous contacter à l'adresse :"
+      }
+    }
+  }
+}
