@@ -1,0 +1,30 @@
+{
+  "heroImageAlt": "À propos de nous",
+  "meetImageAlt": "Découvrez Orixs",
+  "story": {
+    "p1": "Nous avons créé Orixs parce que nous en avions assez de voir des entreprises brillantes perdre du temps, de l'argent et de l'élan à cause d'outils lourds et de données dispersées.",
+    "p2": "Toutes les équipes avec lesquelles nous avons travaillé rencontraient le même problème : plusieurs systèmes qui ne communiquent pas entre eux, des processus manuels qui engloutissent des heures et aucun endroit unique pour voir la situation dans son ensemble. Nous avons donc créé Orixs, un système d'exploitation organisationnel à 360° qui réunit tout.",
+    "p3": "Voyez-le comme votre CRM, votre ERP, votre outil de suivi de projets, votre moteur de reporting et votre assistant IA, réunis dans une seule plateforme entièrement personnalisable. Elle s'adapte à votre flux de travail, relie chaque service et vous offre des informations en temps réel qui nourrissent réellement vos décisions.",
+    "p4": "De la construction à l'assurance, des start-ups de Nairobi aux grandes entreprises de Mumbai, Orixs est conçu pour simplifier le travail, unifier les opérations et accompagner votre croissance.",
+    "p5": "Nous n'avons pas créé Orixs pour suivre les modes, mais pour réparer ce qui ne fonctionnait pas.",
+    "p6": "Pas de chaos. Pas de silos. Juste de la clarté, du contrôle et de la croissance."
+  },
+  "locations": {
+    "titlePrefix": "Nos",
+    "titleHighlight": "implantations",
+    "india": "Inde",
+    "indiaAddress": "5th floor, 9 star hills, Sesh Nag complex, Pipeline Road, Manikonda, Hyderabad, India",
+    "southAfrica": "Afrique du Sud",
+    "southAfricaAddress": "Monte Circle Building, C109 Monte Casino Boulevard, William Nicol Road, Fourways, Gauteng, 1685, Johannesburg, South Africa",
+    "mapAlt": "Carte du monde"
+  },
+  "leadership": {
+    "titlePrefix": "Notre",
+    "titleHighlight": "direction",
+    "subtitle": "Rencontrez l'équipe qui porte la vision de TruSphere",
+    "roles": {
+      "director": "Directeur",
+      "mentor": "Mentor et conseiller"
+    }
+  }
+}
