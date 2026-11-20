@@ -1,6 +1,6 @@
 import { defineRouting } from 'next-intl/routing';
 
-export const locales = ['en', 'es', 'ar'] as const;
+export const locales = ['en', 'es', 'fr', 'ar'] as const;
 export type AppLocale = (typeof locales)[number];
 
 export const defaultLocale: AppLocale = 'en';
@@ -12,6 +12,7 @@ export const rtlLocales: readonly AppLocale[] = ['ar'];
 export const localeNames: Record<AppLocale, string> = {
   en: 'English',
   es: 'Español',
+  fr: 'Français',
   ar: 'العربية',
 };
 

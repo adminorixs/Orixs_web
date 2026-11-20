@@ -1,0 +1,88 @@
+{
+  "blogs": {
+    "badge": "Blog",
+    "heroTitleLead": "Des idées pour les",
+    "heroTitleHighlight": "équipes modernes.",
+    "heroDescription": "Guides pratiques, témoignages de fondateurs et analyses approfondies sur les opérations pilotées par l'IA, l'automatisation des processus et la croissance en toute clarté.",
+    "featured": "À la une",
+    "readTime": "{minutes} min de lecture",
+    "author": "Auteur",
+    "allArticles": "Tous les articles",
+    "allArticlesDescription": "Découvrez des idées et des stratégies pour piloter votre entreprise plus intelligemment.",
+    "filterAll": "Tous",
+    "read": "Lire",
+    "empty": "Aucun article trouvé dans cette catégorie.",
+    "ctaTitle": "Prêt à voir Orixs en action ?",
+    "ctaDescription": "Obtenez une démonstration personnalisée pour votre secteur. Sans engagement.",
+    "ctaGetStarted": "Commencer gratuitement",
+    "ctaTalkToSales": "Contacter l'équipe commerciale"
+  },
+  "blogDetails": {
+    "notFoundTitle": "Blog introuvable",
+    "notFoundDescription": "Le blog que vous recherchez n'existe pas.",
+    "home": "Accueil",
+    "blog": "Blog",
+    "author": "Auteur",
+    "readTime": "{minutes} min de lecture",
+    "share": "Partager",
+    "copied": "Copié !",
+    "copyLink": "Copier le lien",
+    "tableOfContents": "Sommaire",
+    "related": "{count, plural, one {Article associé} other {Articles associés}}",
+    "readMore": "Lire la suite",
+    "sections": {
+      "introduction": "Introduction",
+      "challenge": "Comprendre le défi",
+      "approach": "L'approche Orixs",
+      "strategy": "Stratégie de mise en œuvre",
+      "measuring": "Mesurer le succès",
+      "conclusion": "Conclusion"
+    }
+  },
+  "caseStudies": {
+    "badge": "Études de cas",
+    "heroTitleLead": "De vrais résultats.",
+    "heroTitleHighlight": "De vraies entreprises.",
+    "heroDescription": "Découvrez comment des entreprises de tous secteurs utilisent Orixs pour supprimer les goulots d'étranglement, automatiser leurs opérations et générer une croissance mesurable.",
+    "requestDemo": "Demander une démo",
+    "viewCaseStudies": "Voir les études de cas ↓",
+    "stats": {
+      "payouts": "Paiements effectués dans les délais",
+      "errors": "Réduction des erreurs",
+      "checkins": "Moins de suivis manuels",
+      "industries": "Secteurs transformés"
+    },
+    "featuredTitle": "Témoignages à la une",
+    "featuredDescription": "Chaque entreprise a son défi. Voici comment Orixs a résolu le leur.",
+    "readFullStory": "Lire l'histoire complète",
+    "ctaTitle": "Envie de résultats similaires ?",
+    "ctaDescription": "Découvrez comment Orixs peut transformer vos opérations grâce à une démonstration personnalisée.",
+    "ctaGetStarted": "Commencer gratuitement",
+    "ctaTalkToSales": "Contacter l'équipe commerciale"
+  },
+  "caseStudyDetails": {
+    "home": "Accueil",
+    "caseStudies": "Études de cas",
+    "keyBenefits": "Principaux avantages",
+    "requestSimilar": "Demander une solution similaire",
+    "overview": "Aperçu",
+    "challenges": "Défis",
+    "solution": "Solution",
+    "results": "Résultats",
+    "testimonial": "Témoignage",
+    "ctaTitle": "Prêt à simplifier vos opérations ?",
+    "ctaDescription": "Découvrez comment Orixs peut remplacer vos outils dispersés par une plateforme unifiée tout en conservant la flexibilité nécessaire à vos besoins spécifiques.",
+    "scheduleDemo": "Planifier une démo",
+    "form": {
+      "fullName": "Nom complet",
+      "email": "E-mail",
+      "contactNumber": "Numéro de contact",
+      "organisation": "Organisation",
+      "designation": "Fonction",
+      "submit": "Envoyer",
+      "cancel": "Annuler",
+      "preferredDateTime": "Date et heure souhaitées (facultatif)",
+      "topics": "Des sujets particuliers que vous souhaitez aborder pendant la démo ?"
+    }
+  }
+}
