@@ -8,6 +8,7 @@ import legal from './legal.json';
 import content from './content.json';
 import payment from './payment.json';
 import copilot from './copilot.json';
+import features from './features.json';
 
 const messages = {
   Meta: meta,
@@ -19,6 +20,7 @@ const messages = {
   Content: content,
   Payment: payment,
   Copilot: copilot,
+  Features: features,
 };
 
 export default messages;

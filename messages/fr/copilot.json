@@ -9,7 +9,7 @@
   "placeholder": "Posez une question sur Orixs...",
   "send": "Envoyer le message",
   "dismiss": "Ignorer la suggestion du Copilot",
-  "unavailable": "Je suis momentanément indisponible. Vous pouvez toujours consulter les cas d'usage, les tarifs, les blogs et les études de cas depuis la navigation du site.",
+  "unavailable": "Je suis momentanément indisponible. Vous pouvez toujours parcourir Fonctionnalités, Tarifs, Blogs et Études de cas depuis la navigation du site.",
   "proactive": {
     "homepageTour": "Vous ne savez pas par où commencer ? Je peux vous faire visiter.",
     "pricingHelp": "Besoin d'aide pour comparer les offres ?",
@@ -17,15 +17,59 @@
     "resourceIndustry": "Voulez-vous voir comment cela s'applique à votre secteur ?"
   },
   "suggestions": {
-    "homepage": ["Qu'est-ce qu'Orixs en termes simples ?", "Quelle plateforme convient à mon entreprise ?", "Montrez-moi les principaux modules.", "Comment démarrer ?"],
-    "use-cases": ["Comparer Entreprise, Assurance et Construction.", "Que peut faire Orixs pour les équipes d'assurance ?", "Comment Orixs aide-t-il les projets de construction ?", "Emmenez-moi à l'inscription."],
-    "get-started": ["Que se passe-t-il après mon inscription ?", "Ai-je besoin d'une carte bancaire ?", "Quelles informations dois-je fournir ?", "Puis-je changer de secteur ?"],
-    "pricing": ["Comparer les offres disponibles.", "Existe-t-il un essai gratuit ?", "Montrez-moi les tarifs assurance.", "Que signifient les crédits IA ?"],
-    "blog": ["Résumez ce sujet pour moi.", "Comment cela s'applique-t-il à mon entreprise ?", "Afficher les ressources Orixs associées."],
-    "case-study": ["Résumez les résultats.", "Quels modules Orixs ont aidé ici ?", "Montrez-moi un cas d'usage similaire."],
-    "about": ["Qui est derrière Orixs ?", "Où se trouve Orixs ?", "Quel problème Orixs a-t-il été conçu pour résoudre ?"],
-    "legal": ["Résumez cette politique.", "Que doivent savoir les clients ?", "Où trouver les informations sur le produit ?"],
-    "payment": ["Que faire si le paiement est en attente ?", "Ramenez-moi aux tarifs.", "Comment contacter le support ?"],
-    "unknown": ["Qu'est-ce qu'Orixs ?", "Montrez-moi les cas d'usage.", "Montrez-moi les tarifs."]
+    "homepage": [
+      "Qu'est-ce qu'Orixs en termes simples ?",
+      "Quelle plateforme convient à mon entreprise ?",
+      "Montrez-moi les principaux modules.",
+      "Comment démarrer ?"
+    ],
+    "use-cases": [
+      "Montre-moi les modules Finance.",
+      "Que contient le menu Place de marché ?",
+      "Comment Orixs gère-t-il les réunions et le calendrier ?",
+      "Emmène-moi vers l'inscription."
+    ],
+    "get-started": [
+      "Que se passe-t-il après mon inscription ?",
+      "Ai-je besoin d'une carte bancaire ?",
+      "Quelles informations dois-je fournir ?",
+      "Puis-je changer de secteur ?"
+    ],
+    "pricing": [
+      "Comparer les offres disponibles.",
+      "Existe-t-il un essai gratuit ?",
+      "Montrez-moi les tarifs assurance.",
+      "Que signifient les crédits IA ?"
+    ],
+    "blog": [
+      "Résumez ce sujet pour moi.",
+      "Comment cela s'applique-t-il à mon entreprise ?",
+      "Afficher les ressources Orixs associées."
+    ],
+    "case-study": [
+      "Résumez les résultats.",
+      "Quels modules Orixs ont aidé ici ?",
+      "Montrez-moi un cas d'usage similaire."
+    ],
+    "about": [
+      "Qui est derrière Orixs ?",
+      "Où se trouve Orixs ?",
+      "Quel problème Orixs a-t-il été conçu pour résoudre ?"
+    ],
+    "legal": [
+      "Résumez cette politique.",
+      "Que doivent savoir les clients ?",
+      "Où trouver les informations sur le produit ?"
+    ],
+    "payment": [
+      "Que faire si le paiement est en attente ?",
+      "Ramenez-moi aux tarifs.",
+      "Comment contacter le support ?"
+    ],
+    "unknown": [
+      "Qu'est-ce qu'Orixs ?",
+      "Montrez-moi les cas d'usage.",
+      "Montrez-moi les tarifs."
+    ]
   }
 }

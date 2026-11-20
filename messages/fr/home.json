@@ -60,12 +60,30 @@
         "title": "L'intelligence qui fait avancer toute l'entreprise",
         "description": "Reliez l'activité des projets, les relations clients et les priorités financières dans un seul espace pour que les équipes agissent avec le même contexte.",
         "features": {
-          "dashboards": { "title": "Tableaux de bord en direct", "description": "Gardez la performance, l'activité des équipes et les priorités visibles au même endroit." },
-          "customers": { "title": "Travail client connecté", "description": "Rapprochez les suivis et le contexte client du travail qu'ils génèrent." },
-          "resources": { "title": "Visibilité des ressources", "description": "Donnez aux responsables une vue plus claire des personnes, des budgets et du travail partagé." },
-          "automation": { "title": "Automatisation des flux de travail", "description": "Faites avancer les transferts et approbations de routine avec moins de coordination manuelle." },
-          "reporting": { "title": "Rapports prêts à partager", "description": "Transformez les informations opérationnelles en rapports clairs pour ceux qui en ont besoin." },
-          "priorities": { "title": "Suivi des priorités", "description": "Voyez ce qui avance, ce qui est bloqué et ce qui demande de l'attention ensuite." }
+          "dashboards": {
+            "title": "Tableaux de bord en direct",
+            "description": "Gardez la performance, l'activité des équipes et les priorités visibles au même endroit."
+          },
+          "customers": {
+            "title": "Travail client connecté",
+            "description": "Rapprochez les suivis et le contexte client du travail qu'ils génèrent."
+          },
+          "resources": {
+            "title": "Visibilité des ressources",
+            "description": "Donnez aux responsables une vue plus claire des personnes, des budgets et du travail partagé."
+          },
+          "automation": {
+            "title": "Automatisation des flux de travail",
+            "description": "Faites avancer les transferts et approbations de routine avec moins de coordination manuelle."
+          },
+          "reporting": {
+            "title": "Rapports prêts à partager",
+            "description": "Transformez les informations opérationnelles en rapports clairs pour ceux qui en ont besoin."
+          },
+          "priorities": {
+            "title": "Suivi des priorités",
+            "description": "Voyez ce qui avance, ce qui est bloqué et ce qui demande de l'attention ensuite."
+          }
         }
       },
       "insurance": {
@@ -74,12 +92,30 @@
         "title": "Une vue opérationnelle plus claire sur tout le cycle de l'assurance",
         "description": "Réunissez sinistres, souscription, gestion des polices et communication client dans une vision opérationnelle partagée pour agir plus vite et de façon plus cohérente.",
         "features": {
-          "risk": { "title": "Contexte de risque", "description": "Donnez aux équipes les informations nécessaires pour examiner et évaluer chaque dossier." },
-          "claims": { "title": "Coordination des sinistres", "description": "Suivez les étapes d'examen, les documents et les transferts tout au long du processus de sinistre." },
-          "policy": { "title": "Suivi des polices", "description": "Suivez plus facilement les mises à jour de polices, les renouvellements et les dossiers clés." },
-          "service": { "title": "Service client", "description": "Reliez les demandes des clients aux personnes et au travail nécessaires pour les résoudre." },
-          "compliance": { "title": "Flux de conformité", "description": "Appuyez des contrôles, approbations et étapes opérationnelles cohérents et auditables." },
-          "reporting": { "title": "Reporting opérationnel", "description": "Donnez aux dirigeants une vue plus claire de la charge de travail, de l'avancement et de l'activité de service." }
+          "risk": {
+            "title": "Contexte de risque",
+            "description": "Donnez aux équipes les informations nécessaires pour examiner et évaluer chaque dossier."
+          },
+          "claims": {
+            "title": "Coordination des sinistres",
+            "description": "Suivez les étapes d'examen, les documents et les transferts tout au long du processus de sinistre."
+          },
+          "policy": {
+            "title": "Suivi des polices",
+            "description": "Suivez plus facilement les mises à jour de polices, les renouvellements et les dossiers clés."
+          },
+          "service": {
+            "title": "Service client",
+            "description": "Reliez les demandes des clients aux personnes et au travail nécessaires pour les résoudre."
+          },
+          "compliance": {
+            "title": "Flux de conformité",
+            "description": "Appuyez des contrôles, approbations et étapes opérationnelles cohérents et auditables."
+          },
+          "reporting": {
+            "title": "Reporting opérationnel",
+            "description": "Donnez aux dirigeants une vue plus claire de la charge de travail, de l'avancement et de l'activité de service."
+          }
         }
       },
       "construction": {
@@ -88,12 +124,30 @@
         "title": "Une visibilité totale sur chaque chantier",
         "description": "Reliez calendriers, équipes, budgets et activité du chantier pour que les équipes projet décident en connaissance de cause, de la préconstruction à la livraison.",
         "features": {
-          "planning": { "title": "Planification de projet", "description": "Gardez le travail, les jalons et le contexte de planification visibles pour toute l'équipe." },
-          "crews": { "title": "Coordination des équipes", "description": "Facilitez l'attribution des tâches, les points de contrôle et le suivi de l'activité sur les différents sites." },
-          "budget": { "title": "Maîtrise du budget", "description": "Intégrez l'activité des coûts et les priorités budgétaires aux échanges du projet." },
-          "safety": { "title": "Flux de sécurité", "description": "Coordonnez les actions de sécurité, les listes de contrôle et le suivi des incidents sur les sites." },
-          "delivery": { "title": "Jalons de livraison", "description": "Gardez l'activité des sous-traitants, les calendriers et les jalons alignés sur le plan." },
-          "reporting": { "title": "Reporting de projet", "description": "Donnez aux parties prenantes une vue à jour de l'avancement, de la charge de travail et des risques de livraison." }
+          "planning": {
+            "title": "Planification de projet",
+            "description": "Gardez le travail, les jalons et le contexte de planification visibles pour toute l'équipe."
+          },
+          "crews": {
+            "title": "Coordination des équipes",
+            "description": "Facilitez l'attribution des tâches, les points de contrôle et le suivi de l'activité sur les différents sites."
+          },
+          "budget": {
+            "title": "Maîtrise du budget",
+            "description": "Intégrez l'activité des coûts et les priorités budgétaires aux échanges du projet."
+          },
+          "safety": {
+            "title": "Flux de sécurité",
+            "description": "Coordonnez les actions de sécurité, les listes de contrôle et le suivi des incidents sur les sites."
+          },
+          "delivery": {
+            "title": "Jalons de livraison",
+            "description": "Gardez l'activité des sous-traitants, les calendriers et les jalons alignés sur le plan."
+          },
+          "reporting": {
+            "title": "Reporting de projet",
+            "description": "Donnez aux parties prenantes une vue à jour de l'avancement, de la charge de travail et des risques de livraison."
+          }
         }
       }
     }
@@ -101,6 +155,7 @@
   "contact": {
     "title": "Découvrez ce qu'un espace de travail connecté peut apporter à votre entreprise.",
     "description": "Voyez comment Orixs peut donner à vos équipes, votre travail et vos décisions un rythme opérationnel plus clair.",
+    "writeToUs": "Ou écrivez-nous à",
     "requestDemo": "Demander une démo"
   }
 }

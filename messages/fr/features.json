@@ -1,0 +1,514 @@
+{
+  "eyebrow": "Fonctionnalités",
+  "title": "Une seule plateforme. Chaque partie de l'entreprise.",
+  "description": "Explorez les menus d'Orixs et ouvrez n'importe quel module pour voir ce qu'il contient et comment il s'articule avec les autres.",
+  "menuNavLabel": "Menus Orixs",
+  "modulesLabel": "Modules de ce menu",
+  "insideLabel": "Dans ce module",
+  "previewLabel": "Aperçu du menu Orixs",
+  "openIn": "S'ouvre depuis",
+  "moduleCount": "{count} modules",
+  "statMenus": "menus",
+  "statModules": "modules",
+  "statStores": "boutiques et places de marché",
+  "statGateways": "passerelles de paiement",
+  "statLanguages": "langues",
+  "play": "Lancer la visite",
+  "pause": "Mettre la visite en pause",
+  "next": "Module suivant",
+  "cta": "Démarrer avec Orixs",
+  "ctaNote": "Configuration gratuite · Sans carte bancaire · En service en moins d'une semaine",
+  "selectModule": "Sélectionnez un module pour voir ce qu'il fait",
+  "menus": {
+    "overview": {
+      "name": "Vue d'ensemble",
+      "tagline": "Votre journée en un coup d'œil",
+      "description": "Des tableaux de bord, le calendrier et des rapports qui offrent à chaque rôle un point de départ clair."
+    },
+    "customers": {
+      "name": "Clients",
+      "tagline": "Un CRM du premier prospect au contrat signé",
+      "description": "Captez des prospects, gérez les clients et faites avancer propositions, devis et contrats au même endroit."
+    },
+    "work": {
+      "name": "Travail",
+      "tagline": "Planifier, suivre et livrer le travail",
+      "description": "Tâches, temps, centres de coûts, appels d'offres, documents et voyages reliés aux mêmes personnes et aux mêmes projets."
+    },
+    "finance": {
+      "name": "Finance",
+      "tagline": "Facturation, achats et grand livre complet",
+      "description": "Des factures et bons de commande aux écritures comptables, au stock et aux états financiers."
+    },
+    "marketplace": {
+      "name": "Place de marché",
+      "tagline": "Vendez en ligne et gardez chaque boutique synchronisée",
+      "description": "Catalogues de produits et commandes en ligne d'Amazon, Shopify, eBay et WooCommerce dans un seul espace."
+    },
+    "people": {
+      "name": "Personnes",
+      "tagline": "Recruter, gérer et rémunérer votre équipe",
+      "description": "Dossiers du personnel, présences et congés, paie, recrutement et performance pour toute l'organisation."
+    },
+    "service": {
+      "name": "Messages et service",
+      "tagline": "Des conversations qui mènent quelque part",
+      "description": "Messagerie, avis, tickets de support et chat, reliés aux clients et au travail concernés."
+    },
+    "settings": {
+      "name": "Paramètres",
+      "tagline": "Configurez une fois, pour tout le monde",
+      "description": "Sécurité et rôles, passerelles de paiement, notifications, règles RH et de flux de travail, langues et automatisation."
+    }
+  },
+  "modules": {
+    "myDashboard": {
+      "name": "Mon tableau de bord",
+      "description": "Un accueil personnel avec les chiffres, les tâches et les relances qui comptent pour vous aujourd'hui.",
+      "items": [
+        "Chiffres clés",
+        "Tâches à échéance",
+        "Relances"
+      ]
+    },
+    "calendarMeetings": {
+      "name": "Calendrier et réunions",
+      "description": "Planifiez des réunions, envoyez des invitations et gardez les jours fériés dans le même calendrier.",
+      "items": [
+        "Calendrier",
+        "Liste des réunions",
+        "Jours fériés"
+      ]
+    },
+    "operationalDashboards": {
+      "name": "Tableaux de bord opérationnels",
+      "description": "Des tableaux de bord en direct pour chaque domaine de l'entreprise, construits à partir des mêmes données partagées.",
+      "items": [
+        "CRM",
+        "Travail",
+        "Finance",
+        "Personnes"
+      ]
+    },
+    "reports": {
+      "name": "Rapports",
+      "description": "Des rapports prêts à partager pour les ventes, les prospects et le reste de l'activité.",
+      "items": [
+        "Rapport sur les prospects",
+        "Rapport des ventes",
+        "Exports"
+      ]
+    },
+    "crmDashboard": {
+      "name": "Tableau de bord CRM",
+      "description": "Visualisez la santé du pipeline, les nouveaux prospects et l'activité des clients avant d'ouvrir le moindre dossier.",
+      "items": [
+        "Pipeline",
+        "Nouveaux prospects",
+        "Activité des clients"
+      ]
+    },
+    "marketing": {
+      "name": "Marketing et prospects",
+      "description": "Captez des prospects depuis des formulaires et des publications sociales et faites-les avancer dans un entonnoir de vente visuel.",
+      "items": [
+        "Prospects",
+        "Formulaires",
+        "Publication sociale",
+        "Entonnoir de vente"
+      ]
+    },
+    "clients": {
+      "name": "Clients",
+      "description": "Une fiche par client avec contacts, notes, documents et historique en contexte.",
+      "items": [
+        "Contacts",
+        "Notes",
+        "Documents"
+      ]
+    },
+    "proposals": {
+      "name": "Propositions",
+      "description": "Créez, envoyez et suivez des propositions pour que chaque relance ait du contexte.",
+      "items": [
+        "Créer",
+        "Envoyer",
+        "Suivre"
+      ]
+    },
+    "estimates": {
+      "name": "Devis",
+      "description": "Préparez des devis détaillés et transformez ceux qui sont approuvés en factures.",
+      "items": [
+        "Devis détaillés",
+        "Approbation",
+        "Conversion en facture"
+      ]
+    },
+    "contracts": {
+      "name": "Contrats",
+      "description": "Gardez contrats, discussions et fichiers ensemble, du brouillon à la signature.",
+      "items": [
+        "Brouillons",
+        "Discussions",
+        "Fichiers"
+      ]
+    },
+    "intelligence": {
+      "name": "Intelligence d'entreprise",
+      "description": "Des analyses assistées par l'IA sur vos comptes et vos données d'entreprise, avec le Copilot Orixs à vos côtés.",
+      "items": [
+        "Analyses IA",
+        "Copilot",
+        "Suggestions"
+      ]
+    },
+    "tasks": {
+      "name": "Tâches",
+      "description": "Assignez le travail, définissez les priorités et voyez ce qui avance et ce qui est bloqué.",
+      "items": [
+        "Tableau de tâches",
+        "Sous-tâches",
+        "Fichiers",
+        "Notes"
+      ]
+    },
+    "timesheet": {
+      "name": "Feuille de temps",
+      "description": "Saisissez le temps passé sur les tâches et les centres de coûts pour une livraison et une facturation précises.",
+      "items": [
+        "Saisies de temps",
+        "Minuteurs",
+        "Rapports"
+      ]
+    },
+    "costCenters": {
+      "name": "Centres de coûts",
+      "description": "Organisez le travail par projet ou centre de coûts, avec membres, jalons et budgets.",
+      "items": [
+        "Membres",
+        "Jalons",
+        "Fichiers",
+        "Budget"
+      ]
+    },
+    "tenders": {
+      "name": "Module d'appels d'offres",
+      "description": "Menez les appels d'offres de bout en bout avec une liste de fournisseurs et un annuaire de fournisseurs consultable.",
+      "items": [
+        "Appels d'offres",
+        "Fournisseurs",
+        "Annuaire des fournisseurs"
+      ]
+    },
+    "documents": {
+      "name": "Documents",
+      "description": "Un centre de documents partagé pour que les équipes trouvent le dernier fichier au même endroit.",
+      "items": [
+        "Centre de documents",
+        "Partage",
+        "Recherche"
+      ]
+    },
+    "travel": {
+      "name": "Planificateur de voyages",
+      "description": "Planifiez des voyages, réservez des déplacements et gardez les réservations avec le travail auquel elles se rattachent.",
+      "items": [
+        "Tableau de bord",
+        "Réserver",
+        "Réservations"
+      ]
+    },
+    "billing": {
+      "name": "Facturation",
+      "description": "Envoyez des factures, enregistrez des reçus et émettez des notes de crédit, le tout lié au client.",
+      "items": [
+        "Factures",
+        "Reçus",
+        "Notes de crédit"
+      ]
+    },
+    "purchases": {
+      "name": "Achats",
+      "description": "Émettez des bons de commande, réceptionnez les marchandises et rapprochez les factures fournisseurs et les notes de débit.",
+      "items": [
+        "Bons de commande",
+        "Bons de réception",
+        "Factures d'achat",
+        "Notes de débit"
+      ]
+    },
+    "expenses": {
+      "name": "Dépenses",
+      "description": "Saisissez les dépenses avec justificatifs et approbations, et gardez-les sur le bon projet.",
+      "items": [
+        "Notes de frais",
+        "Reçus",
+        "Approbations"
+      ]
+    },
+    "ledgerSetup": {
+      "name": "Configuration du grand livre",
+      "description": "Définissez les groupes de comptes, les comptes et les exercices, puis chargez les soldes d'ouverture.",
+      "items": [
+        "Groupes de comptes",
+        "Comptes",
+        "Exercices",
+        "Soldes d'ouverture"
+      ]
+    },
+    "accounting": {
+      "name": "Comptabilité",
+      "description": "Comptabilisez les écritures, rapprochez les relevés bancaires et suivez votre registre des immobilisations.",
+      "items": [
+        "Écritures comptables",
+        "Rapprochement bancaire",
+        "Registre des immobilisations"
+      ]
+    },
+    "inventory": {
+      "name": "Stock",
+      "description": "Suivez le stock entre les entrepôts avec niveaux, transferts, ajustements et alertes de réapprovisionnement.",
+      "items": [
+        "Entrepôts",
+        "Niveaux de stock",
+        "Transferts",
+        "Ajustements"
+      ]
+    },
+    "financialReports": {
+      "name": "États financiers",
+      "description": "Balance, compte de résultat et bilan, directement à partir du grand livre.",
+      "items": [
+        "Balance",
+        "Compte de résultat",
+        "Bilan"
+      ]
+    },
+    "marketplaceDashboard": {
+      "name": "Tableau de bord de la place de marché",
+      "description": "L'état de vos boutiques et le travail qui demande de l'attention sur chaque canal connecté.",
+      "items": [
+        "Boutiques connectées",
+        "À traiter",
+        "Santé de la synchronisation"
+      ]
+    },
+    "catalogs": {
+      "name": "Catalogues de produits",
+      "description": "Un seul catalogue, publié sur plusieurs boutiques et places de marché, avec les annonces importées tenues à part.",
+      "items": [
+        "Catalogue",
+        "Publiés",
+        "Importés",
+        "Attention"
+      ]
+    },
+    "onlineOrders": {
+      "name": "Commandes en ligne",
+      "description": "Commandes manuelles et commandes importées de vos boutiques, dans une seule liste.",
+      "items": [
+        "Toutes les commandes",
+        "Commandes importées",
+        "Commandes manuelles"
+      ]
+    },
+    "amazon": {
+      "name": "Amazon",
+      "description": "Connectez votre boutique Amazon pour importer annonces et commandes.",
+      "items": [
+        "Connexion",
+        "Annonces",
+        "Commandes"
+      ]
+    },
+    "shopify": {
+      "name": "Shopify",
+      "description": "Connectez des boutiques Shopify et gardez produits et commandes synchronisés.",
+      "items": [
+        "Connexion",
+        "Produits",
+        "Commandes"
+      ]
+    },
+    "ebay": {
+      "name": "eBay",
+      "description": "Connectez eBay, préparez des brouillons d'annonces et importez les commandes dans Orixs.",
+      "items": [
+        "Connexion",
+        "Brouillons d'annonces",
+        "Commandes"
+      ]
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "Connectez des boutiques WooCommerce et gérez-les avec le reste de la place de marché.",
+      "items": [
+        "Connexion",
+        "Produits",
+        "Commandes"
+      ]
+    },
+    "orgDashboard": {
+      "name": "Tableau de bord des personnes",
+      "description": "Effectifs, présences et activité de recrutement en un coup d'œil.",
+      "items": [
+        "Effectifs",
+        "Présences",
+        "Recrutement"
+      ]
+    },
+    "team": {
+      "name": "Équipe",
+      "description": "Dossiers des employés avec horaires, actifs, pénalités et mutations réunis dans un seul profil.",
+      "items": [
+        "Personnes",
+        "Horaires",
+        "Actifs",
+        "Pénalités",
+        "Mutations"
+      ]
+    },
+    "attendance": {
+      "name": "Présences et congés",
+      "description": "Pointez l'arrivée et le départ, demandez des congés et voyez qui est disponible.",
+      "items": [
+        "Présences",
+        "Congés",
+        "Jours fériés"
+      ]
+    },
+    "payroll": {
+      "name": "Paie",
+      "description": "Salaires, impôts, déclarations TDS et bulletins de paie traités dans un seul flux.",
+      "items": [
+        "Salaire de l'employé",
+        "Impôts",
+        "TDS",
+        "Bulletins de paie"
+      ]
+    },
+    "recruitment": {
+      "name": "Recrutement",
+      "description": "Publiez des offres, suivez les candidats, planifiez des entretiens et envoyez des offres d'embauche.",
+      "items": [
+        "Offres",
+        "Candidats",
+        "Entretiens",
+        "Propositions d'embauche",
+        "Vivier de talents"
+      ]
+    },
+    "performance": {
+      "name": "Performance",
+      "description": "Cycles d'évaluation et compétences pour que les évaluations soient cohérentes et faciles à mener.",
+      "items": [
+        "Évaluations",
+        "Compétences",
+        "Cycles d'évaluation"
+      ]
+    },
+    "hierarchy": {
+      "name": "Hiérarchie et carrières",
+      "description": "Départements, désignations et une page carrières publique pour vos postes ouverts.",
+      "items": [
+        "Départements",
+        "Désignations",
+        "Page carrières"
+      ]
+    },
+    "mailbox": {
+      "name": "Messagerie",
+      "description": "Connectez Gmail ou Microsoft Mail et traitez votre boîte de réception à côté des clients concernés.",
+      "items": [
+        "Gmail",
+        "Microsoft Mail",
+        "Dossiers"
+      ]
+    },
+    "noticeBoard": {
+      "name": "Tableau d'affichage",
+      "description": "Des annonces à l'échelle de l'entreprise qui atteignent les bonnes équipes.",
+      "items": [
+        "Annonces",
+        "Audiences"
+      ]
+    },
+    "support": {
+      "name": "Support",
+      "description": "Des tickets avec agents, types, canaux et modèles de réponse pour un service homogène.",
+      "items": [
+        "Tickets",
+        "Agents",
+        "Modèles de réponse"
+      ]
+    },
+    "chat": {
+      "name": "Chat",
+      "description": "Des conversations rapides en équipe sans quitter votre espace de travail.",
+      "items": [
+        "Messages directs",
+        "Groupes"
+      ]
+    },
+    "accountSecurity": {
+      "name": "Compte et sécurité",
+      "description": "Profil de l'entreprise, rôles et autorisations, connexion à deux facteurs et contrôles de confidentialité.",
+      "items": [
+        "Rôles et autorisations",
+        "Deux facteurs",
+        "RGPD"
+      ]
+    },
+    "payments": {
+      "name": "Paiements",
+      "description": "Acceptez des paiements via neuf passerelles et des modes hors ligne, avec vos propres devises et taxes.",
+      "items": [
+        "Stripe",
+        "PayPal",
+        "Razorpay",
+        "Paystack",
+        "Flutterwave"
+      ]
+    },
+    "communication": {
+      "name": "Notifications et e-mail",
+      "description": "Choisissez ce qui est envoyé, où et quand, par e-mail, Slack et notification push.",
+      "items": [
+        "E-mail",
+        "Slack",
+        "Notification push",
+        "Modèles"
+      ]
+    },
+    "hrSettings": {
+      "name": "Paramètres RH",
+      "description": "Règles de présence, de congés, de paie, de recrutement et d'évaluation définies une fois.",
+      "items": [
+        "Présences",
+        "Congés",
+        "Paie",
+        "Recrutement"
+      ]
+    },
+    "workflowSettings": {
+      "name": "Paramètres travail et ventes",
+      "description": "Règles, sources, statuts et catégories pour les projets, tâches, tickets et prospects.",
+      "items": [
+        "Projets",
+        "Tâches",
+        "Tickets",
+        "Prospects"
+      ]
+    },
+    "platform": {
+      "name": "Plateforme",
+      "description": "Modules, langues, stockage, sauvegardes, champs personnalisés, intégrations et Centre d'automatisation.",
+      "items": [
+        "Langues",
+        "Champs personnalisés",
+        "Centre d'automatisation"
+      ]
+    }
+  }
+}
